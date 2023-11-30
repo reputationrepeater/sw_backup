@@ -1,0 +1,52 @@
+Fa0/1     UP-Link-Port-SW-12 connected    trunk      a-full  a-100 10/100BaseTX
+Fa0/2                        notconnect   182          auto   auto 10/100BaseTX
+Fa0/3     Accounts Printer-3 notconnect   182          auto   auto 10/100BaseTX
+Fa0/4                        notconnect   182          auto   auto 10/100BaseTX
+Fa0/5                        notconnect   182          auto   auto 10/100BaseTX
+Fa0/6                        connected    182        a-full  a-100 10/100BaseTX
+Fa0/7     Accounts Alomgir   notconnect   182          auto   auto 10/100BaseTX
+Fa0/8                        notconnect   182          auto   auto 10/100BaseTX
+Fa0/9                        notconnect   182          auto   auto 10/100BaseTX
+Fa0/10                       notconnect   182          auto   auto 10/100BaseTX
+Fa0/11                       notconnect   527          auto   auto 10/100BaseTX
+Fa0/12                       notconnect   527          auto   auto 10/100BaseTX
+Fa0/13                       notconnect   182          auto   auto 10/100BaseTX
+Fa0/14                       connected    527        a-full  a-100 10/100BaseTX
+Fa0/15                       notconnect   527          auto   auto 10/100BaseTX
+Fa0/16                       notconnect   527          auto   auto 10/100BaseTX
+Fa0/17                       notconnect   527          auto   auto 10/100BaseTX
+Fa0/18                       notconnect   182          auto   auto 10/100BaseTX
+Fa0/19                       notconnect   182          auto   auto 10/100BaseTX
+Fa0/20                       notconnect   182          auto   auto 10/100BaseTX
+Fa0/21                       notconnect   1            auto   auto 10/100BaseTX
+Fa0/22                       notconnect   1            auto   auto 10/100BaseTX
+Fa0/23                       notconnect   1            auto   auto 10/100BaseTX
+Fa0/24                       notconnect   1            auto   auto 10/100BaseTX
+Fa0/25                       notconnect   1            auto   auto 10/100BaseTX
+Fa0/26                       notconnect   1            auto   auto 10/100BaseTX
+Fa0/27                       notconnect   1            auto   auto 10/100BaseTX
+Fa0/28                       notconnect   1            auto   auto 10/100BaseTX
+Fa0/29                       notconnect   1            auto   auto 10/100BaseTX
+Fa0/30                       notconnect   1            auto   auto 10/100BaseTX
+Fa0/31                       notconnect   1            auto   auto 10/100BaseTX
+Fa0/32                       notconnect   1            auto   auto 10/100BaseTX
+Fa0/33                       notconnect   1            auto   auto 10/100BaseTX
+Fa0/34                       notconnect   1            auto   auto 10/100BaseTX
+Fa0/35                       notconnect   1            auto   auto 10/100BaseTX
+Fa0/36                       notconnect   1            auto   auto 10/100BaseTX
+Fa0/37                       notconnect   1            auto   auto 10/100BaseTX
+
+Port      Name               Status       Vlan       Duplex  Speed Type
+Fa0/38                       notconnect   1            auto   auto 10/100BaseTX
+Fa0/39                       notconnect   1            auto   auto 10/100BaseTX
+Fa0/40                       notconnect   1            auto   auto 10/100BaseTX
+Fa0/41                       notconnect   1            auto   auto 10/100BaseTX
+Fa0/42                       notconnect   1            auto   auto 10/100BaseTX
+Fa0/43                       notconnect   1            auto   auto 10/100BaseTX
+Fa0/44                       notconnect   1            auto   auto 10/100BaseTX
+Fa0/45                       notconnect   1            auto   auto 10/100BaseTX
+Fa0/46                       notconnect   1            auto   auto 10/100BaseTX
+Fa0/47                       notconnect   1            auto   auto 10/100BaseTX
+Fa0/48                       notconnect   1            auto   auto 10/100BaseTX
+Gi0/1                        notconnect   1            auto   auto unknown
+Gi0/2                        notconnect   1            auto   auto unknown

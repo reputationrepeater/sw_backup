@@ -1,0 +1,89 @@
+ ge-0/0/0
+  ge-0/0/0.0
+  ge-0/0/1             ----------------001--------------------Mikrotik-Babu-Support
+  ge-0/0/1.0
+  ge-0/0/2
+  ge-0/0/2.0
+  ge-0/0/3
+  ge-0/0/3.0
+  ge-0/0/4
+  ge-0/0/4.0
+  ge-0/0/5             ----------------005--------------------Support-PC1
+  ge-0/0/5.0
+  ge-0/0/6             ----------------006--------------------Support-PC-1
+  ge-0/0/6.0
+  ge-0/0/7
+  ge-0/0/7.0
+  ge-0/0/8             ----------------008--------------------Support-PC-Mosharof
+  ge-0/0/8.0
+  ge-0/0/9             ----------------009--------------------IPTSP-2
+  ge-0/0/9.0
+  ge-0/0/10
+  ge-0/0/10.0
+  ge-0/0/11
+  ge-0/0/11.0
+  ge-0/0/12            ----------------012--------------------IPTSP1
+  ge-0/0/12.0
+  ge-0/0/13
+  ge-0/0/13.0
+  ge-0/0/14            ----------------014--------------------IPTSP3
+  ge-0/0/14.0
+  ge-0/0/15            ----------015----------Test_Mikrotik
+  ge-0/0/15.0
+  ge-0/0/16
+  ge-0/0/16.0
+  ge-0/0/17
+  ge-0/0/17.0
+  ge-0/0/18            ----------------018--------------------Support-Ip-Phone
+  ge-0/0/18.0
+  ge-0/0/19
+  ge-0/0/19.0
+  ge-0/0/20            ----------------020--------------------Jannat-Ip-Phone
+  ge-0/0/20.0
+  ge-0/0/21
+  ge-0/0/21.0
+  ge-0/0/22
+  ge-0/0/22.0
+  ge-0/0/23            ----------------023--------------------SW-121-Up-Link-P47
+  ge-0/0/23.0
+  ae0
+  ae1                  ----------------ae1--------------------SW-121-Up-Link
+  ae1.0
+  ae2
+  ae3
+  ae4
+  ae5
+  ae6
+  ae7
+  ae8
+  ae9
+  ae10
+  ae11
+  ae12
+  ae13
+  ae14
+  ae15
+  ae16
+  ae17
+  ae18
+  ae19
+  bme0
+  bme0.32768
+  dsc
+  gre
+  ipip
+  lo0
+  lsi
+  me0
+  mtun
+  pimd
+  pime
+  tap
+  vlan
+  vlan.507
+  extensive            Display extensive output
+  media                Display media information
+  routing-instance     Name of routing instance
+  snmp-index           SNMP index of interface
+  statistics           Display statistics and detailed output
+  |                    Pipe through a command

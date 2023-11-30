@@ -1,0 +1,18 @@
+set interfaces ge-0/1/3 description ----------013----------SW131-Up-Link
+set interfaces ge-0/1/3 unit 0 family ethernet-switching port-mode trunk
+set interfaces ge-0/1/3 unit 0 family ethernet-switching vlan members NOL-Management
+set interfaces ge-0/1/3 unit 0 family ethernet-switching vlan members NOL-Configuration
+set interfaces ge-0/1/3 unit 0 family ethernet-switching vlan members MD-Office
+set interfaces ge-0/1/3 unit 0 family ethernet-switching vlan members Level3-Iconix-WIFI
+set interfaces ge-0/1/3 unit 0 family ethernet-switching vlan members PABX-Lan
+set interfaces ge-0/1/3 unit 0 family ethernet-switching vlan members L3-3rd-floor-Access-Control
+set interfaces ge-0/1/3 unit 0 family ethernet-switching vlan members L3-4th-floor-Access-Control
+set interfaces ge-0/1/3 unit 0 family ethernet-switching vlan members L3-G2-Office-Camera4
+set interfaces ge-0/1/3 unit 0 family ethernet-switching vlan members L3-G2-Office-Camera5
+set interfaces ge-0/1/3 unit 0 family ethernet-switching vlan members L3-G2-Office-Camera1
+set interfaces ge-0/1/3 unit 0 family ethernet-switching vlan members L3-G2-Office-Camera6
+set interfaces ge-0/1/3 unit 0 family ethernet-switching vlan members L3-G2-Office-Camera2
+set interfaces ge-0/1/3 unit 0 family ethernet-switching vlan members L3-G2-Office-Camera3
+set interfaces ge-0/1/3 unit 0 family ethernet-switching vlan members ICONIX-Camera7
+set interfaces ge-0/1/3 unit 0 family ethernet-switching vlan members ICONIX-Camera8
+set interfaces ge-0/1/3 unit 0 family ethernet-switching vlan members ICONIX-Camera9

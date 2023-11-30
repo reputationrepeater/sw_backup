@@ -1,0 +1,71 @@
+  ge-0/0/0             ----UT--------ge-0/0/0-----DH-1412-C2C-Pharma-Ltd-UT11-Backup
+  ge-0/0/0.0
+  ge-0/0/1
+  ge-0/0/2
+  ge-0/0/3
+  ge-0/0/4
+  ge-0/0/5
+  ge-0/0/6
+  ge-0/0/7
+  ge-0/0/8
+  ge-0/0/9
+  ge-0/0/10
+  ge-0/0/11
+  ge-0/0/12
+  ge-0/0/13
+  ge-0/0/14
+  ge-0/0/15
+  ge-0/0/16
+  ge-0/0/17
+  ge-0/0/18
+  ge-0/0/19
+  ge-0/0/22
+  ge-0/1/0             ----UT--------010------UT-SW52-P17
+  ge-0/1/0.0
+  ge-0/1/1             ----UT--------011------UT-SW52-P18
+  ge-0/1/1.0
+  ge-0/1/3             ----UT--------013------OLT-92-UT-POP-11
+  ge-0/1/3.0
+  ae0
+  ae1
+  ae2
+  ae3                  ----UT--------ae3-----NOL-UT-Sec-11-SW52-ae6
+  ae3.0
+  ae4
+  ae5
+  ae6
+  ae7
+  ae8
+  ae9
+  ae10
+  ae11
+  ae12
+  ae13
+  ae14
+  ae15
+  ae16
+  ae17
+  ae18
+  ae19
+  bme0
+  bme0.32768
+  dsc
+  gre
+  ipip
+  lo0
+  lsi
+  me0
+  me0.0
+  mtun
+  pimd
+  pime
+  tap
+  vlan
+  vlan.0
+  vlan.507
+  extensive            Display extensive output
+  media                Display media information
+  routing-instance     Name of routing instance
+  snmp-index           SNMP index of interface
+  statistics           Display statistics and detailed output
+  |                    Pipe through a command

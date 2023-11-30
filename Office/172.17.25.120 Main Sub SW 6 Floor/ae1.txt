@@ -1,0 +1,13 @@
+set interfaces ge-0/0/2 ether-options 802.3ad ae1
+set interfaces ge-0/0/3 ether-options 802.3ad ae1
+set interfaces ae1 description ----------------ae1--------------------SW-122-UP-Link
+set interfaces ae1 unit 0 family ethernet-switching port-mode trunk
+set interfaces ae1 unit 0 family ethernet-switching vlan members NOL-Management
+set interfaces ae1 unit 0 family ethernet-switching vlan members NOL-Configuration
+set interfaces ae1 unit 0 family ethernet-switching vlan members MD-Office
+set interfaces ae1 unit 0 family ethernet-switching vlan members NOL-Gulshan-Off-Lan
+set interfaces ae1 unit 0 family ethernet-switching vlan members NOL-G2-Monitoring-Camera
+set interfaces ae1 unit 0 family ethernet-switching vlan members NOL-G2-6th-Accounts-Camera
+set interfaces ae1 unit 0 family ethernet-switching vlan members NOL-G2-Office-Monitoring-PC
+set interfaces ae1 unit 0 family ethernet-switching vlan members IPTSP
+set interfaces ae1 unit 0 family ethernet-switching vlan members NOL-G2-Wifi

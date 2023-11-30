@@ -1,0 +1,71 @@
+  ge-0/0/0
+  ge-0/0/0.0
+  ge-0/0/1
+  ge-0/0/1.0
+  ge-0/0/2
+  ge-0/0/2.0
+  ge-0/0/3             ----------003----------DH-1205-Muazuddin-Textile-Shafipur
+  ge-0/0/3.0
+  ge-0/0/4             ----------004----------DH-1329-Malek-Spinning-Mills-Ltd-Gazipur-Radio
+  ge-0/0/4.0
+  ge-0/0/5             ----------005----------DH-1206-Muazuddin-Textile-BSCIC-Konabari-Radio-Backup
+  ge-0/0/5.0
+  ge-0/0/6             ----------006----------DH-1226-Hanif-Spinning-Mills-Facrory-Mouchak
+  ge-0/0/6.0
+  ge-0/0/7
+  ge-0/0/7.0
+  ge-0/0/8
+  ge-0/0/8.0
+  ge-0/0/9
+  ge-0/0/9.0
+  ge-0/0/10
+  ge-0/0/10.0
+  ge-0/0/11
+  ge-0/0/11.0
+  ge-0/0/12
+  ge-0/0/12.0
+  ge-0/0/13
+  ge-0/0/13.0
+  ge-0/0/14
+  ge-0/0/14.0
+  ge-0/0/15
+  ge-0/0/15.0
+  ge-0/0/16
+  ge-0/0/16.0
+  ge-0/0/17
+  ge-0/0/17.0
+  ge-0/0/18
+  ge-0/0/18.0
+  ge-0/0/19
+  ge-0/0/19.0
+  ge-0/0/21
+  ge-0/0/21.0
+  ge-0/0/22
+  ge-0/0/22.0
+  ge-0/0/23            ----------023----------SCL-Alternative-Uplink
+  ge-0/0/23.0
+  ge-0/1/0             ----------010----------Mikrotik-UP-Link
+  ge-0/1/0.0
+  bme0
+  bme0.32768
+  dsc
+  gre
+  ipip
+  lo0
+  lo0.16384
+  lsi
+  me0
+  me0.0
+  mtun
+  pimd
+  pime
+  tap
+  vlan
+  vlan.0
+  vlan.2025
+  extensive            Display extensive output
+  media                Display media information
+  routing-instance     Name of routing instance
+  snmp-index           SNMP index of interface
+  statistics           Display statistics and detailed output
+  |                    Pipe through a command

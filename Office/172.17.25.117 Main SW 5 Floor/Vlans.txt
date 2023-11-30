@@ -1,0 +1,26 @@
+FTTX-vlan2     2500
+                       ae2.0*, ae4.0*
+IPTSP          527
+                       ae2.0*, ae3.0*, ae4.0*, ge-0/0/10.0*, ge-0/0/11.0, ge-0/0/16.0
+MD-Office      101
+                       ae2.0*, ae3.0*
+NOL-Configuration 501
+                       ae2.0*, ae3.0*, ae4.0*
+NOL-G2-Access-Control-5th 301
+                       ae2.0*, ae4.0*, ge-0/0/3.0*
+NOL-G2-Office-Monitoring-PC 555
+                       ae2.0*, ae3.0*, ge-0/0/14.0*, ge-0/0/15.0
+NOL-G2-Wifi-5th 183
+                       ae2.0*, ae4.0*, ge-0/0/2.0*
+NOL-Gulshan-Off-Lan 180
+                       ae2.0*, ae3.0*, ae4.0*, ge-0/0/6.0*, ge-0/0/7.0*, ge-0/0/8.0, ge-0/0/9.0, ge-0/0/18.0
+NOL-Management 507
+                       ae2.0*, ae3.0*, ae4.0*, ge-0/0/12.0*, ge-0/0/13.0
+NOL_G2_Entrance_Camera_5th 302
+                       ae2.0*, ge-0/0/4.0*
+NOL_G2_Support_Camera_5th 303
+                       ae2.0*, ge-0/0/5.0*, ge-0/0/17.0
+default
+                       None
+nol-ppp2       182
+                       ae2.0*, ae4.0*

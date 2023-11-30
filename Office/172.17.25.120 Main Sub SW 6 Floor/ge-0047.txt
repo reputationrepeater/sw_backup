@@ -1,0 +1,8 @@
+set interfaces ge-0/0/47 description ----------------047--------------------SW126-Uplink-2
+set interfaces ge-0/0/47 unit 0 family ethernet-switching port-mode trunk
+set interfaces ge-0/0/47 unit 0 family ethernet-switching vlan members NOL-Management
+set interfaces ge-0/0/47 unit 0 family ethernet-switching vlan members NOL-Configuration
+set interfaces ge-0/0/47 unit 0 family ethernet-switching vlan members IPTSP
+set interfaces ge-0/0/47 unit 0 family ethernet-switching vlan members NOL-Gulshan-Off-Lan
+set interfaces ge-0/0/47 unit 0 family ethernet-switching vlan members MD-Office
+set interfaces ge-0/0/47 unit 0 family ethernet-switching vlan members NOL-G2-Office-Monitoring-PC

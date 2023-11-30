@@ -1,0 +1,3 @@
+set interfaces ge-0/1/2 description -----012-----Devotech
+set interfaces ge-0/1/2 unit 0 family ethernet-switching port-mode access
+set interfaces ge-0/1/2 unit 0 family ethernet-switching vlan members devotech

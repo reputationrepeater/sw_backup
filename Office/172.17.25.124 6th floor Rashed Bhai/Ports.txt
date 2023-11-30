@@ -1,0 +1,24 @@
+Fa0/1     UP-Link-Port-SW-12 connected    trunk      a-full  a-100 10/100BaseTX
+Fa0/2     sales-new-ppp      notconnect   182          auto   auto 10/100BaseTX
+Fa0/3     sales-new-ppp      notconnect   182          auto   auto 10/100BaseTX
+Fa0/4                        notconnect   182          auto   auto 10/100BaseTX
+Fa0/5                        connected    527        a-full  a-100 10/100BaseTX
+Fa0/6                        notconnect   527          auto   auto 10/100BaseTX
+Fa0/7     Sales New          notconnect   182          auto   auto 10/100BaseTX
+Fa0/8     IP-Phone-D01-EX082 connected    527        a-full  a-100 10/100BaseTX
+Fa0/9     Sales              notconnect   527          auto   auto 10/100BaseTX
+Fa0/10    Sales IP-PH        notconnect   527          auto   auto 10/100BaseTX
+Fa0/11    Shameem IP-PH      connected    527        a-full  a-100 10/100BaseTX
+Fa0/12    Sales Samiul       notconnect   182          auto   auto 10/100BaseTX
+Fa0/13                       notconnect   182          auto   auto 10/100BaseTX
+Fa0/14    Motiur-IP-Phone    notconnect   527          auto   auto 10/100BaseTX
+Fa0/15                       notconnect   182          auto   auto 10/100BaseTX
+Fa0/16                       notconnect   182          auto   auto 10/100BaseTX
+Fa0/17                       notconnect   182          auto   auto 10/100BaseTX
+Fa0/18                       notconnect   182          auto   auto 10/100BaseTX
+Fa0/19                       notconnect   182          auto   auto 10/100BaseTX
+Fa0/20    Mamun-IP-PH        notconnect   501          auto   auto 10/100BaseTX
+Fa0/21                       notconnect   501          auto   auto 10/100BaseTX
+Fa0/22                       notconnect   501          auto   auto 10/100BaseTX
+Fa0/23                       notconnect   501          auto   auto 10/100BaseTX
+Fa0/24                       notconnect   501          auto   auto 10/100BaseTX

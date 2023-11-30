@@ -1,0 +1,30 @@
+C2C_Prarma_DATA_Pri 1910
+                       ae3.0*, ge-0/1/3.0*
+C2C_Prarma_DATA_Sec 852
+                       ae3.0*, ge-0/0/0.0*
+C2C_Prarma_INT_Pri 1909
+                       ae3.0*, ge-0/1/3.0*
+C2C_Prarma_INT_Sec 851
+                       ae3.0*, ge-0/0/0.0*
+Crosswear_HO   1538
+                       ae3.0*, ge-0/1/3.0*
+FGG-Group      1907
+                       ae3.0*, ge-0/1/3.0*
+H2H-Solution   1903
+                       ae3.0*, ge-0/1/3.0*
+Managment      507
+                       ae3.0*
+Momin-Textile  1905
+                       ae3.0*, ge-0/1/3.0*
+OLT_Real_IP    2500
+                       ae3.0*, ge-0/1/3.0*
+TCL-Global     1904
+                       ae3.0*, ge-0/1/3.0*
+UT07-SJ39-Mansha 1906
+                       ae3.0*, ge-0/1/3.0*
+UT_Sec11_POP   1901
+                       ae3.0*, ge-0/1/3.0*
+Warptex_Bangladesh 1908
+                       ae3.0*, ge-0/1/3.0*
+default
+                       None

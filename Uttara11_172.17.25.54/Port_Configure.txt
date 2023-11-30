@@ -1,0 +1,5 @@
+set interfaces ge-0/0/0 description ----UT--------ge-0/0/0-----DH-1412-C2C-Pharma-Ltd-UT11-Backup
+set interfaces ge-0/0/0 unit 0 family ethernet-switching port-mode trunk
+set interfaces ge-0/0/0 unit 0 family ethernet-switching vlan members C2C_Prarma_INT_Sec
+set interfaces ge-0/0/0 unit 0 family ethernet-switching vlan members C2C_Prarma_DATA_Sec
+

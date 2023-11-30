@@ -1,0 +1,3 @@
+set interfaces ge-0/1/2 description ----------012----------Colo-Direct-Link-Juniper-P-ge-0/0/4-through-Banani
+set interfaces ge-0/1/2 unit 0 family ethernet-switching port-mode trunk
+set interfaces ge-0/1/2 unit 0 family ethernet-switching vlan members G2-Office-Mikrotik-Backup

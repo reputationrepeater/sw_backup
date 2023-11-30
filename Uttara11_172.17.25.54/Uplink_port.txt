@@ -1,0 +1,40 @@
+set interfaces ge-0/1/0 description ----UT--------010------UT-SW52-P17
+set interfaces ge-0/1/0 ether-options 802.3ad ae3
+
+set interfaces ge-0/1/1 description ----UT--------011------UT-SW52-P18
+set interfaces ge-0/1/1 ether-options 802.3ad ae3
+
+set interfaces ge-0/1/3 description ----UT--------013------OLT-92-UT-POP-11
+set interfaces ge-0/1/3 unit 0 family ethernet-switching port-mode trunk
+set interfaces ge-0/1/3 unit 0 family ethernet-switching vlan members Crosswear_HO
+set interfaces ge-0/1/3 unit 0 family ethernet-switching vlan members FGG-Group
+set interfaces ge-0/1/3 unit 0 family ethernet-switching vlan members H2H-Solution
+set interfaces ge-0/1/3 unit 0 family ethernet-switching vlan members Momin-Textile
+set interfaces ge-0/1/3 unit 0 family ethernet-switching vlan members OLT_Real_IP
+set interfaces ge-0/1/3 unit 0 family ethernet-switching vlan members TCL-Global
+set interfaces ge-0/1/3 unit 0 family ethernet-switching vlan members UT07-SJ39-Mansha
+set interfaces ge-0/1/3 unit 0 family ethernet-switching vlan members UT_Sec11_POP
+set interfaces ge-0/1/3 unit 0 family ethernet-switching vlan members Warptex_Bangladesh
+set interfaces ge-0/1/3 unit 0 family ethernet-switching vlan members C2C_Prarma_INT_Pri
+set interfaces ge-0/1/3 unit 0 family ethernet-switching vlan members C2C_Prarma_DATA_Pri
+
+
+
+set interfaces ae3 description ----UT--------ae3-----NOL-UT-Sec-11-SW52-ae6
+set interfaces ae3 aggregated-ether-options minimum-links 1
+set interfaces ae3 aggregated-ether-options link-speed 1g
+set interfaces ae3 unit 0 family ethernet-switching port-mode trunk
+set interfaces ae3 unit 0 family ethernet-switching vlan members OLT_Real_IP
+set interfaces ae3 unit 0 family ethernet-switching vlan members UT_Sec11_POP
+set interfaces ae3 unit 0 family ethernet-switching vlan members H2H-Solution
+set interfaces ae3 unit 0 family ethernet-switching vlan members TCL-Global
+set interfaces ae3 unit 0 family ethernet-switching vlan members Crosswear_HO
+set interfaces ae3 unit 0 family ethernet-switching vlan members Momin-Textile
+set interfaces ae3 unit 0 family ethernet-switching vlan members UT07-SJ39-Mansha
+set interfaces ae3 unit 0 family ethernet-switching vlan members FGG-Group
+set interfaces ae3 unit 0 family ethernet-switching vlan members Managment
+set interfaces ae3 unit 0 family ethernet-switching vlan members Warptex_Bangladesh
+set interfaces ae3 unit 0 family ethernet-switching vlan members C2C_Prarma_INT_Pri
+set interfaces ae3 unit 0 family ethernet-switching vlan members C2C_Prarma_DATA_Pri
+set interfaces ae3 unit 0 family ethernet-switching vlan members C2C_Prarma_INT_Sec
+set interfaces ae3 unit 0 family ethernet-switching vlan members C2C_Prarma_DATA_Sec
