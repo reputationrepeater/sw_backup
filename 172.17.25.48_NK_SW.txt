@@ -1,0 +1,242 @@
+set system host-name Niketon-SW48
+set system root-authentication encrypted-password "$1$2qj.Q3LC$6KLWzS1ziKL0P0k.o03EN/"
+set system login user noc uid 2000
+set system login user noc class super-user
+set system login user noc authentication encrypted-password "$1$1wDxZvUS$exh.ImvktA23fBYSXUCnX0"
+set system services ssh
+set system services telnet
+set chassis aggregated-devices ethernet device-count 10
+set chassis alarm management-ethernet link-down ignore
+set interfaces ge-0/0/1 description ----NK--------01------NK-1055-Olila-Glass-Industries-HO-DATA
+set interfaces ge-0/0/1 unit 0 family ethernet-switching port-mode access
+set interfaces ge-0/0/1 unit 0 family ethernet-switching vlan members NK-1055-DATA
+set interfaces ge-0/0/2 description ----NK--------02------NK-Access-Controler
+set interfaces ge-0/0/2 ether-options speed 100m
+set interfaces ge-0/0/2 unit 0 family ethernet-switching port-mode access
+set interfaces ge-0/0/2 unit 0 family ethernet-switching vlan members NK-Access-Control
+set interfaces ge-0/0/3 description ----NK--------03------NOL-NK-POP-Camera
+set interfaces ge-0/0/3 ether-options speed 100m
+set interfaces ge-0/0/3 unit 0 family ethernet-switching port-mode access
+set interfaces ge-0/0/3 unit 0 family ethernet-switching vlan members NK-Access-Control
+set interfaces ge-0/0/4 description ----NK--------04------DH-1070-BRAC-IT-Service-Ltd-Niketon-Backup
+set interfaces ge-0/0/4 unit 0 family ethernet-switching port-mode access
+set interfaces ge-0/0/4 unit 0 family ethernet-switching vlan members BRAC-IT-Service-DATA
+set interfaces ge-0/0/5 description ----NK--------05------Mikrotik-eth8-Trunk-Port
+set interfaces ge-0/0/5 unit 0 family ethernet-switching port-mode trunk
+set interfaces ge-0/0/5 unit 0 family ethernet-switching vlan members BRAC-IT-Service-DATA
+set interfaces ge-0/0/5 unit 0 family ethernet-switching vlan members NK-1055-DATA
+set interfaces ge-0/0/5 unit 0 family ethernet-switching vlan members NK-Access-Control
+set interfaces ge-0/0/5 unit 0 family ethernet-switching vlan members NOL-NK-POP-Camera
+set interfaces ge-0/0/5 unit 0 family ethernet-switching vlan members Managment
+set interfaces ge-0/0/6 description ----NK--------06------DH-1070-BRAC-IT-Service-Ltd-Niketon-Backup
+set interfaces ge-0/0/6 unit 0 family ethernet-switching port-mode access
+set interfaces ge-0/0/6 unit 0 family ethernet-switching vlan members Managment
+set interfaces ge-0/1/0 description ----NK--------010------SW-05-P21-OH
+set interfaces ge-0/1/0 ether-options 802.3ad ae1
+set interfaces ge-0/1/1 description "----NK--------011------SW-05-P28-F@H"
+set interfaces ge-0/1/1 ether-options 802.3ad ae1
+set interfaces ge-0/1/2 description ----NK--------012------OLT-P01-Corporate-User
+set interfaces ge-0/1/2 unit 0 family ethernet-switching port-mode trunk
+set interfaces ge-0/1/2 unit 0 family ethernet-switching vlan members Managment
+set interfaces ge-0/1/2 unit 0 family ethernet-switching vlan members NK-01129
+set interfaces ge-0/1/2 unit 0 family ethernet-switching vlan members Amulate-Pharmaceuticals-H17
+set interfaces ge-0/1/2 unit 0 family ethernet-switching vlan members NK-0197
+set interfaces ge-0/1/2 unit 0 family ethernet-switching vlan members NK-0621
+set interfaces ge-0/1/2 unit 0 family ethernet-switching vlan members NK-1060
+set interfaces ge-0/1/2 unit 0 family ethernet-switching vlan members NK-0455
+set interfaces ge-0/1/2 unit 0 family ethernet-switching vlan members Amulate-Pharmaceuticals-H7
+set interfaces ge-0/1/2 unit 0 family ethernet-switching vlan members Fardin-DMD-House-NK
+set interfaces ge-0/1/2 unit 0 family ethernet-switching vlan members NK-0122
+set interfaces ge-0/1/2 unit 0 family ethernet-switching vlan members NK-0698
+set interfaces ge-0/1/2 unit 0 family ethernet-switching vlan members Edison-NK-DATA
+set interfaces ge-0/1/2 unit 0 family ethernet-switching vlan members NK-1044
+set interfaces ge-0/1/2 unit 0 family ethernet-switching vlan members NK-1055
+set interfaces ge-0/1/2 unit 0 family ethernet-switching vlan members Now-Multimedia
+set interfaces ge-0/1/2 unit 0 family ethernet-switching vlan members Franchettii
+set interfaces ge-0/1/2 unit 0 family ethernet-switching vlan members NK-1223
+set interfaces ge-0/1/2 unit 0 family ethernet-switching vlan members NK-1419
+set interfaces ge-0/1/2 unit 0 family ethernet-switching vlan members Nascent-Gardenia-NK
+set interfaces ge-0/1/2 unit 0 family ethernet-switching vlan members Tirzok-NK
+set interfaces ge-0/1/2 unit 0 family ethernet-switching vlan members NK-01135
+set interfaces ge-0/1/2 unit 0 family ethernet-switching vlan members NK-03142
+set interfaces ge-0/1/2 unit 0 family ethernet-switching vlan members Cerebrum-Technology
+set interfaces ge-0/1/2 unit 0 family ethernet-switching vlan members Jeanologia-Bangladesh
+set interfaces ge-0/1/2 unit 0 family ethernet-switching vlan members NK-01190
+set interfaces ge-0/1/2 unit 0 family ethernet-switching vlan members AFC-Health
+set interfaces ge-0/1/2 unit 0 family ethernet-switching vlan members NK-01222
+set interfaces ge-0/1/2 unit 0 family ethernet-switching vlan members DH-984-Cobait
+set interfaces ge-0/1/2 unit 0 family ethernet-switching vlan members Franchetti-Niketon
+set interfaces ge-0/1/2 unit 0 family ethernet-switching vlan members NK-08115
+set interfaces ge-0/1/2 unit 0 family ethernet-switching vlan members NK-05100
+set interfaces ge-0/1/2 unit 0 family ethernet-switching vlan members NK-08135
+set interfaces ge-0/1/2 unit 0 family ethernet-switching vlan members BRAC-IT-Service-FTTX
+set interfaces ge-0/1/2 unit 0 family ethernet-switching vlan members NK-0890
+set interfaces ge-0/1/2 unit 0 family ethernet-switching vlan members DH-705-Hams
+set interfaces ge-0/1/2 unit 0 family ethernet-switching vlan members NK-0897
+set interfaces ge-0/1/2 unit 0 family ethernet-switching vlan members NK-0935
+set interfaces ge-0/1/2 unit 0 family ethernet-switching vlan members NK-0938
+set interfaces ge-0/1/2 unit 0 family ethernet-switching vlan members NK-0942
+set interfaces ge-0/1/2 unit 0 family ethernet-switching vlan members Azoric-Trading-Niketon
+set interfaces ge-0/1/2 unit 0 family ethernet-switching vlan members Karkhana
+set interfaces ge-0/1/2 unit 0 family ethernet-switching vlan members SB-Tel
+set interfaces ge-0/1/2 unit 0 family ethernet-switching vlan members Bengal-Internet-NK
+set interfaces ge-0/1/2 unit 0 family ethernet-switching vlan members Bengal-Data-NK
+set interfaces ge-0/1/2 unit 0 family ethernet-switching vlan members Asian-TV
+set interfaces ge-0/1/2 unit 0 family ethernet-switching vlan members DH-350-SB-Tel-R4
+set interfaces ge-0/1/2 unit 0 family ethernet-switching vlan members DH-350-SB-Tel-HO
+set interfaces ge-0/1/2 unit 0 family ethernet-switching vlan members NK-01212
+set interfaces ge-0/1/2 unit 0 family ethernet-switching vlan members NK-0749
+set interfaces ge-0/1/2 unit 0 family ethernet-switching vlan members NK-08155
+set interfaces ge-0/1/2 unit 0 family ethernet-switching vlan members NK-0754
+set interfaces ge-0/1/2 unit 0 family ethernet-switching vlan members NK-1091
+set interfaces ge-0/1/2 unit 0 family ethernet-switching vlan members Fu-Wang-FTTX
+set interfaces ge-0/1/2 unit 0 family ethernet-switching vlan members Metroidfilms
+set interfaces ge-0/1/2 unit 0 family ethernet-switching vlan members OLT-All-Real-IP
+set interfaces ge-0/1/2 unit 0 family ethernet-switching vlan members n2sys-Niketon
+set interfaces ge-0/1/2 unit 0 family ethernet-switching vlan members Sohan_Home
+set interfaces ge-0/1/3 description ----NK--------013------Niketon-OLD-Mikrotik-sfp1
+set interfaces ge-0/1/3 unit 0 family ethernet-switching port-mode trunk
+set interfaces ge-0/1/3 unit 0 family ethernet-switching vlan members Niketon-MK-INT
+set interfaces ge-0/1/3 unit 0 family ethernet-switching vlan members Niketon-MK-GGC
+set interfaces ge-0/1/3 unit 0 family ethernet-switching vlan members Niketon-MK-BDIX
+set interfaces ge-0/1/3 unit 0 family ethernet-switching vlan members NTMC-Mikrotik-Access
+set interfaces ge-0/1/3 unit 0 family ethernet-switching vlan members PPPoE-NK-FTTX
+set interfaces ae1 description ----NK--------ae1------KJ-SW10-ae15
+set interfaces ae1 aggregated-ether-options minimum-links 1
+set interfaces ae1 aggregated-ether-options link-speed 1g
+set interfaces ae1 unit 0 family ethernet-switching port-mode trunk
+set interfaces ae1 unit 0 family ethernet-switching vlan members Managment
+set interfaces ae1 unit 0 family ethernet-switching vlan members NK-01129
+set interfaces ae1 unit 0 family ethernet-switching vlan members Amulate-Pharmaceuticals-H17
+set interfaces ae1 unit 0 family ethernet-switching vlan members NK-0197
+set interfaces ae1 unit 0 family ethernet-switching vlan members NK-0621
+set interfaces ae1 unit 0 family ethernet-switching vlan members NK-1060
+set interfaces ae1 unit 0 family ethernet-switching vlan members Tirzok-NK
+set interfaces ae1 unit 0 family ethernet-switching vlan members NK-01135
+set interfaces ae1 unit 0 family ethernet-switching vlan members NK-03142
+set interfaces ae1 unit 0 family ethernet-switching vlan members Cerebrum-Technology
+set interfaces ae1 unit 0 family ethernet-switching vlan members Jeanologia-Bangladesh
+set interfaces ae1 unit 0 family ethernet-switching vlan members NK-01190
+set interfaces ae1 unit 0 family ethernet-switching vlan members AFC-Health
+set interfaces ae1 unit 0 family ethernet-switching vlan members BRAC-IT-Service-DATA
+set interfaces ae1 unit 0 family ethernet-switching vlan members NK-01222
+set interfaces ae1 unit 0 family ethernet-switching vlan members DH-984-Cobait
+set interfaces ae1 unit 0 family ethernet-switching vlan members NK-0455
+set interfaces ae1 unit 0 family ethernet-switching vlan members Amulate-Pharmaceuticals-H7
+set interfaces ae1 unit 0 family ethernet-switching vlan members Fardin-DMD-House-NK
+set interfaces ae1 unit 0 family ethernet-switching vlan members NK-0122
+set interfaces ae1 unit 0 family ethernet-switching vlan members NK-0698
+set interfaces ae1 unit 0 family ethernet-switching vlan members Edison-NK-DATA
+set interfaces ae1 unit 0 family ethernet-switching vlan members Franchetti-Niketon
+set interfaces ae1 unit 0 family ethernet-switching vlan members NK-08115
+set interfaces ae1 unit 0 family ethernet-switching vlan members NK-05100
+set interfaces ae1 unit 0 family ethernet-switching vlan members NK-08135
+set interfaces ae1 unit 0 family ethernet-switching vlan members NK-1055-DATA
+set interfaces ae1 unit 0 family ethernet-switching vlan members BRAC-IT-Service-FTTX
+set interfaces ae1 unit 0 family ethernet-switching vlan members NK-0890
+set interfaces ae1 unit 0 family ethernet-switching vlan members DH-705-Hams
+set interfaces ae1 unit 0 family ethernet-switching vlan members NK-0897
+set interfaces ae1 unit 0 family ethernet-switching vlan members NK-0935
+set interfaces ae1 unit 0 family ethernet-switching vlan members NK-0938
+set interfaces ae1 unit 0 family ethernet-switching vlan members NK-0942
+set interfaces ae1 unit 0 family ethernet-switching vlan members Azoric-Trading-Niketon
+set interfaces ae1 unit 0 family ethernet-switching vlan members NK-1044
+set interfaces ae1 unit 0 family ethernet-switching vlan members NK-1055
+set interfaces ae1 unit 0 family ethernet-switching vlan members Now-Multimedia
+set interfaces ae1 unit 0 family ethernet-switching vlan members Franchettii
+set interfaces ae1 unit 0 family ethernet-switching vlan members NK-1223
+set interfaces ae1 unit 0 family ethernet-switching vlan members NK-1419
+set interfaces ae1 unit 0 family ethernet-switching vlan members PPPoE-NK-FTTX
+set interfaces ae1 unit 0 family ethernet-switching vlan members Nascent-Gardenia-NK
+set interfaces ae1 unit 0 family ethernet-switching vlan members Karkhana
+set interfaces ae1 unit 0 family ethernet-switching vlan members SB-Tel
+set interfaces ae1 unit 0 family ethernet-switching vlan members Bengal-Internet-NK
+set interfaces ae1 unit 0 family ethernet-switching vlan members Bengal-Data-NK
+set interfaces ae1 unit 0 family ethernet-switching vlan members Asian-TV
+set interfaces ae1 unit 0 family ethernet-switching vlan members DH-350-SB-Tel-R4
+set interfaces ae1 unit 0 family ethernet-switching vlan members DH-350-SB-Tel-HO
+set interfaces ae1 unit 0 family ethernet-switching vlan members NK-01212
+set interfaces ae1 unit 0 family ethernet-switching vlan members NK-0749
+set interfaces ae1 unit 0 family ethernet-switching vlan members NK-08155
+set interfaces ae1 unit 0 family ethernet-switching vlan members NK-0754
+set interfaces ae1 unit 0 family ethernet-switching vlan members NK-1091
+set interfaces ae1 unit 0 family ethernet-switching vlan members Fu-Wang-FTTX
+set interfaces ae1 unit 0 family ethernet-switching vlan members Niketon-MK-INT
+set interfaces ae1 unit 0 family ethernet-switching vlan members Niketon-MK-GGC
+set interfaces ae1 unit 0 family ethernet-switching vlan members Niketon-MK-BDIX
+set interfaces ae1 unit 0 family ethernet-switching vlan members NTMC-Mikrotik-Access
+set interfaces ae1 unit 0 family ethernet-switching vlan members Metroidfilms
+set interfaces ae1 unit 0 family ethernet-switching vlan members NK-Access-Control
+set interfaces ae1 unit 0 family ethernet-switching vlan members NOL-NK-POP-Camera
+set interfaces ae1 unit 0 family ethernet-switching vlan members OLT-All-Real-IP
+set interfaces ae1 unit 0 family ethernet-switching vlan members n2sys-Niketon
+set interfaces ae1 unit 0 family ethernet-switching vlan members Sohan_Home
+set interfaces vlan unit 507 family inet address 172.17.25.48/24
+set snmp community next_online
+set vlans AFC-Health vlan-id 1719
+set vlans Amulate-Pharmaceuticals-H17 vlan-id 1718
+set vlans Amulate-Pharmaceuticals-H7 vlan-id 1716
+set vlans Asian-TV vlan-id 595
+set vlans Azoric-Trading-Niketon vlan-id 1714
+set vlans BRAC-IT-Service-DATA vlan-id 1720
+set vlans BRAC-IT-Service-FTTX vlan-id 1725
+set vlans Bengal-Data-NK vlan-id 819
+set vlans Bengal-Internet-NK vlan-id 1724
+set vlans Cerebrum-Technology vlan-id 1705
+set vlans DH-350-SB-Tel-HO vlan-id 850
+set vlans DH-350-SB-Tel-R4 vlan-id 851
+set vlans DH-705-Hams vlan-id 1723
+set vlans DH-984-Cobait vlan-id 1704
+set vlans Edison-NK-DATA vlan-id 1713
+set vlans Fardin-DMD-House-NK vlan-id 1735
+set vlans Franchetti-Niketon vlan-id 1712
+set vlans Franchettii vlan-id 1737
+set vlans Fu-Wang-FTTX vlan-id 725
+set vlans Jeanologia-Bangladesh vlan-id 1709
+set vlans Karkhana vlan-id 1711
+set vlans Managment vlan-id 507
+set vlans Managment l3-interface vlan.507
+set vlans Metroidfilms vlan-id 1703
+set vlans NK-01129 vlan-id 1739
+set vlans NK-01135 vlan-id 1742
+set vlans NK-01190 vlan-id 1710
+set vlans NK-01212 vlan-id 1746
+set vlans NK-0122 vlan-id 1715
+set vlans NK-01222 vlan-id 1728
+set vlans NK-0197 vlan-id 1732
+set vlans NK-03142 vlan-id 1743
+set vlans NK-0455 vlan-id 1740
+set vlans NK-05100 vlan-id 1744
+set vlans NK-0621 vlan-id 1736
+set vlans NK-0698 vlan-id 1745
+set vlans NK-0749 vlan-id 1747
+set vlans NK-0754 vlan-id 1749
+set vlans NK-08115 vlan-id 1734
+set vlans NK-08135 vlan-id 1741
+set vlans NK-08155 vlan-id 1748
+set vlans NK-0890 vlan-id 1721
+set vlans NK-0897 vlan-id 1729
+set vlans NK-0935 vlan-id 1717
+set vlans NK-0938 vlan-id 1726
+set vlans NK-0942 vlan-id 1731
+set vlans NK-1044 vlan-id 1707
+set vlans NK-1055 vlan-id 1730
+set vlans NK-1055-DATA vlan-id 1708
+set vlans NK-1060 vlan-id 1702
+set vlans NK-1091 vlan-id 1750
+set vlans NK-1223 vlan-id 1738
+set vlans NK-1419 vlan-id 1701
+set vlans NK-Access-Control vlan-id 234
+set vlans NOL-NK-POP-Camera vlan-id 259
+set vlans NTMC-Mikrotik-Access vlan-id 211
+set vlans Nascent-Gardenia-NK vlan-id 1751
+set vlans Niketon-MK-BDIX vlan-id 758
+set vlans Niketon-MK-GGC vlan-id 757
+set vlans Niketon-MK-INT vlan-id 756
+set vlans Now-Multimedia vlan-id 1727
+set vlans OLT-All-Real-IP vlan-id 2500
+set vlans PPPoE-NK-FTTX vlan-id 1700
+set vlans SB-Tel vlan-id 816
+set vlans Sohan_Home vlan-id 305
+set vlans Tirzok-NK vlan-id 1722
+set vlans n2sys-Niketon vlan-id 1733
