@@ -1,0 +1,292 @@
+Using 4737 out of 524288 bytes
+!
+version 12.2
+no service pad
+no service timestamps debug uptime
+no service timestamps log uptime
+no service password-encryption
+!
+hostname Baridhara
+!
+boot-start-marker
+boot-end-marker
+!
+enable secret 5 $1$34l8$hBZiUXQGeexY5.HvmgQV81
+enable password 7650
+!
+no aaa new-model
+system mtu routing 1998
+!
+!
+!
+crypto pki trustpoint TP-self-signed-1743788928
+ enrollment selfsigned
+ subject-name cn=IOS-Self-Signed-Certificate-1743788928
+ revocation-check none
+ rsakeypair TP-self-signed-1743788928
+!
+!
+crypto pki certificate chain TP-self-signed-1743788928
+ certificate self-signed 01 nvram:IOS-Self-Sig#383A.cer
+!
+!
+!
+!
+spanning-tree mode rapid-pvst
+spanning-tree extend system-id
+!
+!
+vlan internal allocation policy ascending
+!
+vlan 100
+!
+vlan 507
+ name NOL-Configuration
+!
+vlan 574
+ name Hamko
+!
+vlan 705
+ name Data-Edge
+!
+vlan 766
+ name BA-PPOE
+!
+vlan 768
+ name AB_Drive_Nadda
+!
+vlan 834
+ name Egis_Rail_MC
+!
+vlan 903
+ name PPPoE-BA
+!
+vlan 913
+ name Talent-Centric-MD
+!
+vlan 914
+ name Talent-Centric
+!
+vlan 917
+ name Build-Trade-BA
+!
+vlan 921
+ name Nasir-Group
+!
+vlan 922
+ name Dresdin
+!
+vlan 952
+ name Quasem-SUNSTONE
+!
+vlan 961
+ name JAT-Holding
+!
+vlan 962
+ name Apollo-Hospitals
+!
+vlan 966
+ name DH-382
+!
+vlan 971
+ name Hamko-Head-Office
+!
+vlan 989
+ name Fashion-Global
+!
+vlan 1000
+ name test
+!
+vlan 1101
+ name DH-366
+!
+vlan 1127
+ name BA-0819_Sloaric
+!
+vlan 1131
+ name DH-985-Zurhem
+!
+vlan 1145
+ name Colombus_Textile
+!
+vlan 1146
+ name DH-704-Natun-Bazar
+!
+vlan 1148
+ name Instant_Job
+!
+vlan 2500
+ name OLT_REAL_IP
+!
+!
+policy-map 7mb
+ class class-default
+    police cir 7000000
+      conform-action transmit
+      exceed-action drop
+!
+!
+!
+interface FastEthernet0/1
+ description free
+ duplex full
+!
+interface FastEthernet0/2
+ description DH-1232-Egis-Rail-SA-Baridhara-Backup_Data
+ switchport access vlan 834
+ duplex full
+!
+interface FastEthernet0/3
+ description DH-1202-AB-Drive-Limited
+ port-type nni
+ switchport access vlan 768
+ duplex full
+ no cdp enable
+ no cdp tlv server-location
+ no cdp tlv app
+!
+interface FastEthernet0/4
+ description DH-1007-MD-Room
+ switchport access vlan 913
+ duplex full
+!
+interface FastEthernet0/5
+ description DH-1019-JAT-Holding-Bangladesh-(PVT)-Ltd
+ port-type nni
+ switchport access vlan 961
+ duplex full
+ no cdp enable
+ no cdp tlv server-location
+ no cdp tlv app
+!
+interface FastEthernet0/6
+ description BA-AV03
+ switchport access vlan 903
+ duplex full
+!
+interface FastEthernet0/7
+ description DH-366-Atlantic-Industries-Ltd
+ switchport access vlan 1101
+ duplex full
+!
+interface FastEthernet0/8
+ description test
+ switchport access vlan 1000
+ shutdown
+!
+interface FastEthernet0/9
+ description DH-357(B&F Company)
+ duplex full
+!
+interface FastEthernet0/10
+ description DH-1465-Quasem-SUNSTONE-Show-Room-Baridhara
+ switchport access vlan 952
+ duplex full
+!
+interface FastEthernet0/11
+ description DH-382-North-End-Coffee-Roasters
+ switchport access vlan 966
+ duplex full
+!
+interface FastEthernet0/12
+ description Hamko(1310)
+ switchport access vlan 971
+ duplex full
+!
+interface FastEthernet0/13
+ description Genvio-Pharma-Ltd-Baridhara
+ switchport access vlan 1146
+ duplex full
+!
+interface FastEthernet0/14
+ description BA-0721A (1310+MC)
+ switchport access vlan 903
+ duplex full
+!
+interface FastEthernet0/15
+ description Data-Edge
+ switchport access vlan 705
+ duplex full
+!
+interface FastEthernet0/16
+ description BA-PA82
+ switchport access vlan 768
+ duplex full
+!
+interface FastEthernet0/17
+ description DH-1007-Talent-Centric
+ switchport access vlan 914
+ duplex full
+!
+interface FastEthernet0/18
+ description Instant_Job-Hub
+ switchport access vlan 1148
+ duplex full
+!
+interface FastEthernet0/19
+ description DH-1029-Fashion-Global-Group
+ switchport access vlan 989
+ duplex full
+!
+interface FastEthernet0/20
+ description BA-PA54(1310)
+ switchport access vlan 903
+ duplex full
+!
+interface FastEthernet0/21
+ description Free
+ switchport access vlan 1148
+ duplex full
+!
+interface FastEthernet0/22
+ description Test-PPOE
+ switchport access vlan 766
+ duplex full
+!
+interface FastEthernet0/23
+ description Hamko-HO
+ switchport access vlan 971
+ duplex full
+!
+interface FastEthernet0/24
+ description Free
+ switchport access vlan 507
+ duplex full
+!
+interface GigabitEthernet0/1
+ description MAIN_LINK-SW11-ge-2/0/30
+ port-type nni
+ switchport mode trunk
+!
+interface GigabitEthernet0/2
+ description Spark-System-L3
+ port-type nni
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+interface Vlan507
+ ip address 172.17.25.43 255.255.255.0
+!
+no ip http server
+ip http secure-server
+ip classless
+!
+!
+ip sla enable reaction-alerts
+ip sla enable timestamp
+no cdp run
+!
+snmp-server community next_online RO
+!
+line con 0
+ exec-timeout 0 0
+line vty 0 4
+ password 7650
+ login
+line vty 5 15
+ password 7650
+ login
+!
+end

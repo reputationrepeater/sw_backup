@@ -1,0 +1,174 @@
+Using 2787 out of 32768 bytes
+!
+version 12.1
+no service pad
+service timestamps debug uptime
+service timestamps log uptime
+no service password-encryption
+!
+hostname Banani-SW53
+!
+enable secret 5 $1$lVC.$1X07U6QkoKVe531lnBsx61
+!
+ip subnet-zero
+vtp domain UT-NOL
+vtp mode transparent
+!
+spanning-tree mode pvst
+no spanning-tree optimize bpdu transmission
+spanning-tree extend system-id
+!
+!
+vlan 101
+ name Banani-office
+!
+vlan 230
+ name BN-Access-Control
+!
+vlan 246
+!
+vlan 248
+ name cam1
+!
+vlan 249
+ name NOL-BN-Marketing-2-Camera
+!
+vlan 250
+ name cam2
+!
+vlan 253
+ name cam3
+!
+vlan 501
+ name NOL-Configuration
+!
+vlan 507
+ name NOL-Management
+!
+vlan 527
+ name IPTSP
+!
+interface FastEthernet0/1
+ description BN-Office-Camera
+ switchport access vlan 249
+ no ip address
+!
+interface FastEthernet0/2
+ description Wifi-Router
+ switchport access vlan 101
+ no ip address
+!
+interface FastEthernet0/3
+ description Mikrotik
+ switchport access vlan 101
+ no ip address
+!
+interface FastEthernet0/4
+ description Access-Control
+ switchport access vlan 230
+ no ip address
+!
+interface FastEthernet0/5
+ description IP-Phone
+ switchport access vlan 527
+ no ip address
+!
+interface FastEthernet0/6
+ description BN-Office-Camera-2
+ switchport access vlan 248
+ no ip address
+!
+interface FastEthernet0/7
+ switchport access vlan 250
+ no ip address
+!
+interface FastEthernet0/8
+ switchport access vlan 527
+ switchport mode access
+ no ip address
+!
+interface FastEthernet0/9
+ switchport access vlan 246
+ no ip address
+!
+interface FastEthernet0/10
+ description New_Marketing_IP
+ switchport access vlan 527
+ switchport mode access
+ no ip address
+!
+interface FastEthernet0/11
+ description free
+ switchport access vlan 101
+ switchport mode access
+ no ip address
+!
+interface FastEthernet0/12
+ no ip address
+!
+interface FastEthernet0/13
+ no ip address
+!
+interface FastEthernet0/14
+ no ip address
+!
+interface FastEthernet0/15
+ no ip address
+!
+interface FastEthernet0/16
+ no ip address
+!
+interface FastEthernet0/17
+ no ip address
+!
+interface FastEthernet0/18
+ no ip address
+!
+interface FastEthernet0/19
+ no ip address
+!
+interface FastEthernet0/20
+ description Sajjad_IP-Phn
+ switchport access vlan 527
+ no ip address
+!
+interface FastEthernet0/21
+ switchport trunk allowed vlan 101,230,249,501,507,527
+ switchport mode trunk
+ no ip address
+!
+interface FastEthernet0/22
+ no ip address
+!
+interface FastEthernet0/23
+ no ip address
+!
+interface FastEthernet0/24
+ description Up-Link-SW-11
+ switchport trunk allowed vlan 101,230,246,248-250,253,501,507,527
+ switchport mode trunk
+ no ip address
+!
+interface Vlan1
+ no ip address
+ no ip route-cache
+ shutdown
+!
+interface Vlan507
+ ip address 172.17.25.53 255.255.255.0
+ no ip route-cache
+!
+ip http server
+!
+!
+line con 0
+ password 7650
+ login
+line vty 0 4
+ password 7650
+ login
+line vty 5 15
+ password 7650
+ login
+!
+end

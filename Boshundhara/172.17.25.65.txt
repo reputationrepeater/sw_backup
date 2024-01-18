@@ -1,0 +1,246 @@
+set version 12.3R6.6
+set system host-name Bashundhara-PoP.65
+set system time-zone Asia/Dhaka
+set system root-authentication encrypted-password "$1$2zDPk1WK$bqZ.zR7LzB4YX2Dk.vadX/"
+set system login user noc uid 2001
+set system login user noc class super-user
+set system login user noc authentication encrypted-password "$1$mOlXqvRM$L.pi.XPt3D6pjxwmS6Wfj/"
+set system login user shameem uid 2002
+set system login user shameem class super-user
+set system login user shameem authentication encrypted-password "$1$dvOduGXU$TiXZIQa7zZwnyu0ifoyir1"
+set system services ssh
+set system services telnet
+set system services dhcp traceoptions file dhcp_logfile
+set system services dhcp traceoptions level all
+set system services dhcp traceoptions flag all
+set system syslog user * any emergency
+set system syslog file messages any notice
+set system syslog file messages authorization info
+set system syslog file interactive-commands interactive-commands any
+set chassis aggregated-devices ethernet device-count 30
+set chassis auto-image-upgrade
+set interfaces ge-0/0/0 unit 0 family ethernet-switching
+set interfaces ge-0/0/1 unit 0 family ethernet-switching
+set interfaces ge-0/0/2 description ----------002----------Ethics-Bashundhara
+set interfaces ge-0/0/2 unit 0 family ethernet-switching port-mode access
+set interfaces ge-0/0/2 unit 0 family ethernet-switching vlan members Ethics-Bashundhara
+set interfaces ge-0/0/3 description ----------003----------NOL-Bashundhara-Block-D-Camera
+set interfaces ge-0/0/3 unit 0 family ethernet-switching port-mode access
+set interfaces ge-0/0/3 unit 0 family ethernet-switching vlan members Bashundhara_Camera
+set interfaces ge-0/0/4 description ----------004----------DH-900-STS-Group-Head-Office
+set interfaces ge-0/0/4 unit 0 family ethernet-switching port-mode access
+set interfaces ge-0/0/4 unit 0 family ethernet-switching vlan members STS-Group-HO
+set interfaces ge-0/0/5 description ----------005----------Boshundhara_Iblcok_OLT
+set interfaces ge-0/0/5 unit 0 family ethernet-switching port-mode trunk
+set interfaces ge-0/0/5 unit 0 family ethernet-switching vlan members OLT-All-Real-IP
+set interfaces ge-0/0/5 unit 0 family ethernet-switching vlan members PPPOE-BS
+set interfaces ge-0/0/6 unit 0 family ethernet-switching
+set interfaces ge-0/0/7 description ----------007----------DH-1148-Dream-Way-Group
+set interfaces ge-0/0/7 unit 0 family ethernet-switching port-mode access
+set interfaces ge-0/0/7 unit 0 family ethernet-switching vlan members Dream_Way_Bashundhara
+set interfaces ge-0/0/8 description ----------008----------DH-1217-Secret-Recipe-Bashundhara
+set interfaces ge-0/0/8 unit 0 family ethernet-switching port-mode access
+set interfaces ge-0/0/8 unit 0 family ethernet-switching vlan members Secret_Recipe_BS
+set interfaces ge-0/0/10 description ----------010----------ISD-Director
+set interfaces ge-0/0/10 unit 0 family ethernet-switching port-mode access
+set interfaces ge-0/0/10 unit 0 family ethernet-switching vlan members PPPOE-BS
+set interfaces ge-0/0/11 description ----------011----------Bashundhara-Mikrotik-WAN-Backup
+set interfaces ge-0/0/11 ether-options no-auto-negotiation
+set interfaces ge-0/0/11 ether-options link-mode full-duplex
+set interfaces ge-0/0/11 ether-options speed 1g
+set interfaces ge-0/0/11 unit 0 family ethernet-switching port-mode trunk
+set interfaces ge-0/0/11 unit 0 family ethernet-switching vlan members BS-Mikrotik-GGC
+set interfaces ge-0/0/11 unit 0 family ethernet-switching vlan members BS-Mikrotik-BDIX
+set interfaces ge-0/0/11 unit 0 family ethernet-switching vlan members BS-Mikrotik-INT-Backup
+set interfaces ge-0/0/12 description ----------012----------Bashundhara-OLT-86
+set interfaces ge-0/0/12 unit 0 family ethernet-switching port-mode trunk
+set interfaces ge-0/0/12 unit 0 family ethernet-switching vlan members OLT-All-Real-IP
+set interfaces ge-0/0/12 unit 0 family ethernet-switching vlan members PPPOE-BS
+set interfaces ge-0/0/12 unit 0 family ethernet-switching vlan members North_End_Coffee
+set interfaces ge-0/0/12 unit 0 family ethernet-switching vlan members Evergreen92_Property
+set interfaces ge-0/0/12 unit 0 family ethernet-switching vlan members Ethics_BS_FTTX
+set interfaces ge-0/0/12 unit 0 family ethernet-switching vlan members Kopotakkho_Homes
+set interfaces ge-0/0/12 unit 0 family ethernet-switching vlan members Excellent_Agro_BS
+set interfaces ge-0/0/12 unit 0 family ethernet-switching vlan members Tsports-Broadcast-GGC
+set interfaces ge-0/0/12 unit 0 family ethernet-switching vlan members Tsports-Broadcast-BDIX
+set interfaces ge-0/0/12 unit 0 family ethernet-switching vlan members JCX_Developments
+set interfaces ge-0/0/12 unit 0 family ethernet-switching vlan members Bashundhara_Aviation_BS
+set interfaces ge-0/0/12 unit 0 family ethernet-switching vlan members South_View_Textile_BS
+set interfaces ge-0/0/12 unit 0 family ethernet-switching vlan members BATL_BS
+set interfaces ge-0/0/12 unit 0 family ethernet-switching vlan members Maati_Properties_BS
+set interfaces ge-0/0/12 unit 0 family ethernet-switching vlan members Eicra_Soft_BS
+set interfaces ge-0/0/12 unit 0 family ethernet-switching vlan members Azal_Group_BS
+set interfaces ge-0/0/12 unit 0 family ethernet-switching vlan members Japan_Real_Estate_BS
+set interfaces ge-0/0/14 description ----------014----------DH-1131-International-Medicare-Ltd
+set interfaces ge-0/0/14 unit 0 family ethernet-switching port-mode access
+set interfaces ge-0/0/14 unit 0 family ethernet-switching vlan members Medicare_BS
+set interfaces ge-0/0/15 unit 0 family ethernet-switching
+set interfaces ge-0/0/16 description ----------016----------DH-1209-Muazuddin-Textile-Ltd
+set interfaces ge-0/0/16 unit 0 family ethernet-switching port-mode access
+set interfaces ge-0/0/16 unit 0 family ethernet-switching vlan members Muazuddin_Steel_BS
+set interfaces ge-0/0/17 description ----------017----------BS_Iblcok_OLT_Distribution_Port
+set interfaces ge-0/0/17 unit 0 family ethernet-switching port-mode trunk
+set interfaces ge-0/0/17 unit 0 family ethernet-switching vlan members PPPOE-BS
+set interfaces ge-0/0/18 description ----------018----------DH-1164-T-Sports-Backup
+set interfaces ge-0/0/18 unit 0 family ethernet-switching port-mode trunk
+set interfaces ge-0/0/18 unit 0 family ethernet-switching vlan members Tsports_Backup_INT
+set interfaces ge-0/0/18 unit 0 family ethernet-switching vlan members Tsports-GGC-Backup
+set interfaces ge-0/0/18 unit 0 family ethernet-switching vlan members Tsports-BDIX-Backup
+set interfaces ge-0/0/19 unit 0 family ethernet-switching
+set interfaces ge-0/0/20 description ----------020----------DH-1295-Sarker-International
+set interfaces ge-0/0/20 unit 0 family ethernet-switching port-mode access
+set interfaces ge-0/0/20 unit 0 family ethernet-switching vlan members Sarker_INTL_BS
+set interfaces ge-0/0/21 unit 0 family ethernet-switching
+set interfaces ge-0/0/22 description ----------022----------DH-1265-Dream-71
+set interfaces ge-0/0/22 unit 0 family ethernet-switching port-mode access
+set interfaces ge-0/0/23 unit 0 family ethernet-switching
+set interfaces ge-0/0/24 description ----------024----------DH-1463-Bappy-International-BS
+set interfaces ge-0/0/24 unit 0 family ethernet-switching port-mode access
+set interfaces ge-0/0/24 unit 0 family ethernet-switching vlan members Japan_Real_Estate_BS
+set interfaces ge-0/0/25 description ----------025----------DH-1353-Abdullah-Group
+set interfaces ge-0/0/25 unit 0 family ethernet-switching port-mode access
+set interfaces ge-0/0/25 unit 0 family ethernet-switching vlan members Abdullah_Group_BS
+set interfaces ge-0/0/26 unit 0 family ethernet-switching
+set interfaces ge-0/0/27 unit 0 family ethernet-switching
+set interfaces ge-0/0/28 unit 0 family ethernet-switching
+set interfaces ge-0/0/29 unit 0 family ethernet-switching
+set interfaces ge-0/0/30 description ----------030----------Bashundhara-OLT-87_Management_Corporate-User_A-B-Block
+set interfaces ge-0/0/30 unit 0 family ethernet-switching port-mode trunk
+set interfaces ge-0/0/30 unit 0 family ethernet-switching vlan members OLT-All-Real-IP
+set interfaces ge-0/0/30 unit 0 family ethernet-switching vlan members PPPOE-BS
+set interfaces ge-0/0/30 unit 0 family ethernet-switching vlan members Deshi_Bites_BS
+set interfaces ge-0/0/30 unit 0 family ethernet-switching vlan members Bitopi_BS
+set interfaces ge-0/0/31 description ----------031----------OLT-P10
+set interfaces ge-0/0/31 unit 0 family ethernet-switching port-mode trunk
+set interfaces ge-0/0/31 unit 0 family ethernet-switching vlan members Deshi_Bites_BS
+set interfaces ge-0/0/32 unit 0 family ethernet-switching
+set interfaces ge-0/0/33 unit 0 family ethernet-switching
+set interfaces ge-0/0/34 unit 0 family ethernet-switching
+set interfaces ge-0/0/35 unit 0 family ethernet-switching
+set interfaces ge-0/0/36 unit 0 family ethernet-switching
+set interfaces ge-0/0/37 unit 0 family ethernet-switching
+set interfaces ge-0/0/38 unit 0 family ethernet-switching
+set interfaces ge-0/0/39 unit 0 family ethernet-switching
+set interfaces ge-0/0/40 ether-options speed 1g
+set interfaces ge-0/0/40 unit 0 family ethernet-switching port-mode trunk
+set interfaces ge-0/0/40 unit 0 family ethernet-switching vlan members Deshi_Bites_BS
+set interfaces ge-0/0/40 unit 0 family ethernet-switching vlan members PPPOE-BS
+set interfaces ge-0/0/41 unit 0 family ethernet-switching
+set interfaces ge-0/0/42 unit 0 family ethernet-switching
+set interfaces ge-0/0/43 unit 0 family ethernet-switching
+set interfaces ge-0/0/44 unit 0 family ethernet-switching
+set interfaces ge-0/0/45 unit 0 family ethernet-switching
+set interfaces ge-0/0/46 unit 0 family ethernet-switching
+set interfaces ge-0/0/47 unit 0 family ethernet-switching
+set interfaces ge-0/1/0 description "----------010----------SW-11-F@H-Colo"
+set interfaces ge-0/1/0 ether-options 802.3ad ae22
+set interfaces ge-0/1/1 description ----------011----------SW-11-OH-Baridhara
+set interfaces ge-0/1/1 ether-options 802.3ad ae22
+set interfaces ge-0/1/2 description ----------012----------ISD-School-Primary
+set interfaces ge-0/1/2 unit 0 family ethernet-switching port-mode access
+set interfaces ge-0/1/2 unit 0 family ethernet-switching vlan members DH-900-IDS-Bashundhara
+set interfaces ge-0/1/3 description ----------013----------Bashundhara-Mikrotik-WAN-Pri
+set interfaces ge-0/1/3 ether-options auto-negotiation
+set interfaces ge-0/1/3 ether-options link-mode full-duplex
+set interfaces ge-0/1/3 unit 0 family ethernet-switching port-mode trunk
+set interfaces ge-0/1/3 unit 0 family ethernet-switching vlan members BS-Mikrotik-INT
+set interfaces ge-0/1/3 unit 0 family ethernet-switching vlan members BS-Mikrotik-GGC
+set interfaces ge-0/1/3 unit 0 family ethernet-switching vlan members BS-Mikrotik-BDIX
+set interfaces ge-0/1/3 unit 0 family ethernet-switching vlan members BS-Mikrotik-CDN
+set interfaces ge-0/1/3 unit 0 family ethernet-switching vlan members PPPOE-BS
+set interfaces ae22 description ----------ae22----------SW-11-ae22
+set interfaces ae22 aggregated-ether-options minimum-links 1
+set interfaces ae22 aggregated-ether-options link-speed 1g
+set interfaces ae22 unit 0 family ethernet-switching port-mode trunk
+set interfaces ae22 unit 0 family ethernet-switching vlan members NOL-Management
+set interfaces ae22 unit 0 family ethernet-switching vlan members DH-900-IDS-Bashundhara
+set interfaces ae22 unit 0 family ethernet-switching vlan members PPPOE-BS
+set interfaces ae22 unit 0 family ethernet-switching vlan members OLT-All-Real-IP
+set interfaces ae22 unit 0 family ethernet-switching vlan members Evergreen92_Property
+set interfaces ae22 unit 0 family ethernet-switching vlan members Ethics_BS_FTTX
+set interfaces ae22 unit 0 family ethernet-switching vlan members Kopotakkho_Homes
+set interfaces ae22 unit 0 family ethernet-switching vlan members Excellent_Agro_BS
+set interfaces ae22 unit 0 family ethernet-switching vlan members Tsports-Broadcast-GGC
+set interfaces ae22 unit 0 family ethernet-switching vlan members Tsports-Broadcast-BDIX
+set interfaces ae22 unit 0 family ethernet-switching vlan members JCX_Developments
+set interfaces ae22 unit 0 family ethernet-switching vlan members North_End_Coffee
+set interfaces ae22 unit 0 family ethernet-switching vlan members Apollo-Hospital-Primary
+set interfaces ae22 unit 0 family ethernet-switching vlan members STS-Group-HO
+set interfaces ae22 unit 0 family ethernet-switching vlan members Baridhara-PPPOE
+set interfaces ae22 unit 0 family ethernet-switching vlan members Ethics-Bashundhara
+set interfaces ae22 unit 0 family ethernet-switching vlan members Medicare_BS
+set interfaces ae22 unit 0 family ethernet-switching vlan members Dream_Way_Bashundhara
+set interfaces ae22 unit 0 family ethernet-switching vlan members Tsports_Backup_INT
+set interfaces ae22 unit 0 family ethernet-switching vlan members Tsports-GGC-Backup
+set interfaces ae22 unit 0 family ethernet-switching vlan members Tsports-BDIX-Backup
+set interfaces ae22 unit 0 family ethernet-switching vlan members Secret_Recipe_BS
+set interfaces ae22 unit 0 family ethernet-switching vlan members BS-Mikrotik-INT
+set interfaces ae22 unit 0 family ethernet-switching vlan members BS-Mikrotik-GGC
+set interfaces ae22 unit 0 family ethernet-switching vlan members BS-Mikrotik-BDIX
+set interfaces ae22 unit 0 family ethernet-switching vlan members Muazuddin_Steel_BS
+set interfaces ae22 unit 0 family ethernet-switching vlan members Bashundhara_Aviation_BS
+set interfaces ae22 unit 0 family ethernet-switching vlan members South_View_Textile_BS
+set interfaces ae22 unit 0 family ethernet-switching vlan members Japan_Real_Estate_BS
+set interfaces ae22 unit 0 family ethernet-switching vlan members Application_Mentors_BS
+set interfaces ae22 unit 0 family ethernet-switching vlan members BATL_BS
+set interfaces ae22 unit 0 family ethernet-switching vlan members Sarker_INTL_BS
+set interfaces ae22 unit 0 family ethernet-switching vlan members Deshi_Bites_BS
+set interfaces ae22 unit 0 family ethernet-switching vlan members Maati_Properties_BS
+set interfaces ae22 unit 0 family ethernet-switching vlan members Eicra_Soft_BS
+set interfaces ae22 unit 0 family ethernet-switching vlan members BS-Mikrotik-INT-Backup
+set interfaces ae22 unit 0 family ethernet-switching vlan members Azal_Group_BS
+set interfaces ae22 unit 0 family ethernet-switching vlan members Abdullah_Group_BS
+set interfaces ae22 unit 0 family ethernet-switching vlan members Bashundhara_Camera
+set interfaces ae22 unit 0 family ethernet-switching vlan members BS-Mikrotik-CDN
+set interfaces ae22 unit 0 family ethernet-switching vlan members Bitopi_BS
+set interfaces me0 unit 0 family inet dhcp vendor-id Juniper-ex2200-48t-4g
+set interfaces vlan unit 0 family inet dhcp vendor-id Juniper-ex2200-48t-4g
+set interfaces vlan unit 507 family inet address 172.17.25.65/24
+set protocols igmp-snooping vlan all
+set protocols rstp
+set protocols lldp interface all
+set protocols lldp-med interface all
+set ethernet-switching-options storm-control interface all
+set vlans Abdullah_Group_BS vlan-id 970
+set vlans Apollo-Hospital-Primary vlan-id 955
+set vlans Application_Mentors_BS vlan-id 1001
+set vlans Azal_Group_BS vlan-id 2617
+set vlans BATL_BS vlan-id 2613
+set vlans BS-Mikrotik-BDIX vlan-id 758
+set vlans BS-Mikrotik-CDN vlan-id 759
+set vlans BS-Mikrotik-GGC vlan-id 757
+set vlans BS-Mikrotik-INT vlan-id 756
+set vlans BS-Mikrotik-INT-Backup vlan-id 761
+set vlans Baridhara-PPPOE vlan-id 766
+set vlans Bashundhara_Aviation_BS vlan-id 2610
+set vlans Bashundhara_Camera vlan-id 309
+set vlans Bitopi_BS vlan-id 2618
+set vlans DH-900-IDS-Bashundhara vlan-id 732
+set vlans Deshi_Bites_BS vlan-id 2614
+set vlans Dream_Way_Bashundhara vlan-id 820
+set vlans Eicra_Soft_BS vlan-id 2616
+set vlans Ethics-Bashundhara vlan-id 809
+set vlans Ethics_BS_FTTX vlan-id 2604
+set vlans Evergreen92_Property vlan-id 2603
+set vlans Excellent_Agro_BS vlan-id 2606
+set vlans JCX_Developments vlan-id 2609
+set vlans Japan_Real_Estate_BS vlan-id 2612
+set vlans Kopotakkho_Homes vlan-id 2605
+set vlans Maati_Properties_BS vlan-id 2615
+set vlans Medicare_BS vlan-id 2601
+set vlans Muazuddin_Steel_BS vlan-id 1002
+set vlans NOL-Management vlan-id 507
+set vlans NOL-Management l3-interface vlan.507
+set vlans North_End_Coffee vlan-id 2602
+set vlans OLT-All-Real-IP vlan-id 2500
+set vlans PPPOE-BS vlan-id 904
+set vlans STS-Group-HO vlan-id 735
+set vlans Sarker_INTL_BS vlan-id 826
+set vlans Secret_Recipe_BS vlan-id 1007
+set vlans South_View_Textile_BS vlan-id 2611
+set vlans Tsports-BDIX-Backup vlan-id 928
+set vlans Tsports-Broadcast-BDIX vlan-id 2608
+set vlans Tsports-Broadcast-GGC vlan-id 2607
+set vlans Tsports-GGC-Backup vlan-id 927
+set vlans Tsports_Backup_INT vlan-id 925
+set vlans default l3-interface vlan.0

@@ -1,0 +1,264 @@
+Using 4375 out of 524288 bytes
+!
+version 12.2
+no service pad
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+service unsupported-transceiver
+!
+hostname G2-ME-2-SW-45
+!
+boot-start-marker
+boot-end-marker
+!
+enable secret 5 $1$ebT3$EfP5Ae6G6mtqb4tFd5QSD1
+!
+no aaa new-model
+system mtu routing 1546
+!
+!
+!
+crypto pki trustpoint TP-self-signed-220962944
+ enrollment selfsigned
+ subject-name cn=IOS-Self-Signed-Certificate-220962944
+ revocation-check none
+ rsakeypair TP-self-signed-220962944
+!
+!
+crypto pki certificate chain TP-self-signed-220962944
+ certificate self-signed 01 nvram:IOS-Self-Sig#3435.cer
+!
+!
+!
+no errdisable detect cause gbic-invalid
+!
+spanning-tree mode rapid-pvst
+spanning-tree extend system-id
+!
+!
+vlan internal allocation policy ascending
+!
+vlan 501
+ name NOL-Configuration
+!
+vlan 507
+ name Management
+!
+vlan 771
+ name DH-436-IFS
+!
+vlan 815
+ name DH-975-Anisan
+!
+vlan 829
+ name Baplc
+!
+vlan 836
+ name DH-430-G2
+!
+vlan 837
+ name G2-AV20-BNF
+!
+vlan 838
+ name G2-AV20-BNF-Guest
+!
+vlan 909
+ name PPPoE-G2
+!
+vlan 941
+ name Megna-Aviation-Dat
+!
+vlan 958
+ name Popular_Travel_G2
+!
+vlan 961
+ name G1-2403-Bengal-Group
+!
+vlan 967
+ name DH-1220-Proficient
+!
+vlan 972
+ name DH-1010-Southtech
+!
+vlan 982
+ name Mahmud_Group-MD.Re
+!
+vlan 1053
+ name Jamuna-Gas-MD
+!
+vlan 1054
+ name DH-1196-PGS
+!
+vlan 1145
+ name G2-5524
+!
+vlan 1149
+ name BN-0449-MD
+!
+vlan 1408
+ name BN-0235
+!
+vlan 3292
+ name Junayad-sir-1
+!
+vlan 3295
+ name Junayed-Sir-GGC-Pri
+!
+vlan 3296
+ name Junayed-Sir-CDN-Pri
+!
+!
+!
+interface FastEthernet0/1
+ description Mahmud_Group-MD.Re
+ switchport access vlan 982
+ duplex full
+!
+interface FastEthernet0/2
+ description DH-430-Flora-Direc
+ switchport access vlan 836
+ duplex full
+!
+interface FastEthernet0/3
+ description Megna-Aviation-Dat
+ switchport access vlan 941
+ duplex full
+!
+interface FastEthernet0/4
+ description G2-9510-BAPLC
+ switchport access vlan 829
+ duplex full
+!
+interface FastEthernet0/5
+ description G2-AV20-BNF-Company-HO
+ switchport access vlan 837
+ duplex full
+!
+interface FastEthernet0/6
+ description free
+ switchport access vlan 909
+ duplex full
+!
+interface FastEthernet0/7
+ description G2-6307
+ switchport access vlan 909
+ duplex full
+!
+interface FastEthernet0/8
+ description Junayed-Sir
+ switchport access vlan 1145
+ switchport trunk allowed vlan 501,3292
+ switchport mode trunk
+ duplex full
+!
+interface FastEthernet0/9
+ description DH-1220-Proficient
+ switchport access vlan 967
+ duplex full
+!
+interface FastEthernet0/10
+ description DH-975-Anisan-Fashions-Ltd
+ switchport access vlan 815
+ duplex full
+!
+interface FastEthernet0/11
+ description G1-AV12-Jamuna-MD-House
+ switchport access vlan 1053
+ duplex full
+!
+interface FastEthernet0/12
+ description G2-10503
+ switchport access vlan 909
+ duplex full
+!
+interface FastEthernet0/13
+ description G2-9627
+ switchport access vlan 909
+ duplex full
+!
+interface FastEthernet0/14
+ description G2-4601
+ switchport access vlan 909
+ duplex full
+!
+interface FastEthernet0/15
+ description Dhaka-Popular-Travel-G2
+ switchport access vlan 958
+ duplex full
+!
+interface FastEthernet0/16
+ duplex full
+!
+interface FastEthernet0/17
+ description DH-1196-PGS
+ switchport access vlan 1054
+ duplex full
+!
+interface FastEthernet0/18
+ description free
+ duplex full
+!
+interface FastEthernet0/19
+ description G2-5520
+ switchport access vlan 1054
+ duplex full
+!
+interface FastEthernet0/20
+ duplex full
+!
+interface FastEthernet0/21
+ description G2-AV20-R48-Guest-House
+ switchport access vlan 838
+ duplex full
+!
+interface FastEthernet0/22
+ duplex full
+!
+interface FastEthernet0/23
+ description G1-2403-Bengal-Group
+ switchport access vlan 961
+ duplex full
+!
+interface FastEthernet0/24
+ duplex full
+!
+interface GigabitEthernet0/1
+ description SW45-P1
+ port-type nni
+ switchport mode trunk
+!
+interface GigabitEthernet0/2
+ description Junayed-Sir
+ port-type nni
+ switchport access vlan 1145
+ switchport trunk allowed vlan 501,3292,3295,3296
+ switchport mode trunk
+ speed nonegotiate
+!
+interface Vlan1
+ no ip address
+ no ip route-cache
+!
+interface Vlan507
+ ip address 172.17.25.45 255.255.255.0
+ no ip route-cache
+!
+no ip http server
+ip http secure-server
+ip sla enable reaction-alerts
+snmp-server community next_online RO
+snmp-server community view RO
+snmp-server community host RO
+!
+line con 0
+ password 7650
+ login
+line vty 0 4
+ password 7650
+ login
+line vty 5 15
+ password 7650
+ login
+!
+end

@@ -1,0 +1,149 @@
+set version 12.3R12.4
+set system host-name UT-4-36
+set system root-authentication encrypted-password "$1$OJHGnfW8$QVsPhHg333UwNJlP0ExIb1"
+set system login user noc uid 2001
+set system login user noc class super-user
+set system login user noc authentication encrypted-password "$1$NrZQEP8T$mx8HHQUmY.1VruxipOP6T0"
+set system login user shameem uid 2000
+set system login user shameem class super-user
+set system login user shameem authentication encrypted-password "$1$t/bWfORn$apzgucjxBY8tzl8OdQwue."
+set system services ssh
+set system services telnet
+set system services dhcp traceoptions file dhcp_logfile
+set system services dhcp traceoptions level all
+set system services dhcp traceoptions flag all
+set system syslog user * any emergency
+set system syslog file messages any notice
+set system syslog file messages authorization info
+set system syslog file interactive-commands interactive-commands any
+set chassis aggregated-devices ethernet device-count 45
+set interfaces ge-0/0/0 description ----UT--------000-------DH-1490-Tudorknight-Limited
+set interfaces ge-0/0/0 unit 0 family ethernet-switching port-mode access
+set interfaces ge-0/0/0 unit 0 family ethernet-switching vlan members Tudorknight
+set interfaces ge-0/0/1 description ----UT--------001-------Uttara-Call-Center-ISSL
+set interfaces ge-0/0/1 unit 0 family ethernet-switching port-mode access
+set interfaces ge-0/0/1 unit 0 family ethernet-switching vlan members Uttara-Call-Center
+set interfaces ge-0/0/3 description ----UT--------003-------Office-Hub
+set interfaces ge-0/0/3 unit 0 family ethernet-switching port-mode access
+set interfaces ge-0/0/3 unit 0 family ethernet-switching vlan members PPPoE-UT04-FTTX
+set interfaces ge-0/0/6 description ----UT--------006-------Next-Server-WAN
+set interfaces ge-0/0/6 unit 0 family ethernet-switching port-mode access
+set interfaces ge-0/0/6 unit 0 family ethernet-switching vlan members NEXT-Server
+set interfaces ge-0/0/7 description ----UT--------007-------Metro-Data
+set interfaces ge-0/0/7 unit 0 family ethernet-switching port-mode access
+set interfaces ge-0/0/7 unit 0 family ethernet-switching vlan members NextNet-Metro-Lan
+set interfaces ge-0/0/9 description ----UT--------009-------ISSL-P2P
+set interfaces ge-0/0/9 unit 0 family ethernet-switching port-mode access
+set interfaces ge-0/0/9 unit 0 family ethernet-switching vlan members ISSL-P2P
+set interfaces ge-0/0/10 unit 0 family ethernet-switching port-mode access
+set interfaces ge-0/0/10 unit 0 family ethernet-switching vlan members NOL-UT-4-Camera
+set interfaces ge-0/0/11 description ----UT--------011-------ISSL-data
+set interfaces ge-0/0/11 ether-options speed 100m
+set interfaces ge-0/0/11 unit 0 family ethernet-switching port-mode trunk
+set interfaces ge-0/0/11 unit 0 family ethernet-switching vlan members ISSL-data
+set interfaces ge-0/0/12 description ----UT--------012-------OLT-85-Sec-4,6,8
+set interfaces ge-0/0/12 unit 0 family ethernet-switching port-mode trunk
+set interfaces ge-0/0/12 unit 0 family ethernet-switching vlan members NOL-Configuration
+set interfaces ge-0/0/12 unit 0 family ethernet-switching vlan members STS-Group-S6
+set interfaces ge-0/0/12 unit 0 family ethernet-switching vlan members DH-620-UT06
+set interfaces ge-0/0/12 unit 0 family ethernet-switching vlan members Pizza-Inn-UT-S4
+set interfaces ge-0/0/12 unit 0 family ethernet-switching vlan members Peerless-Industries
+set interfaces ge-0/0/12 unit 0 family ethernet-switching vlan members Uthant-Rabbani
+set interfaces ge-0/0/12 unit 0 family ethernet-switching vlan members Pantagon-MD-House
+set interfaces ge-0/0/12 unit 0 family ethernet-switching vlan members JD-Williams-UT-6
+set interfaces ge-0/0/12 unit 0 family ethernet-switching vlan members London_Fashion
+set interfaces ge-0/0/12 unit 0 family ethernet-switching vlan members Rokib_Sir_UT_OFF
+set interfaces ge-0/0/12 unit 0 family ethernet-switching vlan members Mode_Makers
+set interfaces ge-0/0/12 unit 0 family ethernet-switching vlan members Sajedul_Munir_UT6
+set interfaces ge-0/0/12 unit 0 family ethernet-switching vlan members Tudorknight
+set interfaces ge-0/0/24 description ----UT--------024-------DH-1236-Mahmud-Group-Director-Residence-UT4-Backup
+set interfaces ge-0/0/24 unit 0 family ethernet-switching port-mode access
+set interfaces ge-0/1/2 description ----UT--------012-------OLT-85-Sec-4,6,8_PPP-clients
+set interfaces ge-0/1/2 unit 0 family ethernet-switching port-mode trunk
+set interfaces ge-0/1/2 unit 0 family ethernet-switching vlan members PPPoE-UT04-FTTX
+set interfaces ge-0/1/2 unit 0 family ethernet-switching vlan members OLT_Real_IP
+set interfaces xe-0/1/3 description ----UT--------013-------SW-35-P2
+set interfaces xe-0/1/3 ether-options 802.3ad ae0
+set interfaces ae0 description ----UT--------ae0------Uplink-SW35-ae0
+set interfaces ae0 aggregated-ether-options link-speed 10g
+set interfaces ae0 unit 0 family ethernet-switching port-mode trunk
+set interfaces ae0 unit 0 family ethernet-switching vlan members PPPoE-UT04-FTTX
+set interfaces ae0 unit 0 family ethernet-switching vlan members Uttara-Call-Center
+set interfaces ae0 unit 0 family ethernet-switching vlan members NextNet-Metro-Lan
+set interfaces ae0 unit 0 family ethernet-switching vlan members NEXT-Server
+set interfaces ae0 unit 0 family ethernet-switching vlan members ISSL-data
+set interfaces ae0 unit 0 family ethernet-switching vlan members DH-620-UT06
+set interfaces ae0 unit 0 family ethernet-switching vlan members STS-Group-S6
+set interfaces ae0 unit 0 family ethernet-switching vlan members Pizza-Inn-UT-S4
+set interfaces ae0 unit 0 family ethernet-switching vlan members Swadesh-CDN
+set interfaces ae0 unit 0 family ethernet-switching vlan members OLT_Real_IP
+set interfaces ae0 unit 0 family ethernet-switching vlan members Uthant-Rabbani
+set interfaces ae0 unit 0 family ethernet-switching vlan members Pantagon-MD-House
+set interfaces ae0 unit 0 family ethernet-switching vlan members JD-Williams-UT-6
+set interfaces ae0 unit 0 family ethernet-switching vlan members London_Fashion
+set interfaces ae0 unit 0 family ethernet-switching vlan members NOL-Configuration
+set interfaces ae0 unit 0 family ethernet-switching vlan members Vision-Blue-INT-Sec
+set interfaces ae0 unit 0 family ethernet-switching vlan members Vision-Blue-GGC-Sec
+set interfaces ae0 unit 0 family ethernet-switching vlan members Vision-Blue-CDN-Sec
+set interfaces ae0 unit 0 family ethernet-switching vlan members Vision-Blue-BDIX
+set interfaces ae0 unit 0 family ethernet-switching vlan members Skynet-Secondary-INT
+set interfaces ae0 unit 0 family ethernet-switching vlan members Skynet-Secondary-GGC
+set interfaces ae0 unit 0 family ethernet-switching vlan members Skynet-Secondary-CDN
+set interfaces ae0 unit 0 family ethernet-switching vlan members Skynet-Secondary-BDIX
+set interfaces ae0 unit 0 family ethernet-switching vlan members Net3-Link-Int
+set interfaces ae0 unit 0 family ethernet-switching vlan members Net3-Link-BDIX
+set interfaces ae0 unit 0 family ethernet-switching vlan members Net3-Link-GGC-Pri
+set interfaces ae0 unit 0 family ethernet-switching vlan members Net3-Link-CDN-Pri
+set interfaces ae0 unit 0 family ethernet-switching vlan members NOL-UT-4-Camera
+set interfaces ae0 unit 0 family ethernet-switching vlan members Rokib_Sir_UT_OFF
+set interfaces ae0 unit 0 family ethernet-switching vlan members ISSL-P2P
+set interfaces ae0 unit 0 family ethernet-switching vlan members Mode_Makers
+set interfaces ae0 unit 0 family ethernet-switching vlan members Sajedul_Munir_UT6
+set interfaces ae0 unit 0 family ethernet-switching vlan members NextNet
+set interfaces ae0 unit 0 family ethernet-switching vlan members Tudorknight
+set interfaces vlan unit 507 family inet address 172.17.25.36/24
+set interfaces vlan unit 3314 family inet
+set snmp community next_online
+set routing-options static route 0.0.0.0/0 next-hop 172.17.25.26
+set protocols igmp-snooping vlan all
+set protocols rstp
+set protocols lldp interface all
+set protocols lldp-med interface all
+set ethernet-switching-options storm-control interface all
+set vlans DH-620-UT06 vlan-id 1520
+set vlans ISSL-P2P vlan-id 1220
+set vlans ISSL-data vlan-id 660
+set vlans JD-Williams-UT-6 vlan-id 1531
+set vlans London_Fashion vlan-id 1534
+set vlans Mode_Makers vlan-id 1545
+set vlans NEXT-Server vlan-id 999
+set vlans NOL-Configuration vlan-id 507
+set vlans NOL-Configuration l3-interface vlan.507
+set vlans NOL-UT-4-Camera vlan-id 246
+set vlans Net3-Link-BDIX vlan-id 3312
+set vlans Net3-Link-CDN-Pri vlan-id 3505
+set vlans Net3-Link-GGC-Pri vlan-id 3319
+set vlans Net3-Link-Int vlan-id 564
+set vlans NextNet vlan-id 953
+set vlans NextNet-Metro-Lan vlan-id 998
+set vlans OLT_Real_IP vlan-id 2500
+set vlans PPPoE-UT04-FTTX vlan-id 804
+set vlans Pantagon-MD-House vlan-id 1528
+set vlans Peerless-Industries vlan-id 1538
+set vlans Pizza-Inn-UT-S4 vlan-id 1533
+set vlans Rokib_Sir_UT_OFF vlan-id 1541
+set vlans STS-Group-S6 vlan-id 1527
+set vlans Sajedul_Munir_UT6 vlan-id 1550
+set vlans Skynet-Secondary-BDIX vlan-id 3321
+set vlans Skynet-Secondary-CDN vlan-id 3316
+set vlans Skynet-Secondary-GGC vlan-id 3315
+set vlans Skynet-Secondary-INT vlan-id 3314
+set vlans Swadesh-CDN vlan-id 883
+set vlans Tudorknight vlan-id 1552
+set vlans Uthant-Rabbani vlan-id 1524
+set vlans Uttara-Call-Center vlan-id 959
+set vlans Vision-Blue-BDIX vlan-id 2226
+set vlans Vision-Blue-CDN-Sec vlan-id 2224
+set vlans Vision-Blue-GGC-Sec vlan-id 2223
+set vlans Vision-Blue-INT-Sec vlan-id 2222
+set vlans default

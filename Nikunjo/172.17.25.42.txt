@@ -1,0 +1,259 @@
+set version 12.3R6.6
+set system host-name SW-42
+set system root-authentication encrypted-password "$1$rESVPm2p$47rn1q6I4A3UDslWMoOC8."
+set system login user noc uid 2002
+set system login user noc class super-user
+set system login user noc authentication encrypted-password "$1$VvOQ3.dg$bx1./WXGA8bvleOIWfzyq."
+set system login user sanwar uid 2005
+set system login user sanwar class super-user
+set system login user sanwar authentication encrypted-password "$1$InGFYK9V$G93C0wvi8div/SNpMUID.."
+set system login user shameem uid 2000
+set system login user shameem class super-user
+set system login user shameem authentication encrypted-password "$1$gnJNBTpy$F4CegI2bxllAEZXzgRThP/"
+set system services ssh
+set system services telnet
+set system syslog user * any emergency
+set system syslog file messages any notice
+set system syslog file messages authorization info
+set system syslog file interactive-commands interactive-commands any
+set chassis aggregated-devices ethernet device-count 10
+set chassis auto-image-upgrade
+set interfaces ge-0/0/0 description ----NJ--------00------OLT-NKJ-UPLINK
+set interfaces ge-0/0/0 unit 0 family ethernet-switching port-mode trunk
+set interfaces ge-0/0/0 unit 0 family ethernet-switching vlan members 507
+set interfaces ge-0/0/0 unit 0 family ethernet-switching vlan members PPPoE-NJ
+set interfaces ge-0/0/0 unit 0 family ethernet-switching vlan members Nikunja-PPPOE
+set interfaces ge-0/0/0 unit 0 family ethernet-switching vlan members Universal-IT-NKJ
+set interfaces ge-0/0/0 unit 0 family ethernet-switching vlan members Flying_Academy
+set interfaces ge-0/0/0 unit 0 family ethernet-switching vlan members OLT_IP
+set interfaces ge-0/0/0 unit 0 family ethernet-switching vlan members Space_IT_NKJ
+set interfaces ge-0/0/1 description ----NJ--------01------OLT-NMS
+set interfaces ge-0/0/1 unit 0 family ethernet-switching port-mode access
+set interfaces ge-0/0/1 unit 0 family ethernet-switching vlan members OLT_IP
+set interfaces ge-0/0/2 description ----NJ--------02------Link-Tech-IT-L3-P
+set interfaces ge-0/0/2 unit 0 family ethernet-switching port-mode trunk
+set interfaces ge-0/0/2 unit 0 family ethernet-switching vlan members Link-Tech-IT-INT-Primary
+set interfaces ge-0/0/2 unit 0 family ethernet-switching vlan members Link-Tech-IT-CDN-Primary
+set interfaces ge-0/0/2 unit 0 family ethernet-switching vlan members Link-Tech-IT-BDIX-Primary
+set interfaces ge-0/0/2 unit 0 family ethernet-switching vlan members Link-Tech-IT-GGC-Primary
+set interfaces ge-0/0/3 description ----NJ--------03------Link-Tech-IT-L3-B
+set interfaces ge-0/0/3 unit 0 family ethernet-switching port-mode trunk
+set interfaces ge-0/0/3 unit 0 family ethernet-switching vlan members Link-Tech-IT-CDN-Secondary
+set interfaces ge-0/0/3 unit 0 family ethernet-switching vlan members Link-Tech-IT-INT-Secondary
+set interfaces ge-0/0/3 unit 0 family ethernet-switching vlan members Link-Tech-IT-GGC-Secondary
+set interfaces ge-0/0/4 description ----NJ--------04------NJ-0305-Dtech-Online
+set interfaces ge-0/0/4 unit 0 family ethernet-switching port-mode access
+set interfaces ge-0/0/4 unit 0 family ethernet-switching vlan members NJ-0305
+set interfaces ge-0/0/5 description ----NJ--------05------SW205.66-P-Giga-2
+set interfaces ge-0/0/5 unit 0 family ethernet-switching port-mode trunk
+set interfaces ge-0/0/5 unit 0 family ethernet-switching vlan members 507
+set interfaces ge-0/0/5 unit 0 family ethernet-switching vlan members R-N-R-Raviation
+set interfaces ge-0/0/5 unit 0 family ethernet-switching vlan members Express-Worldeide
+set interfaces ge-0/0/5 unit 0 family ethernet-switching vlan members Arirang
+set interfaces ge-0/0/5 unit 0 family ethernet-switching vlan members Aero-Technologies
+set interfaces ge-0/0/5 unit 0 family ethernet-switching vlan members Switch-Management
+set interfaces ge-0/0/5 unit 0 family ethernet-switching vlan members Megna-Aviation
+set interfaces ge-0/0/5 unit 0 family ethernet-switching vlan members Rupantarita-Prakritik
+set interfaces ge-0/0/5 unit 0 family ethernet-switching vlan members Universe-IT
+set interfaces ge-0/0/5 unit 0 family ethernet-switching vlan members PPPoE-NJ
+set interfaces ge-0/0/5 unit 0 family ethernet-switching vlan members Partex-Aviation
+set interfaces ge-0/0/5 unit 0 family ethernet-switching vlan members Genex-Nikunja
+set interfaces ge-0/0/5 unit 0 family ethernet-switching vlan members genex
+set interfaces ge-0/0/5 unit 0 family ethernet-switching vlan members South-Asian-Airlines
+set interfaces ge-0/0/5 unit 0 family ethernet-switching vlan members BN-0235-NKJ
+set interfaces ge-0/0/5 unit 0 family ethernet-switching vlan members BRB-Air
+set interfaces ge-0/0/5 unit 0 family ethernet-switching vlan members Bashundhara-Airways
+set interfaces ge-0/0/5 unit 0 family ethernet-switching vlan members DH-672-Rimjhim
+set interfaces ge-0/0/5 unit 0 family ethernet-switching vlan members Mondol-Group
+set interfaces ge-0/0/5 unit 0 family ethernet-switching vlan members Mondol-Group-BDIX
+set interfaces ge-0/0/5 unit 0 family ethernet-switching vlan members INAZ-Thai-Cuisine
+set interfaces ge-0/0/5 unit 0 family ethernet-switching vlan members IPTSP
+set interfaces ge-0/0/5 unit 0 family ethernet-switching vlan members Fortune_Shoes_HO_NJ
+set interfaces ge-0/0/6 description ----NJ--------06------Nikunja-POP-Camera
+set interfaces ge-0/0/6 unit 0 family ethernet-switching port-mode access
+set interfaces ge-0/0/6 unit 0 family ethernet-switching vlan members Nikunja-POP-Camera
+set interfaces ge-0/0/7 description ----NJ--------07------OLT-Real-IP
+set interfaces ge-0/0/7 unit 0 family ethernet-switching port-mode access
+set interfaces ge-0/0/7 unit 0 family ethernet-switching vlan members Flying_Academy
+set interfaces ge-0/0/9 description ----NJ--------09------Test_PPOE
+set interfaces ge-0/0/9 unit 0 family ethernet-switching port-mode access
+set interfaces ge-0/0/9 unit 0 family ethernet-switching vlan members PPPoE-NJ
+set interfaces ge-0/0/10 description ----NJ--------10------DH-355-Nikunja-Communication
+set interfaces ge-0/0/10 ether-options speed 1g
+set interfaces ge-0/0/10 unit 0 family ethernet-switching port-mode trunk
+set interfaces ge-0/0/10 unit 0 family ethernet-switching vlan members Nikunja-Communication-Internet
+set interfaces ge-0/0/10 unit 0 family ethernet-switching vlan members Nikunja-Communication-GGC
+set interfaces ge-0/0/10 unit 0 family ethernet-switching vlan members Nikunja-Communication-BDIX
+set interfaces ge-0/0/10 unit 0 family ethernet-switching vlan members Nikunja-Communication-CDN
+set interfaces ge-0/0/12 description ----NJ--------12------Fu-Wang-Office
+set interfaces ge-0/0/12 unit 0 family ethernet-switching port-mode access
+set interfaces ge-0/0/12 unit 0 family ethernet-switching vlan members Fu_Wang_Nikunja
+set interfaces ge-0/0/13 description ----NJ--------13------Fu-Wang-MD-House
+set interfaces ge-0/0/13 unit 0 family ethernet-switching port-mode access
+set interfaces ge-0/0/13 unit 0 family ethernet-switching vlan members Fu_Wang_MD_Res
+set interfaces ge-0/0/14 description ----NJ--------14------SpaceIT
+set interfaces ge-0/0/14 unit 0 family ethernet-switching port-mode access
+set interfaces ge-0/0/14 unit 0 family ethernet-switching vlan members Space_IT_NKJ
+set interfaces ge-0/0/23 description ----NJ--------23------Management
+set interfaces ge-0/0/23 unit 0 family ethernet-switching port-mode access
+set interfaces xe-0/1/1 description ----NJ--------011------UP-Link-142
+set interfaces xe-0/1/1 ether-options 802.3ad ae3
+set interfaces ae3 description -----------------SW11-ae3
+set interfaces ae3 unit 0 family ethernet-switching port-mode trunk
+set interfaces ae3 unit 0 family ethernet-switching vlan members Comilla-Online-Nikunjo
+set interfaces ae3 unit 0 family ethernet-switching vlan members PPPoE-NJ
+set interfaces ae3 unit 0 family ethernet-switching vlan members R-N-R-Raviation
+set interfaces ae3 unit 0 family ethernet-switching vlan members Flying_Academy
+set interfaces ae3 unit 0 family ethernet-switching vlan members Express-Worldeide
+set interfaces ae3 unit 0 family ethernet-switching vlan members Megna-Aviation
+set interfaces ae3 unit 0 family ethernet-switching vlan members Universe-IT
+set interfaces ae3 unit 0 family ethernet-switching vlan members Rupantarita-Prakritik
+set interfaces ae3 unit 0 family ethernet-switching vlan members Fu_Wang_Nikunja
+set interfaces ae3 unit 0 family ethernet-switching vlan members Arirang
+set interfaces ae3 unit 0 family ethernet-switching vlan members Fu_Wang_MD_Res
+set interfaces ae3 unit 0 family ethernet-switching vlan members Aero-Technologies
+set interfaces ae3 unit 0 family ethernet-switching vlan members Nikunja-Communication-Internet
+set interfaces ae3 unit 0 family ethernet-switching vlan members Nikunja-Communication-GGC
+set interfaces ae3 unit 0 family ethernet-switching vlan members Nikunja-Communication-BDIX
+set interfaces ae3 unit 0 family ethernet-switching vlan members Partex-Aviation
+set interfaces ae3 unit 0 family ethernet-switching vlan members Switch-Management
+set interfaces ae3 unit 0 family ethernet-switching vlan members Fortune_Shoes_HO_NJ
+set interfaces ae3 unit 0 family ethernet-switching vlan members Genex-Nikunja
+set interfaces ae3 unit 0 family ethernet-switching vlan members genex
+set interfaces ae3 unit 0 family ethernet-switching vlan members Mega-Data
+set interfaces ae3 unit 0 family ethernet-switching vlan members NJ-0305
+set interfaces ae3 unit 0 family ethernet-switching vlan members South-Asian-Airlines
+set interfaces ae3 unit 0 family ethernet-switching vlan members BN-0235-NKJ
+set interfaces ae3 unit 0 family ethernet-switching vlan members BRB-Air
+set interfaces ae3 unit 0 family ethernet-switching vlan members Nikunja-PPPOE
+set interfaces ae3 unit 0 family ethernet-switching vlan members Nikunja-Communication-CDN
+set interfaces ae3 unit 0 family ethernet-switching vlan members Bashundhara-Airways
+set interfaces ae3 unit 0 family ethernet-switching vlan members Fissa-Tuhin-NJ-INT
+set interfaces ae3 unit 0 family ethernet-switching vlan members Fissa-Tuhin-NJ-GGC
+set interfaces ae3 unit 0 family ethernet-switching vlan members Fissa-Tuhin-NJ-BDIX
+set interfaces ae3 unit 0 family ethernet-switching vlan members Fissa-Tuhin-NJ-Data
+set interfaces ae3 unit 0 family ethernet-switching vlan members DH-672-Rimjhim
+set interfaces ae3 unit 0 family ethernet-switching vlan members NOL-Management
+set interfaces ae3 unit 0 family ethernet-switching vlan members Mondol-Group
+set interfaces ae3 unit 0 family ethernet-switching vlan members Mondol-Group-BDIX
+set interfaces ae3 unit 0 family ethernet-switching vlan members Universal-IT-NKJ
+set interfaces ae3 unit 0 family ethernet-switching vlan members Pipex-Network-CDN
+set interfaces ae3 unit 0 family ethernet-switching vlan members Pipex-Network-BDIX
+set interfaces ae3 unit 0 family ethernet-switching vlan members Tuhin-Enterprises-CDN-Secondary
+set interfaces ae3 unit 0 family ethernet-switching vlan members Pipex-Network-INT
+set interfaces ae3 unit 0 family ethernet-switching vlan members Amar-Net-Primary-Nukunjo
+set interfaces ae3 unit 0 family ethernet-switching vlan members Amar-Net-Blackhole
+set interfaces ae3 unit 0 family ethernet-switching vlan members Tuhin-GGC-Secondary
+set interfaces ae3 unit 0 family ethernet-switching vlan members Pipex-Network-Primary
+set interfaces ae3 unit 0 family ethernet-switching vlan members Nikunja-POP-Camera
+set interfaces ae3 unit 0 family ethernet-switching vlan members INAZ-Thai-Cuisine
+set interfaces ae3 unit 0 family ethernet-switching vlan members Tuhin-Enterprise-BDIX
+set interfaces ae3 unit 0 family ethernet-switching vlan members Link-Tech-IT-INT-Primary
+set interfaces ae3 unit 0 family ethernet-switching vlan members Link-Tech-IT-CDN-Primary
+set interfaces ae3 unit 0 family ethernet-switching vlan members Link-Tech-IT-BDIX-Primary
+set interfaces ae3 unit 0 family ethernet-switching vlan members Link-Tech-IT-CDN-Secondary
+set interfaces ae3 unit 0 family ethernet-switching vlan members Link-Tech-IT-INT-Secondary
+set interfaces ae3 unit 0 family ethernet-switching vlan members IPTSP
+set interfaces ae3 unit 0 family ethernet-switching vlan members Link-Tech-IT-GGC-Primary
+set interfaces ae3 unit 0 family ethernet-switching vlan members Link-Tech-IT-GGC-Secondary
+set interfaces ae3 unit 0 family ethernet-switching vlan members Pipex-Network-GGC-Primary
+set interfaces ae3 unit 0 family ethernet-switching vlan members Tuhin-Enterprise-INT-Sec
+set interfaces ae3 unit 0 family ethernet-switching vlan members Tuhin-Enterprise-GGC-Sec
+set interfaces ae3 unit 0 family ethernet-switching vlan members Tuhin-Enterprise-CDN-Sec
+set interfaces ae3 unit 0 family ethernet-switching vlan members Tuhin-Enterprise-BDIX-Sec
+set interfaces ae3 unit 0 family ethernet-switching vlan members Pipex-Network-CDN-Pri
+set interfaces ae3 unit 0 family ethernet-switching vlan members Brothers-Net-INT
+set interfaces ae3 unit 0 family ethernet-switching vlan members Brothers-Net-GGC
+set interfaces ae3 unit 0 family ethernet-switching vlan members Brothers-Net-CDN
+set interfaces ae3 unit 0 family ethernet-switching vlan members Brothers-Net-BDIX
+set interfaces ae3 unit 0 family ethernet-switching vlan members Nikunja-Communication-INT
+set interfaces ae3 unit 0 family ethernet-switching vlan members Brothers-Net-Cache
+set interfaces ae3 unit 0 family ethernet-switching vlan members Pipex-Network-Cache
+set interfaces ae3 unit 0 family ethernet-switching vlan members Tuhin-Enterprise-Iconix-Cloud
+set interfaces ae3 unit 0 family ethernet-switching vlan members OLT_IP
+set interfaces ae3 unit 0 family ethernet-switching vlan members Space_IT_NKJ
+set interfaces vlan unit 507 family inet address 172.17.25.42/24
+set interfaces vlan unit 806 family inet address 172.17.205.10/24
+set snmp community next_online clients 172.17.25.0/24
+set snmp community next_online clients 172.16.25.0/24
+set protocols igmp-snooping vlan all
+set protocols rstp
+set protocols lldp interface all
+set protocols lldp-med interface all
+set ethernet-switching-options storm-control interface all
+set vlans Aero-Technologies vlan-id 967
+set vlans Amar-Net-Blackhole vlan-id 624
+set vlans Amar-Net-Primary-Nukunjo vlan-id 621
+set vlans Arirang vlan-id 955
+set vlans BN-0235-NKJ vlan-id 993
+set vlans BRB-Air vlan-id 1007
+set vlans Bashundhara-Airways vlan-id 926
+set vlans Brothers-Net-BDIX vlan-id 370
+set vlans Brothers-Net-CDN vlan-id 369
+set vlans Brothers-Net-Cache vlan-id 2128
+set vlans Brothers-Net-GGC vlan-id 368
+set vlans Brothers-Net-INT vlan-id 367
+set vlans Comilla-Online-Nikunjo vlan-id 397
+set vlans DH-672-Rimjhim vlan-id 990
+set vlans Express-Worldeide vlan-id 923
+set vlans Fissa-Tuhin-NJ-BDIX vlan-id 2277
+set vlans Fissa-Tuhin-NJ-Data vlan-id 2278
+set vlans Fissa-Tuhin-NJ-GGC vlan-id 2276
+set vlans Fissa-Tuhin-NJ-INT vlan-id 2275
+set vlans Flying_Academy vlan-id 1603
+set vlans Fortune_Shoes_HO_NJ vlan-id 939
+set vlans Fu_Wang_MD_Res vlan-id 956
+set vlans Fu_Wang_Nikunja vlan-id 954
+set vlans Genex-Nikunja vlan-id 921
+set vlans INAZ-Thai-Cuisine vlan-id 949
+set vlans IPTSP vlan-id 527
+set vlans Link-Tech-IT-BDIX-Primary vlan-id 945
+set vlans Link-Tech-IT-CDN-Primary vlan-id 944
+set vlans Link-Tech-IT-CDN-Secondary vlan-id 940
+set vlans Link-Tech-IT-GGC-Primary vlan-id 2240
+set vlans Link-Tech-IT-GGC-Secondary vlan-id 2241
+set vlans Link-Tech-IT-INT-Primary vlan-id 942
+set vlans Link-Tech-IT-INT-Secondary vlan-id 908
+set vlans Mega-Data vlan-id 1519
+set vlans Megna-Aviation vlan-id 941
+set vlans Mondol-Group vlan-id 1132
+set vlans Mondol-Group-BDIX vlan-id 1133
+set vlans NJ-0305 vlan-id 933
+set vlans NMS-Technology-BDIX
+set vlans NOL-Management vlan-id 507
+set vlans NOL-Management l3-interface vlan.507
+set vlans Nikunja-Communication-BDIX vlan-id 662
+set vlans Nikunja-Communication-CDN vlan-id 661
+set vlans Nikunja-Communication-GGC vlan-id 660
+set vlans Nikunja-Communication-INT vlan-id 659
+set vlans Nikunja-Communication-Internet vlan-id 1184
+set vlans Nikunja-POP-Camera vlan-id 277
+set vlans Nikunja-PPPOE vlan-id 765
+set vlans OLT_IP vlan-id 2500
+set vlans PPPoE-NJ vlan-id 902
+set vlans Partex-Aviation vlan-id 919
+set vlans Pipex-Network-BDIX vlan-id 848
+set vlans Pipex-Network-CDN vlan-id 847
+set vlans Pipex-Network-CDN-Pri vlan-id 3080
+set vlans Pipex-Network-Cache vlan-id 2175
+set vlans Pipex-Network-GGC-Primary vlan-id 3469
+set vlans Pipex-Network-GGC-Primery
+set vlans Pipex-Network-INT vlan-id 846
+set vlans Pipex-Network-Primary vlan-id 745
+set vlans R-N-R-Raviation vlan-id 909
+set vlans Rupantarita-Prakritik vlan-id 951
+set vlans South-Asian-Airlines vlan-id 980
+set vlans Space_IT_NKJ vlan-id 1604
+set vlans Switch-Management vlan-id 806
+set vlans Switch-Management l3-interface vlan.806
+set vlans Tuhin-Enterprise-BDIX vlan-id 2111
+set vlans Tuhin-Enterprise-BDIX-Sec vlan-id 3678
+set vlans Tuhin-Enterprise-CDN-Sec vlan-id 3655
+set vlans Tuhin-Enterprise-GGC-Sec vlan-id 3654
+set vlans Tuhin-Enterprise-INT-Sec vlan-id 3653
+set vlans Tuhin-Enterprise-Iconix-Cloud vlan-id 3656
+set vlans Tuhin-Enterprises-CDN-Secondary vlan-id 359
+set vlans Tuhin-GGC-Secondary vlan-id 818
+set vlans Universal-IT-NKJ vlan-id 1602
+set vlans Universe-IT vlan-id 950
+set vlans genex vlan-id 948

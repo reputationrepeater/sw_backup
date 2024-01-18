@@ -1,0 +1,296 @@
+Using 4937 out of 524288 bytes
+!
+version 12.2
+no service pad
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+!
+hostname NJ
+!
+boot-start-marker
+boot-end-marker
+!
+enable secret 5 $1$NEId$Ev4V.2E5uDwutHP8TlC7v/
+enable password 7650
+!
+no aaa new-model
+system mtu routing 1998
+!
+!
+!
+crypto pki trustpoint TP-self-signed-347763072
+ enrollment selfsigned
+ subject-name cn=IOS-Self-Signed-Certificate-347763072
+ revocation-check none
+ rsakeypair TP-self-signed-347763072
+!
+!
+crypto pki certificate chain TP-self-signed-347763072
+ certificate self-signed 01 nvram:IOS-Self-Sig#3232.cer
+!
+!
+!
+!
+spanning-tree mode rapid-pvst
+spanning-tree extend system-id
+!
+!
+vlan internal allocation policy ascending
+!
+vlan 527
+ name IPTSP
+!
+vlan 806
+ name Switch-Management
+!
+vlan 902
+ name PPPoE-NJ
+!
+vlan 909
+ name R-N-R-Raviation
+!
+vlan 919
+ name Partex-Aviation
+!
+vlan 920
+ name DH-331
+!
+vlan 921
+ name Genex-Nikunja
+!
+vlan 923
+ name Express-Worldeide
+!
+vlan 926
+ name Bashundhara-Airways
+!
+vlan 939
+ name Fortune_Shoes_HO_NJ
+!
+vlan 941
+ name Megna-Aviation
+!
+vlan 948
+ name genex
+!
+vlan 949
+ name INAZ-Thai-Cuisine
+!
+vlan 950
+ name Universe-IT
+!
+vlan 951
+ name DH-310
+!
+vlan 954
+ name Fu_Wang_Nikunja
+!
+vlan 955
+ name Arirang
+!
+vlan 956
+ name Fu_Wang_MD_Res
+!
+vlan 960
+ name Ntitas
+!
+vlan 967
+ name Aero-Technologies
+!
+vlan 980
+ name South-Asian-Airlines
+!
+vlan 990
+ name DH-672-Rimjhim
+!
+vlan 993
+ name BN-0235-NKJ
+!
+vlan 994-995
+!
+vlan 1007
+ name BRB-Air
+!
+vlan 1131
+ name Pipex-Internet
+!
+vlan 1132
+ name Mondol-Group
+!
+vlan 1133
+ name Mondol-Group-BDIX
+!
+vlan 1157
+ name Abroad-IT--Internet
+!
+vlan 1158
+ name Abroad-IT-GGC
+!
+vlan 1159
+ name Abroad-IT-BDIX
+!
+!
+!
+interface FastEthernet0/1
+ description BN-0235-Reliable-Builders-NKJ
+ port-type nni
+ switchport access vlan 993
+ duplex full
+!
+interface FastEthernet0/2
+ description DH-462-Bashundhara-Airways
+ switchport access vlan 926
+ duplex full
+!
+interface FastEthernet0/3
+ description DH-672-Rimjhim-Land
+ switchport access vlan 990
+ duplex full
+!
+interface FastEthernet0/4
+ description MAF-Flying
+ switchport access vlan 956
+ duplex full
+!
+interface FastEthernet0/5
+ description DH-1191-Fu-wang-Office
+ switchport access vlan 954
+ duplex full
+!
+interface FastEthernet0/6
+ description DH-377-South-Asian-Air
+ switchport access vlan 980
+ duplex full
+!
+interface FastEthernet0/7
+ description Nj01-Ld02
+ switchport access vlan 902
+!
+interface FastEthernet0/8
+ description DH-331-Bangladesh-Flying
+ switchport access vlan 920
+!
+interface FastEthernet0/9
+ description DH-310-Rupantorito-Gas
+ switchport access vlan 951
+ duplex full
+!
+interface FastEthernet0/10
+ description Universe_IT
+ switchport access vlan 950
+ duplex full
+!
+interface FastEthernet0/11
+ description Free
+ duplex full
+!
+interface FastEthernet0/12
+ description NJ-0301
+ switchport access vlan 902
+ duplex full
+!
+interface FastEthernet0/13
+ description DH-367Genex Infosys Data_967
+ switchport access vlan 527
+ duplex full
+!
+interface FastEthernet0/14
+ description DH-994-Mondol-Group
+ switchport trunk allowed vlan 1132,1133
+ switchport mode trunk
+ duplex full
+!
+interface FastEthernet0/15
+ description Arirang
+ switchport access vlan 955
+ duplex full
+!
+interface FastEthernet0/16
+ description NJ-3501
+ switchport access vlan 902
+ duplex full
+!
+interface FastEthernet0/17
+ description DH-1200-Thai-Cuisine
+ switchport access vlan 902
+ duplex full
+!
+interface FastEthernet0/18
+ description DH-356-Partex-Aviation
+ switchport access vlan 919
+ duplex full
+!
+interface FastEthernet0/19
+ description DH-367-Genex-Infosys-Limited
+ switchport trunk allowed vlan 921,948
+ switchport mode trunk
+ duplex full
+!
+interface FastEthernet0/20
+ description NJ-1202
+ switchport access vlan 902
+ duplex full
+!
+interface FastEthernet0/21
+ description Bangla-International-Airlines
+ switchport access vlan 954
+ duplex full
+!
+interface FastEthernet0/22
+ description DH-385-BRB-Air
+ switchport access vlan 1007
+ duplex full
+!
+interface FastEthernet0/23
+ description DH-305(Megna Aviation Ltd.)
+ switchport access vlan 941
+!
+interface FastEthernet0/24
+ description NJ-0701
+ switchport access vlan 902
+ duplex full
+!
+interface GigabitEthernet0/1
+ description Mega-IT
+ port-type nni
+ switchport trunk allowed vlan 994,995,1131-1133
+ switchport mode trunk
+!
+interface GigabitEthernet0/2
+ description SW-42_P-0/0/5
+ port-type nni
+ switchport trunk allowed vlan 527,806,902,909,919-921,923,926,939,941,948-951
+ switchport trunk allowed vlan add 954-956,960,967,980,990,993-995,1007
+ switchport trunk allowed vlan add 1131-1133,1157-1159
+ switchport mode trunk
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+interface Vlan806
+ ip address 172.17.205.66 255.255.255.0
+!
+no ip http server
+ip http secure-server
+ip classless
+!
+!
+ip sla enable reaction-alerts
+!
+snmp-server community next_online RO
+!
+line con 0
+ exec-timeout 0 0
+line vty 0 4
+ password 7650
+ login
+line vty 5
+ password 7650
+ login
+line vty 6 15
+ password noc7650
+ login
+!
+end

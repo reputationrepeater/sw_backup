@@ -1,0 +1,720 @@
+set version 13.2X51-D35.3
+set system host-name SW-52
+set system auto-snapshot
+set system root-authentication encrypted-password "$1$Kl26pyKg$jOY53D0kMN9ofEarvhWUF1"
+set system login user noc uid 2001
+set system login user noc class super-user
+set system login user noc authentication encrypted-password "$1$M4THBuhd$7MHK6r0dQbDcJGVQl6hXa1"
+set system login user shameem uid 2002
+set system login user shameem class super-user
+set system login user shameem authentication encrypted-password "$1$kfh1kkJZ$rcJFO8DfYFe3/5t8wpE2e1"
+set system services telnet
+set system syslog user * any emergency
+set system syslog file messages any notice
+set system syslog file messages authorization info
+set system syslog file interactive-commands interactive-commands any
+set chassis aggregated-devices ethernet device-count 20
+set interfaces ge-0/0/0 description ----UT--------000------Juniper-UT-P000
+set interfaces ge-0/0/0 ether-options 802.3ad ae3
+set interfaces ge-0/0/1 description ----UT--------001------Juniper-UT-P001
+set interfaces ge-0/0/1 ether-options 802.3ad ae3
+set interfaces ge-0/0/2 description ----UT--------02------Bismilla_Ent-L3-2nd
+set interfaces ge-0/0/2 unit 0 family ethernet-switching interface-mode trunk
+set interfaces ge-0/0/2 unit 0 family ethernet-switching vlan members Bismillah-Computer-INT-Sec
+set interfaces ge-0/0/2 unit 0 family ethernet-switching vlan members Bismillah-Computer-CDN-SEC
+set interfaces ge-0/0/4 description ----UT--------004------Juniper-UT-P103
+set interfaces ge-0/0/4 ether-options 802.3ad ae4
+set interfaces ge-0/0/5 description ----UT--------005------Juniper-UT-P102
+set interfaces ge-0/0/5 ether-options 802.3ad ae4
+set interfaces ge-0/0/6 description ----UT--------06------DH-1431-Target-Group
+set interfaces ge-0/0/6 unit 0 family ethernet-switching interface-mode access
+set interfaces ge-0/0/6 unit 0 family ethernet-switching vlan members Target-Group-Pri
+set interfaces ge-0/0/8 description ----UT--------08------DPS-School-SEC-15-Primary
+set interfaces ge-0/0/8 unit 0 family ethernet-switching interface-mode access
+set interfaces ge-0/0/8 unit 0 family ethernet-switching vlan members DH-900-UT-S-15-Primary
+set interfaces ge-0/0/9 description ----UT--------09------UT-Sector7-Mikrotik
+set interfaces ge-0/0/9 unit 0 family ethernet-switching interface-mode trunk
+set interfaces ge-0/0/9 unit 0 family ethernet-switching vlan members Mikrotik-UT7-INT
+set interfaces ge-0/0/11 description ----UT--------011------UT-Sector7-Mikrotik-sfp3
+set interfaces ge-0/0/11 unit 0 family ethernet-switching interface-mode trunk
+set interfaces ge-0/0/11 unit 0 family ethernet-switching vlan members Mikrotik-UT7-INT
+set interfaces ge-0/0/13 description ----UT--------13------Race-IT
+set interfaces ge-0/0/13 unit 0 family ethernet-switching interface-mode trunk
+set interfaces ge-0/0/13 unit 0 family ethernet-switching vlan members Race-INT
+set interfaces ge-0/0/13 unit 0 family ethernet-switching vlan members Race-IT-GGC
+set interfaces ge-0/0/13 unit 0 family ethernet-switching vlan members Race_Bdix
+set interfaces ge-0/0/13 unit 0 family ethernet-switching vlan members Race-IT-CDN
+set interfaces ge-0/0/14 description ----UT--------14------DH-1411-C2C-Group-HO-UT7-Backup
+set interfaces ge-0/0/14 unit 0 family ethernet-switching interface-mode trunk
+set interfaces ge-0/0/14 unit 0 family ethernet-switching vlan members C2C_HO_INT_Sec
+set interfaces ge-0/0/14 unit 0 family ethernet-switching vlan members C2C_HO_DATA_Sec
+set interfaces ge-0/0/15 description ----UT--------15------Net-Connect-Primary-L3
+set interfaces ge-0/0/15 unit 0 family ethernet-switching interface-mode trunk
+set interfaces ge-0/0/15 unit 0 family ethernet-switching vlan members Net-Connect-INT-Secondary
+set interfaces ge-0/0/15 unit 0 family ethernet-switching vlan members Net-Connect-GGC-Secondary
+set interfaces ge-0/0/15 unit 0 family ethernet-switching vlan members Net-Connect-CDN-Secondary
+set interfaces ge-0/0/15 unit 0 family ethernet-switching vlan members Net-Connect-BDIX-Secondary
+set interfaces ge-0/0/16 description ----UT--------16------OLT-88-UT-Sector-12-BACKUP_enable-this-port-if-primary-down_-5.18/-16.68dBm
+set interfaces ge-0/0/16 unit 0 family ethernet-switching interface-mode trunk
+set interfaces ge-0/0/16 unit 0 family ethernet-switching vlan members PPPoE-UT12-FTTX
+set interfaces ge-0/0/16 unit 0 family ethernet-switching vlan members OLT_Real_IP
+set interfaces ge-0/0/16 unit 0 family ethernet-switching vlan members UT12-MR01
+set interfaces ge-0/0/16 unit 0 family ethernet-switching vlan members Prianka-City-INT
+set interfaces ge-0/0/16 unit 0 family ethernet-switching vlan members Prianka-City-Data
+set interfaces ge-0/0/16 unit 0 family ethernet-switching vlan members DH-1030-AMBIENT
+set interfaces ge-0/0/17 description ----UT--------17------UT-11-SW-54-P010
+set interfaces ge-0/0/17 ether-options 802.3ad ae6
+set interfaces ge-0/0/18 description ----UT--------18------UT-11-SW-54-P011
+set interfaces ge-0/0/18 ether-options 802.3ad ae6
+set interfaces ge-0/0/19 description ----UT--------19------SW50-P_ge-0/1/0
+set interfaces ge-0/0/19 ether-options 802.3ad ae7
+set interfaces ge-0/0/20 description ----UT--------20------SW50-P_ge-0/1/1
+set interfaces ge-0/0/20 ether-options 802.3ad ae7
+set interfaces ge-0/0/22 description ----UT--------25------UT_Sec7_BDIX
+set interfaces ge-0/0/22 speed 1g
+set interfaces ge-0/0/22 ether-options auto-negotiation
+set interfaces ge-0/0/22 unit 0 family ethernet-switching interface-mode trunk
+set interfaces ge-0/0/22 unit 0 family ethernet-switching vlan members UT_Sec7_BDIX
+set interfaces ge-0/0/23 description ----UT--------23------UT12-MR01-Uber-Primary-Data
+set interfaces ge-0/0/23 unit 0 family ethernet-switching interface-mode access
+set interfaces ge-0/0/23 unit 0 family ethernet-switching vlan members Uber
+set interfaces ge-0/0/24 description ----UT--------24------OLT-88-UT-Sector-12_PRIMARY_-4.88/-11.12dBm
+set interfaces ge-0/0/24 disable
+set interfaces ge-0/0/24 unit 0 family ethernet-switching interface-mode trunk
+set interfaces ge-0/0/24 unit 0 family ethernet-switching vlan members PPPoE-UT12-FTTX
+set interfaces ge-0/0/24 unit 0 family ethernet-switching vlan members OLT_Real_IP
+set interfaces ge-0/0/24 unit 0 family ethernet-switching vlan members UT12-MR01
+set interfaces ge-0/0/24 unit 0 family ethernet-switching vlan members Prianka-City-INT
+set interfaces ge-0/0/24 unit 0 family ethernet-switching vlan members Prianka-City-Data
+set interfaces ge-0/0/24 unit 0 family ethernet-switching vlan members DH-1030-AMBIENT
+set interfaces ge-0/0/26 description ----UT--------26------SW-205.63-P-02
+set interfaces ge-0/0/26 unit 0 family ethernet-switching interface-mode trunk
+set interfaces ge-0/0/26 unit 0 family ethernet-switching vlan members Switch-Management
+set interfaces ge-0/0/26 unit 0 family ethernet-switching vlan members Aleya_Feeds-Home-Office
+set interfaces ge-0/0/26 unit 0 family ethernet-switching vlan members GBA-Techno
+set interfaces ge-0/0/26 unit 0 family ethernet-switching vlan members M.Biz-Tech-Internet
+set interfaces ge-0/0/26 unit 0 family ethernet-switching vlan members M.Biz-Tech-BDIX
+set interfaces ge-0/0/26 unit 0 family ethernet-switching vlan members Uber
+set interfaces ge-0/0/26 unit 0 family ethernet-switching vlan members BDpeer-Internet
+set interfaces ge-0/0/26 unit 0 family ethernet-switching vlan members BDpeer-BDIX
+set interfaces ge-0/0/26 unit 0 family ethernet-switching vlan members Net-Vision-Internet
+set interfaces ge-0/0/26 unit 0 family ethernet-switching vlan members Net-Vision-GGC
+set interfaces ge-0/0/26 unit 0 family ethernet-switching vlan members Net-Vision-BDIX
+set interfaces ge-0/0/26 unit 0 family ethernet-switching vlan members UT11-1501
+set interfaces ge-0/0/26 unit 0 family ethernet-switching vlan members PPPoE-UT04-FTTX
+set interfaces ge-0/0/26 unit 0 family ethernet-switching vlan members OD-0408
+set interfaces ge-0/0/26 unit 0 family ethernet-switching vlan members Net-Vision-CDN
+set interfaces ge-0/0/26 unit 0 family ethernet-switching vlan members Bomerang-Backup
+set interfaces ge-0/0/26 unit 0 family ethernet-switching vlan members STS-Nursing-Principle
+set interfaces ge-0/0/26 unit 0 family ethernet-switching vlan members SM-Group-UT-11
+set interfaces ge-0/0/26 unit 0 family ethernet-switching vlan members Firstray-DATA-Backup
+set interfaces ge-0/0/26 unit 0 family ethernet-switching vlan members AQM_Business_Backup
+set interfaces ge-0/0/26 unit 0 family ethernet-switching vlan members Alternative_Recruitment
+set interfaces ge-0/0/26 unit 0 family ethernet-switching vlan members Xuan_Tong_Sec
+set interfaces ge-0/0/30 description ----UT--------30------OLT-83-Sec-1,3,5
+set interfaces ge-0/0/30 unit 0 family ethernet-switching interface-mode trunk
+set interfaces ge-0/0/30 unit 0 family ethernet-switching vlan members UT03-0226
+set interfaces ge-0/0/30 unit 0 family ethernet-switching vlan members UT01-0403
+set interfaces ge-0/0/30 unit 0 family ethernet-switching vlan members UT03-0441
+set interfaces ge-0/0/30 unit 0 family ethernet-switching vlan members UT03-0220
+set interfaces ge-0/0/30 unit 0 family ethernet-switching vlan members NOL-Management
+set interfaces ge-0/0/30 unit 0 family ethernet-switching vlan members Mansha-Fashion-UT1
+set interfaces ge-0/0/30 unit 0 family ethernet-switching vlan members UT03-0775
+set interfaces ge-0/0/30 unit 0 family ethernet-switching vlan members UT03-0275
+set interfaces ge-0/0/30 unit 0 family ethernet-switching vlan members Bashundhara_Airways
+set interfaces ge-0/0/30 unit 0 family ethernet-switching vlan members DH-1010
+set interfaces ge-0/0/30 unit 0 family ethernet-switching vlan members OLT_Real_IP
+set interfaces ge-0/0/30 unit 0 family ethernet-switching vlan members Firstray-FTTX
+set interfaces ge-0/0/30 unit 0 family ethernet-switching vlan members Javan-Hotel
+set interfaces ge-0/0/30 unit 0 family ethernet-switching vlan members Crosswear_Res
+set interfaces ge-0/0/30 unit 0 family ethernet-switching vlan members MAF_Flying
+set interfaces ge-0/0/30 unit 0 family ethernet-switching vlan members Megna_Aviation
+set interfaces ge-0/0/30 unit 0 family ethernet-switching vlan members UT7_L3_Sohan_Bhai
+set interfaces ge-0/0/30 unit 0 family ethernet-switching vlan members POWERGEN_LTD
+set interfaces ge-0/0/30 unit 0 family ethernet-switching vlan members Softograph_Ltd
+set interfaces ge-0/0/30 unit 0 family ethernet-switching vlan members Bashundhara_Airways_DATA
+set interfaces ge-0/0/30 unit 0 family ethernet-switching vlan members Target-Group-FTTX
+set interfaces ge-0/0/31 description ----UT--------31------OLT-84-Sec-7,9,13,14
+set interfaces ge-0/0/31 unit 0 family ethernet-switching interface-mode trunk
+set interfaces ge-0/0/31 unit 0 family ethernet-switching vlan members UT07-LK17
+set interfaces ge-0/0/31 unit 0 family ethernet-switching vlan members UT07-1810
+set interfaces ge-0/0/31 unit 0 family ethernet-switching vlan members NOL-Management
+set interfaces ge-0/0/31 unit 0 family ethernet-switching vlan members Mansha-Fashion-UT2
+set interfaces ge-0/0/31 unit 0 family ethernet-switching vlan members Olive-Tree-Uttara
+set interfaces ge-0/0/31 unit 0 family ethernet-switching vlan members Color-Experts
+set interfaces ge-0/0/31 unit 0 family ethernet-switching vlan members Hamko-Footwear
+set interfaces ge-0/0/31 unit 0 family ethernet-switching vlan members Mansha-Fashion-UT1
+set interfaces ge-0/0/31 unit 0 family ethernet-switching vlan members OLT_Real_IP
+set interfaces ge-0/0/31 unit 0 family ethernet-switching vlan members AQM-Business
+set interfaces ge-0/0/31 unit 0 family ethernet-switching vlan members PPPoE-UT07-FTTX
+set interfaces ge-0/0/31 unit 0 family ethernet-switching vlan members UT7_L3_Sohan_Bhai
+set interfaces ge-0/0/31 unit 0 family ethernet-switching vlan members Pizza-Inn-UT-S3
+set interfaces ge-0/0/31 unit 0 family ethernet-switching vlan members Hop_Lun_Res
+set interfaces ge-0/0/31 unit 0 family ethernet-switching vlan members Max_Zannat_UGH
+set interfaces ge-0/0/31 unit 0 family ethernet-switching vlan members Xuan_Tong_UT4
+set interfaces ge-0/0/31 unit 0 family ethernet-switching vlan members Hop_Yick_UT7
+set interfaces ge-0/0/31 unit 0 family ethernet-switching vlan members C2C-HO-INT-Pri
+set interfaces ge-0/0/31 unit 0 family ethernet-switching vlan members C2C-HO-DATA-Pri
+set interfaces ge-0/0/31 unit 0 family ethernet-switching vlan members Shangu_HO_UT7
+set interfaces ge-0/0/31 unit 0 family ethernet-switching vlan members Increments_UT13
+set interfaces xe-0/0/32 description ----UT--------32------SW-11-P18-Uplink
+set interfaces xe-0/0/32 unit 0 family ethernet-switching interface-mode trunk
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members NOL-Management
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members Wenet_INT
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members WENET-GGC
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members WENET-BDIX
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members WENET-CDN
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members Race-INT
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members Race-IT-GGC
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members Race_Bdix
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members Race-IT-CDN
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members managment
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members Fissa-IBD-Uttara-INT
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members Fissa-IBD-Uttara-GGC
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members Fissa-IBD-Uttara-BDIX
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members Fissa-IBD-Uttara-Data
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members DH-900-UT-S-15-Primary
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members Mikrotik-UT-Int
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members Mikrotik-UT-GGC
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members Mikrotik-UT-BDIX
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members UT03-0226
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members UT01-0403
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members UT03-0441
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members UT03-0220
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members UT07-LK17
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members UT07-1810
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members Olive-Tree-Uttara
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members UT07-SJ39-Mansha
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members Hamko-Footwear
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members Blume-Net-INT
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members Blume-Net-GGC
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members Blume-Net-BDIX
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members Blume-Net-CDN
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members PPPoE-UT01-FTTX
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members UT-Access-Control
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members NOL-UT-Marketing-Camera
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members NOL-UT-Conference-Camera
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members NOL-UT-Outside-Camera
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members Switch-Management
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members GBA-Techno
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members M.Biz-Tech-Internet
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members M.Biz-Tech-BDIX
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members Uber
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members BDpeer-Internet
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members BDpeer-BDIX
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members Net-Vision-Internet
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members Net-Vision-GGC
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members Net-Vision-BDIX
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members UT11-1501
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members OD-0408
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members Net-Vision-CDN
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members SM-Group-UT-11
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members Asian-Network-CDN
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members STS-Group-S6
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members OLT_Real_IP
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members NextNet-Metro-Lan
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members NEXT-Server
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members ISSL-data
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members Swadesh-BD-INT
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members Swadesh-BD-GGC
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members Swadesh-BD-BDIX
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members Swadesh-CDN
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members NextNet
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members NOL-UT-PoP-Camera
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members IPTSP
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members PPPoE-UT04-FTTX
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members UT_Sec7_BDIX
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members PPPoE-NJ
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members Wenet-BD-INT-Sec
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members Wenet-BD-GGC-Sec
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members Wenet-BD-CDN-Sec
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members Swadesh-BD-CDN
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members Vision-Blue-INT-Sec
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members Vision-Blue-GGC-Sec
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members Vision-Blue-CDN-Sec
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members Arin-Telecom-Int-Sec
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members Arin-Telecom-GGC-Sec
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members Arin-Telecom-CDN-Sec
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members Arin-Telecom-BDIX
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members Vision-Blue-BDIX
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members Arin-Telecom-BDIX-Sec
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members Megna_Aviation
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members Skynet-Secondary-INT
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members Skynet-Secondary-GGC
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members Skynet-Secondary-CDN
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members Skynet-Secondary-BDIX
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members Net-Connect-INT-Secondary
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members Net-Connect-GGC-Secondary
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members Net-Connect-CDN-Secondary
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members Net-Connect-BDIX-Secondary
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members Non-Stop-Network-INT
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members Non-Stop-Network-CDN
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members Non-Stop-Network-GGC
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members Non-Stop-Network-BDIX
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members Global-Cyber-Net-INT-Secondary
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members Global-Cyber-Net-CDN-Secondary
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members Global-Cyber-Net-BDIX-Secondary
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members Bismillah-Computer-INT-Sec
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members Bismillah-Computer-CDN-SEC
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members Global-Cyber-Net-GGC-Secondary
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members Hop_Lun_Res
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members Mahmud_UT4_DATA_Pri
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members NOL-UT-4-Camera
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members PCA-Online-INT
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members PCA-Online-GGC
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members PCA-Online-CDN
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members PCA-Online-BDIX
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members BD-Network-GGC-SEC
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members Uttara-Call-Center
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members Alternative_Recruitment
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members Aleya_Feeds-Home-Office
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members Uttara-Office-Mikrotik
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members STS-Nursing-Principle
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members Mansha-Fashion-UT1
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members DH-1010
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members Prianka-City-INT
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members POWERGEN_LTD
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members MAF_Flying
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members UT03-0275
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members Bashundhara_Airways
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members Crosswear_Res
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members Pizza-Inn-UT-S3
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members Pantagon-MD-House
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members London_Fashion
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members JD-Williams-UT-6
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members Pizza-Inn-UT-S4
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members Mansha-Fashion-UT2
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members Crosswear_HO
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members Prianka-City-Data
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members UT7_L3_Sohan_Bhai
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members Rokib_Sir_UT_OFF
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members Momin-Textile
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members FGG-Group
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members UT12-MR01
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members Bashundhara_Airways_DATA
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members Mikrotik-UT7-INT
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members Softograph_Ltd
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members Uthant-Rabbani
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members Warptex_Bangladesh
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members Max_Zannat_UGH
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members Xuan_Tong_UT4
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members Hop_Yick_UT7
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members C2C_Prarma_INT_Sec
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members C2C_Prarma_DATA_Sec
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members C2C_HO_INT_Sec
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members C2C_HO_DATA_Sec
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members Shangu_HO_UT7
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members Target-Group-Pri
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members Sajedul_Munir_UT6
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members Increments_UT13
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members Swadesh-BD-ICONIX-Cloud
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members Vision-Blue-Iconix-Cloud-SEC
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members Jadu-Net-Sec-INT
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members Jadu-Net-Sec-GGC
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members Jadu-Net-Sec-CDN
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members Jadu-Net-Sec-BDIX
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members Tudorknight
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members DH-620-UT06
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members Mahmud_Director_Res_Sec
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members ISSL-P2P
+set interfaces xe-0/0/32 unit 0 family ethernet-switching vlan members Mode_Makers
+set interfaces xe-0/0/33 description ----UT--------33------SW-36-Sec-4-P-0-OH
+set interfaces xe-0/0/33 ether-options 802.3ad ae0
+set interfaces xe-0/0/34 description ----UT--------34------SW-36-Sec-4-P-2-SCL
+set interfaces xe-0/0/34 ether-options 802.3ad ae0
+set interfaces xe-0/0/35 description ----UT--------35------UT-S4-Mikrotik-Pri-sfp-sfpplus1
+set interfaces xe-0/0/35 unit 0 family ethernet-switching interface-mode trunk
+set interfaces xe-0/0/35 unit 0 family ethernet-switching vlan members Mikrotik-UT-BDIX
+set interfaces xe-0/0/35 unit 0 family ethernet-switching vlan members Mikrotik-UT-Int
+set interfaces xe-0/0/35 unit 0 family ethernet-switching vlan members Mikrotik-UT-GGC
+set interfaces xe-0/0/35 unit 0 family ethernet-switching vlan members PPPoE-UT04-FTTX
+set interfaces xe-0/0/35 unit 0 family ethernet-switching vlan members UT_Sec11_POP
+set interfaces xe-0/0/35 unit 0 family ethernet-switching vlan members M.Biz-Tech-Internet
+set interfaces xe-0/0/35 unit 0 family ethernet-switching vlan members PPPoE-UT12-FTTX
+set interfaces xe-0/0/35 unit 0 family ethernet-switching vlan members PPPoE-UT07-FTTX
+set interfaces xe-0/0/35 unit 0 family ethernet-switching vlan members Uthant-Rabbani
+set interfaces ae0 description ----UT04------ae0-----SW-35-Uplink-Sec-04-ae5
+set interfaces ae0 aggregated-ether-options minimum-links 1
+set interfaces ae0 aggregated-ether-options link-speed 10g
+set interfaces ae0 unit 0 family ethernet-switching interface-mode trunk
+set interfaces ae0 unit 0 family ethernet-switching vlan members PPPoE-UT04-FTTX
+set interfaces ae0 unit 0 family ethernet-switching vlan members Uttara-Call-Center
+set interfaces ae0 unit 0 family ethernet-switching vlan members NextNet-Metro-Lan
+set interfaces ae0 unit 0 family ethernet-switching vlan members NEXT-Server
+set interfaces ae0 unit 0 family ethernet-switching vlan members ISSL-data
+set interfaces ae0 unit 0 family ethernet-switching vlan members NOL-Management
+set interfaces ae0 unit 0 family ethernet-switching vlan members DH-620-UT06
+set interfaces ae0 unit 0 family ethernet-switching vlan members STS-Group-S6
+set interfaces ae0 unit 0 family ethernet-switching vlan members Pizza-Inn-UT-S4
+set interfaces ae0 unit 0 family ethernet-switching vlan members Swadesh-BD-INT
+set interfaces ae0 unit 0 family ethernet-switching vlan members Swadesh-BD-GGC
+set interfaces ae0 unit 0 family ethernet-switching vlan members Swadesh-BD-BDIX
+set interfaces ae0 unit 0 family ethernet-switching vlan members Swadesh-CDN
+set interfaces ae0 unit 0 family ethernet-switching vlan members OLT_Real_IP
+set interfaces ae0 unit 0 family ethernet-switching vlan members Uthant-Rabbani
+set interfaces ae0 unit 0 family ethernet-switching vlan members Pantagon-MD-House
+set interfaces ae0 unit 0 family ethernet-switching vlan members JD-Williams-UT-6
+set interfaces ae0 unit 0 family ethernet-switching vlan members London_Fashion
+set interfaces ae0 unit 0 family ethernet-switching vlan members Wenet-BD-INT-Sec
+set interfaces ae0 unit 0 family ethernet-switching vlan members Wenet-BD-GGC-Sec
+set interfaces ae0 unit 0 family ethernet-switching vlan members Wenet-BD-CDN-Sec
+set interfaces ae0 unit 0 family ethernet-switching vlan members Swadesh-BD-CDN
+set interfaces ae0 unit 0 family ethernet-switching vlan members WENET-BDIX
+set interfaces ae0 unit 0 family ethernet-switching vlan members Vision-Blue-INT-Sec
+set interfaces ae0 unit 0 family ethernet-switching vlan members Vision-Blue-GGC-Sec
+set interfaces ae0 unit 0 family ethernet-switching vlan members Vision-Blue-CDN-Sec
+set interfaces ae0 unit 0 family ethernet-switching vlan members Arin-Telecom-Int-Sec
+set interfaces ae0 unit 0 family ethernet-switching vlan members Arin-Telecom-GGC-Sec
+set interfaces ae0 unit 0 family ethernet-switching vlan members Arin-Telecom-CDN-Sec
+set interfaces ae0 unit 0 family ethernet-switching vlan members Arin-Telecom-BDIX
+set interfaces ae0 unit 0 family ethernet-switching vlan members Vision-Blue-BDIX
+set interfaces ae0 unit 0 family ethernet-switching vlan members Arin-Telecom-BDIX-Sec
+set interfaces ae0 unit 0 family ethernet-switching vlan members Skynet-Secondary-INT
+set interfaces ae0 unit 0 family ethernet-switching vlan members Skynet-Secondary-GGC
+set interfaces ae0 unit 0 family ethernet-switching vlan members Skynet-Secondary-CDN
+set interfaces ae0 unit 0 family ethernet-switching vlan members Skynet-Secondary-BDIX
+set interfaces ae0 unit 0 family ethernet-switching vlan members Non-Stop-Network-INT
+set interfaces ae0 unit 0 family ethernet-switching vlan members Non-Stop-Network-CDN
+set interfaces ae0 unit 0 family ethernet-switching vlan members Non-Stop-Network-GGC
+set interfaces ae0 unit 0 family ethernet-switching vlan members Non-Stop-Network-BDIX
+set interfaces ae0 unit 0 family ethernet-switching vlan members Global-Cyber-Net-INT-Secondary
+set interfaces ae0 unit 0 family ethernet-switching vlan members Global-Cyber-Net-CDN-Secondary
+set interfaces ae0 unit 0 family ethernet-switching vlan members Global-Cyber-Net-BDIX-Secondary
+set interfaces ae0 unit 0 family ethernet-switching vlan members Rokib_Sir_UT_OFF
+set interfaces ae0 unit 0 family ethernet-switching vlan members Mahmud_UT4_DATA_Pri
+set interfaces ae0 unit 0 family ethernet-switching vlan members Mahmud_Director_Res_Sec
+set interfaces ae0 unit 0 family ethernet-switching vlan members Global-Cyber-Net-GGC-Secondary
+set interfaces ae0 unit 0 family ethernet-switching vlan members NOL-UT-4-Camera
+set interfaces ae0 unit 0 family ethernet-switching vlan members PCA-Online-INT
+set interfaces ae0 unit 0 family ethernet-switching vlan members PCA-Online-GGC
+set interfaces ae0 unit 0 family ethernet-switching vlan members PCA-Online-CDN
+set interfaces ae0 unit 0 family ethernet-switching vlan members PCA-Online-BDIX
+set interfaces ae0 unit 0 family ethernet-switching vlan members BD-Network-GGC-SEC
+set interfaces ae0 unit 0 family ethernet-switching vlan members ISSL-P2P
+set interfaces ae0 unit 0 family ethernet-switching vlan members Mode_Makers
+set interfaces ae0 unit 0 family ethernet-switching vlan members Sajedul_Munir_UT6
+set interfaces ae0 unit 0 family ethernet-switching vlan members Swadesh-BD-ICONIX-Cloud
+set interfaces ae0 unit 0 family ethernet-switching vlan members Vision-Blue-Iconix-Cloud-SEC
+set interfaces ae0 unit 0 family ethernet-switching vlan members NextNet
+set interfaces ae0 unit 0 family ethernet-switching vlan members Jadu-Net-Sec-INT
+set interfaces ae0 unit 0 family ethernet-switching vlan members Jadu-Net-Sec-GGC
+set interfaces ae0 unit 0 family ethernet-switching vlan members Jadu-Net-Sec-CDN
+set interfaces ae0 unit 0 family ethernet-switching vlan members Jadu-Net-Sec-BDIX
+set interfaces ae0 unit 0 family ethernet-switching vlan members Tudorknight
+set interfaces ae3 description ----UT--------ae3-----NOL-Juniper-UT-ae3
+set interfaces ae3 aggregated-ether-options minimum-links 1
+set interfaces ae3 aggregated-ether-options link-speed 1g
+set interfaces ae3 unit 0 family ethernet-switching interface-mode trunk
+set interfaces ae3 unit 0 family ethernet-switching vlan members DH-900-UT-S-15-Primary
+set interfaces ae3 unit 0 family ethernet-switching vlan members Color-Experts
+set interfaces ae3 unit 0 family ethernet-switching vlan members Uber
+set interfaces ae3 unit 0 family ethernet-switching vlan members UT11-1501
+set interfaces ae3 unit 0 family ethernet-switching vlan members Aleya_Feeds-Home-Office
+set interfaces ae3 unit 0 family ethernet-switching vlan members OD-0408
+set interfaces ae3 unit 0 family ethernet-switching vlan members GBA-Techno
+set interfaces ae3 unit 0 family ethernet-switching vlan members M.Biz-Tech-Internet
+set interfaces ae3 unit 0 family ethernet-switching vlan members Momin-Textile
+set interfaces ae3 unit 0 family ethernet-switching vlan members SM-Group-UT-11
+set interfaces ae3 unit 0 family ethernet-switching vlan members Mansha-Fashion-UT1
+set interfaces ae3 unit 0 family ethernet-switching vlan members UT03-0226
+set interfaces ae3 unit 0 family ethernet-switching vlan members DH-1030-AMBIENT
+set interfaces ae3 unit 0 family ethernet-switching vlan members UT03-0220
+set interfaces ae3 unit 0 family ethernet-switching vlan members UT01-0403
+set interfaces ae3 unit 0 family ethernet-switching vlan members UT03-0441
+set interfaces ae3 unit 0 family ethernet-switching vlan members AQM-Business
+set interfaces ae3 unit 0 family ethernet-switching vlan members UT03-0775
+set interfaces ae3 unit 0 family ethernet-switching vlan members Pizza-Inn-UT-S3
+set interfaces ae3 unit 0 family ethernet-switching vlan members UT07-LK17
+set interfaces ae3 unit 0 family ethernet-switching vlan members Pizza-Inn-UT-S4
+set interfaces ae3 unit 0 family ethernet-switching vlan members Mansha-Fashion-UT2
+set interfaces ae3 unit 0 family ethernet-switching vlan members Olive-Tree-Uttara
+set interfaces ae3 unit 0 family ethernet-switching vlan members Hamko-Footwear
+set interfaces ae3 unit 0 family ethernet-switching vlan members DH-620-UT06
+set interfaces ae3 unit 0 family ethernet-switching vlan members UT07-SJ39-Mansha
+set interfaces ae3 unit 0 family ethernet-switching vlan members UT03-0275
+set interfaces ae3 unit 0 family ethernet-switching vlan members Uttara-Call-Center
+set interfaces ae3 unit 0 family ethernet-switching vlan members STS-Group-S6
+set interfaces ae3 unit 0 family ethernet-switching vlan members DH-1010
+set interfaces ae3 unit 0 family ethernet-switching vlan members Crosswear_HO
+set interfaces ae3 unit 0 family ethernet-switching vlan members Crosswear_Res
+set interfaces ae3 unit 0 family ethernet-switching vlan members NextNet
+set interfaces ae3 unit 0 family ethernet-switching vlan members STS-Nursing-Principle
+set interfaces ae3 unit 0 family ethernet-switching vlan members Firstray-FTTX
+set interfaces ae3 unit 0 family ethernet-switching vlan members Uthant-Rabbani
+set interfaces ae3 unit 0 family ethernet-switching vlan members Pantagon-MD-House
+set interfaces ae3 unit 0 family ethernet-switching vlan members JD-Williams-UT-6
+set interfaces ae3 unit 0 family ethernet-switching vlan members Javan-Hotel
+set interfaces ae3 unit 0 family ethernet-switching vlan members H2H-Solution
+set interfaces ae3 unit 0 family ethernet-switching vlan members TCL-Global
+set interfaces ae3 unit 0 family ethernet-switching vlan members Uttara-Office-Mikrotik
+set interfaces ae3 unit 0 family ethernet-switching vlan members Prianka-City-INT
+set interfaces ae3 unit 0 family ethernet-switching vlan members Prianka-City-Data
+set interfaces ae3 unit 0 family ethernet-switching vlan members London_Fashion
+set interfaces ae3 unit 0 family ethernet-switching vlan members Bashundhara_Airways
+set interfaces ae3 unit 0 family ethernet-switching vlan members MAF_Flying
+set interfaces ae3 unit 0 family ethernet-switching vlan members Megna_Aviation
+set interfaces ae3 unit 0 family ethernet-switching vlan members UT7_L3_Sohan_Bhai
+set interfaces ae3 unit 0 family ethernet-switching vlan members Softograph_Ltd
+set interfaces ae3 unit 0 family ethernet-switching vlan members FGG-Group
+set interfaces ae3 unit 0 family ethernet-switching vlan members Hop_Lun_Res
+set interfaces ae3 unit 0 family ethernet-switching vlan members Rokib_Sir_UT_OFF
+set interfaces ae3 unit 0 family ethernet-switching vlan members Mahmud_UT4_DATA_Pri
+set interfaces ae3 unit 0 family ethernet-switching vlan members Alternative_Recruitment
+set interfaces ae3 unit 0 family ethernet-switching vlan members Warptex_Bangladesh
+set interfaces ae3 unit 0 family ethernet-switching vlan members Max_Zannat_UGH
+set interfaces ae3 unit 0 family ethernet-switching vlan members Xuan_Tong_UT4
+set interfaces ae3 unit 0 family ethernet-switching vlan members Mode_Makers
+set interfaces ae3 unit 0 family ethernet-switching vlan members Xuan_Tong_Sec
+set interfaces ae3 unit 0 family ethernet-switching vlan members Hop_Yick_UT7
+set interfaces ae3 unit 0 family ethernet-switching vlan members C2C-HO-INT-Pri
+set interfaces ae3 unit 0 family ethernet-switching vlan members C2C-HO-DATA-Pri
+set interfaces ae3 unit 0 family ethernet-switching vlan members C2C_Prarma_INT_Pri
+set interfaces ae3 unit 0 family ethernet-switching vlan members C2C_Prarma_DATA_Pri
+set interfaces ae3 unit 0 family ethernet-switching vlan members Shangu_HO_UT7
+set interfaces ae3 unit 0 family ethernet-switching vlan members Target-Group-FTTX
+set interfaces ae4 description ----UT--------ae4-----NOL-Juniper-UT-ae4
+set interfaces ae4 aggregated-ether-options minimum-links 1
+set interfaces ae4 aggregated-ether-options link-speed 1g
+set interfaces ae4 unit 0 family ethernet-switching interface-mode trunk
+set interfaces ae4 unit 0 family ethernet-switching vlan members Color-Experts
+set interfaces ae4 unit 0 family ethernet-switching vlan members Aleya_Feeds-Home-Office
+set interfaces ae4 unit 0 family ethernet-switching vlan members UT_Sec11_POP
+set interfaces ae4 unit 0 family ethernet-switching vlan members Firstray-DATA-Backup
+set interfaces ae4 unit 0 family ethernet-switching vlan members Bomerang-Backup
+set interfaces ae4 unit 0 family ethernet-switching vlan members UT12-MR01
+set interfaces ae4 unit 0 family ethernet-switching vlan members PPPoE-NJ
+set interfaces ae4 unit 0 family ethernet-switching vlan members AQM_Business_Backup
+set interfaces ae4 unit 0 family ethernet-switching vlan members Mahmud_Director_Res_Sec
+set interfaces ae4 unit 0 family ethernet-switching vlan members Bashundhara_Airways_DATA
+set interfaces ae6 description ----UT--------ae3-----SW-54-UT-11-ae3
+set interfaces ae6 aggregated-ether-options minimum-links 1
+set interfaces ae6 aggregated-ether-options link-speed 1g
+set interfaces ae6 unit 0 family ethernet-switching interface-mode trunk
+set interfaces ae6 unit 0 family ethernet-switching vlan members OLT_Real_IP
+set interfaces ae6 unit 0 family ethernet-switching vlan members UT_Sec11_POP
+set interfaces ae6 unit 0 family ethernet-switching vlan members H2H-Solution
+set interfaces ae6 unit 0 family ethernet-switching vlan members TCL-Global
+set interfaces ae6 unit 0 family ethernet-switching vlan members Crosswear_HO
+set interfaces ae6 unit 0 family ethernet-switching vlan members Momin-Textile
+set interfaces ae6 unit 0 family ethernet-switching vlan members UT07-SJ39-Mansha
+set interfaces ae6 unit 0 family ethernet-switching vlan members FGG-Group
+set interfaces ae6 unit 0 family ethernet-switching vlan members NOL-Management
+set interfaces ae6 unit 0 family ethernet-switching vlan members Warptex_Bangladesh
+set interfaces ae6 unit 0 family ethernet-switching vlan members C2C_Prarma_INT_Pri
+set interfaces ae6 unit 0 family ethernet-switching vlan members C2C_Prarma_DATA_Pri
+set interfaces ae6 unit 0 family ethernet-switching vlan members C2C_Prarma_INT_Sec
+set interfaces ae6 unit 0 family ethernet-switching vlan members C2C_Prarma_DATA_Sec
+set interfaces ae7 description ----UT--------ae7-----SW-50-ae7
+set interfaces ae7 aggregated-ether-options minimum-links 1
+set interfaces ae7 aggregated-ether-options link-speed 1g
+set interfaces ae7 unit 0 family ethernet-switching interface-mode trunk
+set interfaces ae7 unit 0 family ethernet-switching vlan members NOL-Management
+set interfaces ae7 unit 0 family ethernet-switching vlan members managment
+set interfaces ae7 unit 0 family ethernet-switching vlan members Color-Experts
+set interfaces ae7 unit 0 family ethernet-switching vlan members Uttara-Office-Mikrotik
+set interfaces ae7 unit 0 family ethernet-switching vlan members UT-Access-Control
+set interfaces ae7 unit 0 family ethernet-switching vlan members NOL-UT-Marketing-Camera
+set interfaces ae7 unit 0 family ethernet-switching vlan members NOL-UT-Conference-Camera
+set interfaces ae7 unit 0 family ethernet-switching vlan members NOL-UT-Outside-Camera
+set interfaces ae7 unit 0 family ethernet-switching vlan members NOL-UT-PoP-Camera
+set interfaces ae7 unit 0 family ethernet-switching vlan members UT_Sec11_POP
+set interfaces ae7 unit 0 family ethernet-switching vlan members OLT_Real_IP
+set interfaces ae7 unit 0 family ethernet-switching vlan members IPTSP
+set interfaces ae7 unit 0 family ethernet-switching vlan members H2H-Solution
+set interfaces ae7 unit 0 family ethernet-switching vlan members TCL-Global
+set interfaces ae7 unit 0 family ethernet-switching vlan members Crosswear_HO
+set interfaces ae7 unit 0 family ethernet-switching vlan members Momin-Textile
+set interfaces ae7 unit 0 family ethernet-switching vlan members UT07-SJ39-Mansha
+set interfaces ae7 unit 0 family ethernet-switching vlan members FGG-Group
+set interfaces ae7 unit 0 family ethernet-switching vlan members Warptex_Bangladesh
+set interfaces ae7 unit 0 family ethernet-switching vlan members ISSL-P2P
+set interfaces irb unit 507 family inet address 172.17.25.52/24
+set snmp community next_online clients 172.17.25.0/24
+set snmp community next_online clients 172.16.25.0/24
+set forwarding-options storm-control-profiles default all
+set routing-options static route 0.0.0.0/0 next-hop 172.17.25.26
+set protocols lldp interface all
+set protocols lldp-med interface all
+set protocols igmp-snooping vlan default
+set vlans AQM-Business vlan-id 1312
+set vlans AQM_Business_Backup vlan-id 1147
+set vlans Aleya_Feeds-Home-Office vlan-id 934
+set vlans Alif_Technologies_Backup vlan-id 383
+set vlans Alternative_Recruitment vlan-id 923
+set vlans Arin-Telecom-BDIX vlan-id 2230
+set vlans Arin-Telecom-BDIX-Sec vlan-id 2300
+set vlans Arin-Telecom-CDN-Sec vlan-id 2233
+set vlans Arin-Telecom-GGC-Sec vlan-id 2232
+set vlans Arin-Telecom-Int-Sec vlan-id 2231
+set vlans Asian-Network-CDN vlan-id 1095
+set vlans Asian-Network-INT vlan-id 1094
+set vlans BD-Network-GGC-SEC vlan-id 2915
+set vlans BDpeer-BDIX vlan-id 1142
+set vlans BDpeer-Internet vlan-id 1140
+set vlans Bashundhara_Airways vlan-id 1318
+set vlans Bashundhara_Airways_DATA vlan-id 1321
+set vlans Bismillah-Computer-CDN-SEC vlan-id 3356
+set vlans Bismillah-Computer-INT-Sec vlan-id 3355
+set vlans Blume-Net-BDIX vlan-id 1081
+set vlans Blume-Net-CDN vlan-id 1080
+set vlans Blume-Net-GGC vlan-id 1079
+set vlans Blume-Net-INT vlan-id 1078
+set vlans Bomerang-Backup vlan-id 1010
+set vlans C2C-HO-DATA-Pri vlan-id 1548
+set vlans C2C-HO-INT-Pri vlan-id 1547
+set vlans C2C_HO_DATA_Sec vlan-id 859
+set vlans C2C_HO_INT_Sec vlan-id 858
+set vlans C2C_Prarma_DATA_Pri vlan-id 1910
+set vlans C2C_Prarma_DATA_Sec vlan-id 852
+set vlans C2C_Prarma_INT_Pri vlan-id 1909
+set vlans C2C_Prarma_INT_Sec vlan-id 851
+set vlans Color-Experts vlan-id 974
+set vlans Crosswear_HO vlan-id 1538
+set vlans Crosswear_Res vlan-id 1319
+set vlans DH-1010 vlan-id 1302
+set vlans DH-1030-AMBIENT vlan-id 1306
+set vlans DH-620-UT06 vlan-id 1520
+set vlans DH-900-UT-S-15-Primary vlan-id 731
+set vlans FGG-Group vlan-id 1907
+set vlans Firstray-DATA-Backup vlan-id 1163
+set vlans Firstray-FTTX vlan-id 1308
+set vlans Fissa-IBD-Uttara-BDIX vlan-id 2289
+set vlans Fissa-IBD-Uttara-Data vlan-id 2290
+set vlans Fissa-IBD-Uttara-GGC vlan-id 2288
+set vlans Fissa-IBD-Uttara-INT vlan-id 2287
+set vlans GBA-Techno vlan-id 976
+set vlans Global-Cyber-Net-BDIX-Secondary vlan-id 1229
+set vlans Global-Cyber-Net-CDN-Secondary vlan-id 1227
+set vlans Global-Cyber-Net-GGC-Secondary vlan-id 3465
+set vlans Global-Cyber-Net-INT-Secondary vlan-id 1225
+set vlans H2H-Solution vlan-id 1903
+set vlans Hamko-Footwear vlan-id 1537
+set vlans Hop_Lun_Res vlan-id 1542
+set vlans Hop_Yick_UT7 vlan-id 1546
+set vlans IPTSP vlan-id 527
+set vlans ISSL-P2P vlan-id 1220
+set vlans ISSL-data vlan-id 660
+set vlans Increments_UT13 vlan-id 1551
+set vlans JD-Williams-UT-6 vlan-id 1531
+set vlans Jadu-Net-Sec-BDIX vlan-id 686
+set vlans Jadu-Net-Sec-CDN vlan-id 685
+set vlans Jadu-Net-Sec-GGC vlan-id 684
+set vlans Jadu-Net-Sec-INT vlan-id 683
+set vlans Javan-Hotel vlan-id 1303
+set vlans London_Fashion vlan-id 1534
+set vlans M.Biz-Tech-BDIX vlan-id 986
+set vlans M.Biz-Tech-Internet vlan-id 985
+set vlans MAF_Flying vlan-id 1314
+set vlans Mahmud_Director_Res_Sec vlan-id 1122
+set vlans Mahmud_UT4_DATA_Pri vlan-id 932
+set vlans Mansha-Fashion-UT1 vlan-id 1120
+set vlans Mansha-Fashion-UT2 vlan-id 1535
+set vlans Max_Zannat_UGH vlan-id 1544
+set vlans Megna_Aviation vlan-id 941
+set vlans Mikrotik-UT-BDIX vlan-id 738
+set vlans Mikrotik-UT-GGC vlan-id 737
+set vlans Mikrotik-UT-Int vlan-id 736
+set vlans Mikrotik-UT7-INT vlan-id 1005
+set vlans Mode_Makers vlan-id 1545
+set vlans Momin-Textile vlan-id 1905
+set vlans NEXT-Server vlan-id 999
+set vlans NOL-Management vlan-id 507
+set vlans NOL-Management l3-interface irb.507
+set vlans NOL-UT-4-Camera vlan-id 246
+set vlans NOL-UT-Conference-Camera vlan-id 257
+set vlans NOL-UT-Marketing-Camera vlan-id 256
+set vlans NOL-UT-Outside-Camera vlan-id 258
+set vlans NOL-UT-PoP-Camera vlan-id 271
+set vlans Net-Connect-BDIX-Secondary vlan-id 4006
+set vlans Net-Connect-CDN-Secondary vlan-id 4005
+set vlans Net-Connect-GGC-Secondary vlan-id 4004
+set vlans Net-Connect-INT-Secondary vlan-id 4003
+set vlans Net-Vision-BDIX vlan-id 1109
+set vlans Net-Vision-CDN vlan-id 1110
+set vlans Net-Vision-GGC vlan-id 1108
+set vlans Net-Vision-Internet vlan-id 1107
+set vlans NextNet vlan-id 953
+set vlans NextNet-Metro-Lan vlan-id 998
+set vlans Non-Stop-Network-BDIX vlan-id 929
+set vlans Non-Stop-Network-CDN vlan-id 3348
+set vlans Non-Stop-Network-GGC vlan-id 3349
+set vlans Non-Stop-Network-INT vlan-id 3347
+set vlans OD-0408 vlan-id 946
+set vlans OLT_Real_IP vlan-id 2500
+set vlans Olive-Tree-Uttara vlan-id 1536
+set vlans PCA-Online-BDIX vlan-id 3619
+set vlans PCA-Online-CDN vlan-id 3618
+set vlans PCA-Online-GGC vlan-id 3617
+set vlans PCA-Online-INT vlan-id 3616
+set vlans POWERGEN_LTD vlan-id 1311
+set vlans PPPoE-NJ vlan-id 902
+set vlans PPPoE-UT01-FTTX vlan-id 1301
+set vlans PPPoE-UT04-FTTX vlan-id 804
+set vlans PPPoE-UT07-FTTX vlan-id 1501
+set vlans PPPoE-UT12-FTTX vlan-id 1300
+set vlans Pantagon-MD-House vlan-id 1528
+set vlans Pizza-Inn-UT-S3 vlan-id 1523
+set vlans Pizza-Inn-UT-S4 vlan-id 1533
+set vlans Prianka-City-Data vlan-id 1539
+set vlans Prianka-City-INT vlan-id 1304
+set vlans Race-INT vlan-id 1137
+set vlans Race-IT-CDN vlan-id 1141
+set vlans Race-IT-GGC vlan-id 1138
+set vlans Race_Bdix vlan-id 1139
+set vlans Rokib_Sir_UT_OFF vlan-id 1541
+set vlans SM-Group-UT-11 vlan-id 1075
+set vlans STS-Group-S6 vlan-id 1527
+set vlans STS-Nursing-Principle vlan-id 981
+set vlans Sajedul_Munir_UT6 vlan-id 1550
+set vlans Shangu_HO_UT7 vlan-id 1549
+set vlans Skynet-Secondary-BDIX vlan-id 3321
+set vlans Skynet-Secondary-CDN vlan-id 3316
+set vlans Skynet-Secondary-GGC vlan-id 3315
+set vlans Skynet-Secondary-INT vlan-id 3314
+set vlans Softograph_Ltd vlan-id 1320
+set vlans Swadesh-BD-BDIX vlan-id 870
+set vlans Swadesh-BD-CDN vlan-id 2213
+set vlans Swadesh-BD-GGC vlan-id 2212
+set vlans Swadesh-BD-ICONIX-Cloud vlan-id 2227
+set vlans Swadesh-BD-INT vlan-id 2211
+set vlans Swadesh-CDN vlan-id 883
+set vlans Switch-Management vlan-id 806
+set vlans TCL-Global vlan-id 1904
+set vlans Target-Group-FTTX vlan-id 1317
+set vlans Target-Group-Pri vlan-id 1160
+set vlans Tudorknight vlan-id 1552
+set vlans UT-Access-Control vlan-id 235
+set vlans UT01-0403 vlan-id 1309
+set vlans UT03-0220 vlan-id 1307
+set vlans UT03-0226 vlan-id 1305
+set vlans UT03-0275 vlan-id 1315
+set vlans UT03-0441 vlan-id 1310
+set vlans UT03-0775 vlan-id 1316
+set vlans UT07-1810 vlan-id 1532
+set vlans UT07-LK17 vlan-id 1522
+set vlans UT07-SJ39-Mansha vlan-id 1906
+set vlans UT11-1501 vlan-id 910
+set vlans UT12-MR01 vlan-id 1526
+set vlans UT7_L3_Sohan_Bhai vlan-id 1540
+set vlans UT_Sec11_POP vlan-id 1901
+set vlans UT_Sec7_BDIX vlan-id 1502
+set vlans Uber vlan-id 1154
+set vlans Uthant-Rabbani vlan-id 1524
+set vlans Uttara-Call-Center vlan-id 959
+set vlans Uttara-Office-Mikrotik vlan-id 943
+set vlans Vision-Blue-BDIX vlan-id 2226
+set vlans Vision-Blue-CDN-Sec vlan-id 2224
+set vlans Vision-Blue-GGC-Sec vlan-id 2223
+set vlans Vision-Blue-INT-Sec vlan-id 2222
+set vlans Vision-Blue-Iconix-Cloud-SEC vlan-id 2228
+set vlans WENET-BDIX vlan-id 779
+set vlans WENET-CDN vlan-id 780
+set vlans WENET-GGC vlan-id 778
+set vlans Warptex_Bangladesh vlan-id 1908
+set vlans Wenet-BD-CDN-Sec vlan-id 2210
+set vlans Wenet-BD-GGC-Sec vlan-id 2209
+set vlans Wenet-BD-INT-Sec vlan-id 2208
+set vlans Wenet_INT vlan-id 777
+set vlans Xuan_Tong_Sec vlan-id 966
+set vlans Xuan_Tong_UT4 vlan-id 1543
+set vlans managment vlan-id 501

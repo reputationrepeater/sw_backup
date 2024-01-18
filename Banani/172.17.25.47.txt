@@ -1,0 +1,298 @@
+Using 4904 out of 524288 bytes
+!
+version 12.2
+no service pad
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+!
+hostname BANANI
+!
+boot-start-marker
+boot-end-marker
+!
+enable password C$&bill
+!
+no aaa new-model
+system mtu routing 1500
+authentication mac-move permit
+ip subnet-zero
+!
+!
+!
+crypto pki trustpoint TP-self-signed-1743891456
+ enrollment selfsigned
+ subject-name cn=IOS-Self-Signed-Certificate-1743891456
+ revocation-check none
+ rsakeypair TP-self-signed-1743891456
+!
+!
+crypto pki certificate chain TP-self-signed-1743891456
+ certificate self-signed 01 nvram:IOS-Self-Sig#3637.cer
+!
+!
+!
+errdisable recovery cause bpduguard
+!
+spanning-tree mode rapid-pvst
+spanning-tree etherchannel guard misconfig
+spanning-tree extend system-id
+!
+!
+vlan internal allocation policy ascending
+!
+vlan 309
+ name Data_Edge
+!
+vlan 501
+ name NOL-Configuration
+!
+vlan 507
+ name Managment
+!
+vlan 545
+ name Connect-BD
+!
+vlan 905
+ name PPPoE-BN
+!
+vlan 906
+!
+vlan 907
+ name OD-0333
+!
+vlan 915
+ name BN-1211
+!
+vlan 922
+ name OD-0334
+!
+vlan 924
+ name Ena-Food
+!
+vlan 931
+!
+vlan 935
+ name Kaspersky-BN-New
+!
+vlan 937
+ name Policy-Research
+!
+vlan 938
+ name Asiatic
+!
+vlan 945
+!
+vlan 946
+ name OD-0408
+!
+vlan 947
+!
+vlan 949
+ name RBIP
+!
+vlan 960
+ name OD-Council01
+!
+vlan 961
+ name R&R-Resturant
+!
+vlan 968
+ name G2-5520
+!
+vlan 975,977
+!
+vlan 987
+ name BN-1833
+!
+vlan 1077
+ name OD-By-Rokib-Sir
+!
+vlan 1106
+ name MD-PA10-kaspersky
+!
+vlan 1114
+ name Unique_Infoway
+!
+vlan 1122
+ name Mansha
+!
+vlan 1123
+ name Apsis_Solutions
+!
+vlan 1155
+ name Roadmaster
+!
+vlan 1163
+ name Asiatic-Estencil
+!
+vlan 1204
+ name ICB
+!
+vlan 1423
+ name Atom-Backup
+!
+vlan 1433
+ name BACCO_Banani
+!
+vlan 1442
+ name Asiatic-Events-BN
+!
+!
+!
+interface FastEthernet0/1
+ description Free
+ switchport access vlan 501
+ duplex full
+!
+interface FastEthernet0/2
+ description Free
+ switchport trunk allowed vlan 507,906,931,945-947,975,977,978
+ switchport mode trunk
+ duplex full
+!
+interface FastEthernet0/3
+ description FREE
+ switchport access vlan 545
+ duplex full
+!
+interface FastEthernet0/4
+ description BN-1010_Policy-Research-Backup
+ switchport access vlan 937
+ duplex full
+!
+interface FastEthernet0/5
+ description FREE
+ switchport access vlan 1123
+ duplex full
+!
+interface FastEthernet0/6
+ description FREE
+ switchport access vlan 1122
+ duplex full
+!
+interface FastEthernet0/7
+ description BN-2706-Asiatic-Active
+ switchport access vlan 938
+ duplex full
+!
+interface FastEthernet0/8
+ description BN-0764-ICB-Islami-Bank
+ switchport access vlan 1204
+ duplex full
+!
+interface FastEthernet0/9
+ description Unique_Infoway
+ switchport access vlan 1114
+ duplex full
+!
+interface FastEthernet0/10
+ description Problem Port
+ switchport access vlan 935
+ duplex full
+!
+interface FastEthernet0/11
+ description BN-0759-Bitmakers
+ duplex full
+!
+interface FastEthernet0/12
+ description BN-1539(Maze_Geek_BD)
+ switchport access vlan 935
+ duplex full
+!
+interface FastEthernet0/13
+ description Free
+ switchport access vlan 1106
+ duplex full
+!
+interface FastEthernet0/14
+ description BN-1851-After-Hours-Residence-Backup
+ duplex full
+!
+interface FastEthernet0/15
+ description BN-1762-Ena-Food
+ switchport access vlan 924
+ duplex full
+!
+interface FastEthernet0/16
+ description G1-2801-BACCO-Project
+ switchport access vlan 1433
+ duplex full
+!
+interface FastEthernet0/17
+ description BN-KA34-Apsis-2
+ switchport access vlan 949
+ switchport trunk allowed vlan 406,407
+ duplex full
+!
+interface FastEthernet0/18
+ description MD-PA10_Kaspersky
+ switchport access vlan 1106
+ duplex full
+!
+interface FastEthernet0/19
+ description Free
+ switchport access vlan 1106
+ duplex full
+!
+interface FastEthernet0/20
+ description Free
+ switchport access vlan 1442
+ duplex full
+!
+interface FastEthernet0/21
+ description BN-2329-Atom_Backup
+ switchport access vlan 1423
+ duplex full
+!
+interface FastEthernet0/22
+ description problem-port
+ duplex full
+!
+interface FastEthernet0/23
+ description BN-KA-27-Roadmaster
+ switchport access vlan 1155
+ duplex full
+!
+interface FastEthernet0/24
+ description Max Power
+ duplex full
+!
+interface GigabitEthernet0/1
+ description SW-3-ge-4/0/20
+ port-type nni
+ switchport trunk allowed vlan 309,501,507,545,905-907,915,922,924,931,935,937
+ switchport trunk allowed vlan add 938,945-947,949,960,961,968,975,977,978,987
+ switchport trunk allowed vlan add 1077,1106,1114,1122,1123,1155,1163,1204,1423
+ switchport trunk allowed vlan add 1433,1442
+ switchport mode trunk
+!
+interface GigabitEthernet0/2
+ description SW-63-P-Gi-0/1
+ port-type nni
+ switchport trunk allowed vlan 507,801,813,901,932,966
+ switchport mode trunk
+!
+interface Vlan1
+ no ip address
+ no ip route-cache
+!
+interface Vlan507
+ ip address 172.17.25.47 255.255.255.0
+ no ip route-cache
+!
+no ip http server
+ip http secure-server
+snmp-server community next_online RO
+!
+line con 0
+line vty 0 4
+ password 7650
+ login
+line vty 5
+ password 7650
+ login
+line vty 6 15
+ login
+!
+end

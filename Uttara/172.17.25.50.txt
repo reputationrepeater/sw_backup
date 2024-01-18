@@ -1,0 +1,132 @@
+set version 12.3R6.6
+set system host-name SW-50
+set system root-authentication encrypted-password "$1$ycPXhocU$5kzXbFPGXcBqPLSKN/VAk/"
+set system login user noc uid 2000
+set system login user noc class super-user
+set system login user noc authentication encrypted-password "$1$LuK/iOLc$vs3Wc5hYniPgdFMOp6wP./"
+set system services ssh
+set system services telnet
+set chassis aggregated-devices ethernet device-count 20
+set interfaces ge-0/0/0 description ---------------IP-Cam-NVR
+set interfaces ge-0/0/0 unit 0 family ethernet-switching port-mode access
+set interfaces ge-0/0/0 unit 0 family ethernet-switching vlan members NOL-Configuration
+set interfaces ge-0/0/1 description ---------------Dlink-Camera
+set interfaces ge-0/0/1 unit 0 family ethernet-switching port-mode access
+set interfaces ge-0/0/2 description ----UT--------02------Uttara-Mikrotik
+set interfaces ge-0/0/2 unit 0 family ethernet-switching port-mode trunk
+set interfaces ge-0/0/2 unit 0 family ethernet-switching vlan members Mikrotik-UT-Int
+set interfaces ge-0/0/2 unit 0 family ethernet-switching vlan members Mikrotik-UT-GGC
+set interfaces ge-0/0/2 unit 0 family ethernet-switching vlan members Mikrotik-UT-BDIX
+set interfaces ge-0/0/2 unit 0 family ethernet-switching vlan members Managment
+set interfaces ge-0/0/4 description ----UT--------04------Uttara-Office-Mikrotik
+set interfaces ge-0/0/4 unit 0 family ethernet-switching port-mode access
+set interfaces ge-0/0/4 unit 0 family ethernet-switching vlan members Uttara-Office-Mikrotik
+set interfaces ge-0/0/5 description ----UT--------05------UT03-0709-Taher-and-Sons-Pvt-Ltd
+set interfaces ge-0/0/5 unit 0 family ethernet-switching port-mode access
+set interfaces ge-0/0/6 description ----UT--------06------Access-Controller
+set interfaces ge-0/0/6 unit 0 family ethernet-switching port-mode access
+set interfaces ge-0/0/6 unit 0 family ethernet-switching vlan members UT-Access-Control
+set interfaces ge-0/0/7 description ----UT--------08------Rakib-Sir-Server
+set interfaces ge-0/0/7 unit 0 family ethernet-switching port-mode access
+set interfaces ge-0/0/7 unit 0 family ethernet-switching vlan members NOL-Configuration
+set interfaces ge-0/0/8 description ----UT--------08------ISSL-P2P-Office
+set interfaces ge-0/0/8 unit 0 family ethernet-switching port-mode access
+set interfaces ge-0/0/8 unit 0 family ethernet-switching vlan members ISSL-P2P
+set interfaces ge-0/0/9 description ----UT--------09------UT03-0715
+set interfaces ge-0/0/9 unit 0 family ethernet-switching port-mode access
+set interfaces ge-0/0/10 description ----UT--------10------IP-Phone-ATA
+set interfaces ge-0/0/10 unit 0 family ethernet-switching port-mode access
+set interfaces ge-0/0/10 unit 0 family ethernet-switching vlan members IPTSP
+set interfaces ge-0/0/11 description ----UT--------11------Camera-1
+set interfaces ge-0/0/11 unit 0 family ethernet-switching port-mode access
+set interfaces ge-0/0/11 unit 0 family ethernet-switching vlan members NOL-UT-Conference-Camera
+set interfaces ge-0/0/13 description ----UT--------13------Uttara-Datacenter-Camera
+set interfaces ge-0/0/13 unit 0 family ethernet-switching port-mode access
+set interfaces ge-0/0/13 unit 0 family ethernet-switching vlan members NOL-UT-PoP-Camera
+set interfaces ge-0/0/15 description ----UT--------15------Office_IP_Phone
+set interfaces ge-0/0/15 unit 0 family ethernet-switching port-mode access
+set interfaces ge-0/0/15 unit 0 family ethernet-switching vlan members IPTSP
+set interfaces ge-0/0/16 description ----UT--------16------UT03-0703_PPPOE
+set interfaces ge-0/0/16 unit 0 family ethernet-switching port-mode access
+set interfaces ge-0/0/17 description ----UT--------17------Camera-Outside
+set interfaces ge-0/0/17 unit 0 family ethernet-switching port-mode access
+set interfaces ge-0/0/17 unit 0 family ethernet-switching vlan members NOL-UT-Outside-Camera
+set interfaces ge-0/0/18 description ----UT--------18------UT-Office
+set interfaces ge-0/0/18 unit 0 family ethernet-switching port-mode access
+set interfaces ge-0/0/19 description ----UT--------19------UT-Cam-DLink
+set interfaces ge-0/0/19 unit 0 family ethernet-switching port-mode access
+set interfaces ge-0/0/20 description ----UT--------20------NOL-UT-Entrance-Camera
+set interfaces ge-0/0/20 unit 0 family ethernet-switching port-mode access
+set interfaces ge-0/0/20 unit 0 family ethernet-switching vlan members NOL-UT-Marketing-Camera
+set interfaces ge-0/0/21 description ----UT--------21------UT03-0710
+set interfaces ge-0/0/21 unit 0 family ethernet-switching port-mode access
+set interfaces ge-0/0/22 unit 0 family ethernet-switching port-mode access
+set interfaces ge-0/0/22 unit 0 family ethernet-switching vlan members PPPoE-NJ
+set interfaces ge-0/1/0 description ----UT--------10------SW-52-ge-0/0/19
+set interfaces ge-0/1/0 ether-options 802.3ad ae7
+set interfaces ge-0/1/1 description ----UT--------11------SW-52-ge-0/0/20
+set interfaces ge-0/1/1 ether-options 802.3ad ae7
+set interfaces ge-0/1/2 description ----UT--------11------UT07-MR02-Color-Expert
+set interfaces ge-0/1/2 unit 0 family ethernet-switching port-mode access
+set interfaces ge-0/1/2 unit 0 family ethernet-switching vlan members Color-Experts
+set interfaces ae7 description ----UT--------ae7-----SW-52-ae7
+set interfaces ae7 aggregated-ether-options minimum-links 1
+set interfaces ae7 aggregated-ether-options link-speed 1g
+set interfaces ae7 unit 0 family ethernet-switching port-mode trunk
+set interfaces ae7 unit 0 family ethernet-switching vlan members Managment
+set interfaces ae7 unit 0 family ethernet-switching vlan members NOL-Configuration
+set interfaces ae7 unit 0 family ethernet-switching vlan members PPPoE-NJ
+set interfaces ae7 unit 0 family ethernet-switching vlan members Uttara-Office-Mikrotik
+set interfaces ae7 unit 0 family ethernet-switching vlan members genex
+set interfaces ae7 unit 0 family ethernet-switching vlan members Mikrotik-UT-BDIX
+set interfaces ae7 unit 0 family ethernet-switching vlan members Mikrotik-UT-GGC
+set interfaces ae7 unit 0 family ethernet-switching vlan members Mikrotik-UT-Int
+set interfaces ae7 unit 0 family ethernet-switching vlan members IPTSP
+set interfaces ae7 unit 0 family ethernet-switching vlan members Color-Experts
+set interfaces ae7 unit 0 family ethernet-switching vlan members UT-Access-Control
+set interfaces ae7 unit 0 family ethernet-switching vlan members NOL-UT-Marketing-Camera
+set interfaces ae7 unit 0 family ethernet-switching vlan members NOL-UT-Outside-Camera
+set interfaces ae7 unit 0 family ethernet-switching vlan members NOL-UT-Conference-Camera
+set interfaces ae7 unit 0 family ethernet-switching vlan members NOL-UT-PoP-Camera
+set interfaces ae7 unit 0 family ethernet-switching vlan members UT_Sec11_POP
+set interfaces ae7 unit 0 family ethernet-switching vlan members OLT_Real_IP
+set interfaces ae7 unit 0 family ethernet-switching vlan members H2H-Solution
+set interfaces ae7 unit 0 family ethernet-switching vlan members TCL-Global
+set interfaces ae7 unit 0 family ethernet-switching vlan members Crosswear_HO
+set interfaces ae7 unit 0 family ethernet-switching vlan members Momin-Textile
+set interfaces ae7 unit 0 family ethernet-switching vlan members UT07-SJ39-Mansha
+set interfaces ae7 unit 0 family ethernet-switching vlan members FGG-Group
+set interfaces ae7 unit 0 family ethernet-switching vlan members Warptex_Bangladesh
+set interfaces ae7 unit 0 family ethernet-switching vlan members ISSL-P2P
+set interfaces vlan unit 507 family inet address 172.17.25.50/24
+set snmp community next_online
+set vlans Access-Controller vlan-id 925
+set vlans Color-Experts vlan-id 974
+set vlans Crosswear_HO vlan-id 1538
+set vlans Eirtel-GGC-Uttara-Backup vlan-id 439
+set vlans Eirtel-Int-Uttara-Backup vlan-id 438
+set vlans FGG-Group vlan-id 1907
+set vlans H2H-Solution vlan-id 1903
+set vlans ILIS-Level3_DC1
+set vlans IPTSP vlan-id 527
+set vlans ISSL-P2P vlan-id 1220
+set vlans Managment vlan-id 507
+set vlans Managment l3-interface vlan.507
+set vlans Mikrotik-UT-BDIX vlan-id 738
+set vlans Mikrotik-UT-GGC vlan-id 737
+set vlans Mikrotik-UT-Int vlan-id 736
+set vlans Momin-Textile vlan-id 1905
+set vlans NOL-Configuration vlan-id 501
+set vlans NOL-UT-Conference-Camera vlan-id 257
+set vlans NOL-UT-Marketing-Camera vlan-id 256
+set vlans NOL-UT-Outside-Camera vlan-id 258
+set vlans NOL-UT-PoP-Camera vlan-id 271
+set vlans OLT_Real_IP vlan-id 2500
+set vlans PPPoE-NJ vlan-id 902
+set vlans TCL-Global vlan-id 1904
+set vlans UT-Access-Control vlan-id 235
+set vlans UT07-SJ39-Mansha vlan-id 1906
+set vlans UT_Sec11_POP vlan-id 1901
+set vlans Uttara-Office-Mikrotik vlan-id 943
+set vlans Warptex_Bangladesh vlan-id 1908
+set vlans genex vlan-id 948

@@ -1,0 +1,337 @@
+Using 5411 out of 524288 bytes
+!
+version 12.2
+no service pad
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+!
+hostname Gulshan-1_SW63
+!
+boot-start-marker
+boot-end-marker
+!
+enable secret 5 $1$WLcg$23GALxq/SNWg8fNd9Zc1h/
+!
+no aaa new-model
+system mtu routing 1500
+!
+!
+!
+crypto pki trustpoint TP-self-signed-3481275776
+ enrollment selfsigned
+ subject-name cn=IOS-Self-Signed-Certificate-3481275776
+ revocation-check none
+ rsakeypair TP-self-signed-3481275776
+!
+!
+crypto pki certificate chain TP-self-signed-3481275776
+ certificate self-signed 01 nvram:IOS-Self-Sig#3638.cer
+!
+!
+!
+!
+spanning-tree mode rapid-pvst
+spanning-tree extend system-id
+!
+!
+vlan internal allocation policy ascending
+!
+vlan 2
+!
+vlan 501
+ name PPPOE
+!
+vlan 507
+ name Management
+!
+vlan 542
+ name Data-Edge-Data
+!
+vlan 775
+ name People-Tech-G1-BDIX
+!
+vlan 801
+ name Singapur_School
+!
+vlan 802
+ name PPPoE-G1
+!
+vlan 803
+ name G1-1603
+!
+vlan 805
+ name G1-AV12
+!
+vlan 808
+ name C2C_Chairman_Res_Sec
+!
+vlan 810
+ name People-Tech-G1
+!
+vlan 811
+ name Bengal-Cement
+!
+vlan 812
+ name Mazen-R8-H15
+!
+vlan 813
+ name Sysnet
+!
+vlan 817
+ name Hamko-G1
+!
+vlan 818
+ name Bangal-Data
+!
+vlan 824
+ name Pizza-Inn-Gulshan
+!
+vlan 825
+ name Golden-Jute-MD
+!
+vlan 828
+ name G1-AV15
+!
+vlan 830
+ name G1-2701
+!
+vlan 831
+ name G1-2801_BP
+!
+vlan 832
+ name DH-1053-Bengal
+!
+vlan 834
+ name Egis_Rail_Sec
+!
+vlan 844
+ name G1-2805-BACCO
+!
+vlan 850
+ name Data-Edge-Data-POP
+!
+vlan 851
+ name SAM_Tower
+!
+vlan 901
+ name Axiata_Backup
+!
+vlan 909
+ name PPPoE-G2
+!
+vlan 929
+ name G1-2801
+!
+vlan 932
+ name G1-13601
+!
+vlan 965
+ name Hamko_G2-G1
+!
+vlan 966
+ name Venturas-Limited
+!
+vlan 972
+ name DH-1034-Nascent
+!
+vlan 973
+ name G1-AV01
+!
+vlan 1008
+ name G1-14102
+!
+vlan 1110
+ name Net-Vision-CDN
+!
+vlan 1111
+ name Nex-Vision-BDXI
+!
+!
+class-map match-all CLASS
+ match vlan  810
+!
+!
+policy-map BANDWIDTH
+!
+!
+!
+interface FastEthernet0/1
+ description Singapur-School
+ switchport access vlan 801
+ duplex full
+!
+interface FastEthernet0/2
+ description Free
+ switchport access vlan 966
+ duplex full
+!
+interface FastEthernet0/3
+ description DH-1215-Axiata-Digital-Bangladesh-Backup
+ switchport access vlan 901
+ shutdown
+ duplex full
+!
+interface FastEthernet0/4
+ description DH-1376-Diamond-World-G2-Backup
+ switchport access vlan 1008
+ duplex full
+!
+interface FastEthernet0/5
+ description free
+ switchport access vlan 932
+ shutdown
+ duplex full
+!
+interface FastEthernet0/6
+ description Junayed-Sir
+ switchport access vlan 501
+ shutdown
+ duplex full
+!
+interface FastEthernet0/7
+ description free
+ switchport access vlan 972
+ shutdown
+ duplex full
+!
+interface FastEthernet0/8
+ description free
+ switchport access vlan 909
+ shutdown
+ duplex full
+!
+interface FastEthernet0/9
+ description Power-High
+ switchport access vlan 909
+ shutdown
+ duplex full
+!
+interface FastEthernet0/10
+ description free
+ switchport access vlan 805
+ shutdown
+ duplex full
+!
+interface FastEthernet0/11
+ description free
+ switchport access vlan 830
+ shutdown
+ duplex full
+!
+interface FastEthernet0/12
+ description free
+ switchport access vlan 812
+ shutdown
+ duplex full
+!
+interface FastEthernet0/13
+ description Mazen-R8-H15-Gulshan-1
+ switchport access vlan 812
+ duplex full
+!
+interface FastEthernet0/14
+ description G1-AV75-Bengal-Cement
+ switchport access vlan 811
+ duplex full
+!
+interface FastEthernet0/15
+ description DH-1136-Universal-College
+ switchport access vlan 803
+ duplex full
+!
+interface FastEthernet0/16
+ description free
+ shutdown
+ duplex full
+!
+interface FastEthernet0/17
+ description G1-2801-BACCO
+ switchport access vlan 929
+ shutdown
+ duplex full
+!
+interface FastEthernet0/18
+ description G2-3401-Hamko-Backup
+ switchport access vlan 817
+ shutdown
+ duplex full
+!
+interface FastEthernet0/19
+ description Free
+ switchport access vlan 844
+ shutdown
+ duplex full
+!
+interface FastEthernet0/20
+ description G1-AV15-Bengal-Group
+ switchport access vlan 828
+ shutdown
+ duplex full
+!
+interface FastEthernet0/21
+ description Free
+ switchport access vlan 832
+ shutdown
+ duplex full
+!
+interface FastEthernet0/22
+ description DH-1413-C2C-Chairman-Res-G1
+ switchport access vlan 808
+ duplex full
+!
+interface FastEthernet0/23
+ description DH-1232-Egis-Rail-SA-Gulshan-1-Backup
+ switchport access vlan 834
+ shutdown
+ duplex full
+!
+interface FastEthernet0/24
+ description Bengal-Group_DH-10
+ switchport trunk allowed vlan 818,832
+ switchport mode trunk
+ duplex full
+!
+interface GigabitEthernet0/1
+ description SW-14_P04
+ port-type nni
+ switchport trunk allowed vlan 501,507,542,775,801-803,805,808,810-813,817,818
+ switchport trunk allowed vlan add 824,825,828,830-832,834,844,850,851,901,909
+ switchport trunk allowed vlan add 929,932,965,966,972,1008,1111
+ switchport mode trunk
+ no cdp enable
+!
+interface GigabitEthernet0/2
+ description SW-9_P05
+ port-type nni
+ switchport trunk allowed vlan 501,507,542,775,801-803,805,808,810-813,817,818
+ switchport trunk allowed vlan add 824,825,828,830-832,834,844,850,851,901,909
+ switchport trunk allowed vlan add 929,932,965,966,972,1008,1111
+ switchport mode trunk
+ no cdp enable
+!
+interface Vlan1
+ no ip address
+ no ip route-cache
+!
+interface Vlan507
+ ip address 172.17.25.63 255.255.255.0
+ no ip route-cache
+!
+no ip http server
+ip http secure-server
+ip sla enable reaction-alerts
+no cdp run
+snmp-server community next_online RO
+!
+line con 0
+ password 7650
+ login
+line vty 0 4
+ password 7650
+ login
+line vty 5 15
+ password 7650
+ login
+!
+end
