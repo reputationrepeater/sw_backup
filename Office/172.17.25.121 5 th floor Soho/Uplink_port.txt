@@ -1,5 +1,0 @@
-set interfaces ge-0/0/47 description ----------------047--------------------SW-126-UP-Link-P47
-set interfaces ge-0/0/47 ether-options 802.3ad ae1
-
-set interfaces ge-0/0/0 description ----------------000--------------------SW-21-UP-Link-1
-set interfaces ge-0/0/0 ether-options 802.3ad ae0

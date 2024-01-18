@@ -1,3 +1,42 @@
+set version 12.3R6.6
+set system host-name SW-122-6thF-Mkt
+set system root-authentication encrypted-password "$1$xkJZmMD0$0x4sRn7AzI19KYjdrjo11/"
+set system login user noc uid 2000
+set system login user noc class super-user
+set system login user noc authentication encrypted-password "$1$Asn644nE$Gvl7pXgXtgiFp2bO9vF3K0"
+set system services telnet
+set system services dhcp traceoptions file dhcp_logfile
+set system services dhcp traceoptions level all
+set system services dhcp traceoptions flag all
+set system syslog user * any emergency
+set system syslog file messages any notice
+set system syslog file messages authorization info
+set system syslog file interactive-commands interactive-commands any
+set chassis aggregated-devices ethernet device-count 20
+set chassis auto-image-upgrade
+set interfaces ge-0/0/0 description ----------------000--------------------SW-22-UP-Link-1
+set interfaces ge-0/0/0 ether-options 802.3ad ae0
+set interfaces ge-0/0/2 description ----------------002--------------------NOL-G2-Access-Control
+set interfaces ge-0/0/2 unit 0 family ethernet-switching port-mode access
+set interfaces ge-0/0/2 unit 0 family ethernet-switching vlan members NOL-G2-Access-Control
+set interfaces ge-0/0/3 description ----------------003-------------------Motin_IP-Phone
+set interfaces ge-0/0/3 unit 0 family ethernet-switching port-mode access
+set interfaces ge-0/0/3 unit 0 family ethernet-switching vlan members IPTSP
+set interfaces ge-0/0/4 unit 0 family ethernet-switching port-mode access
+set interfaces ge-0/0/4 unit 0 family ethernet-switching vlan members NOL-Configuration
+set interfaces ge-0/0/5 description ----------------005--------------------Sales-Alamin
+set interfaces ge-0/0/5 unit 0 family ethernet-switching port-mode access
+set interfaces ge-0/0/5 unit 0 family ethernet-switching vlan members NOL-G2-Wifi-PPP
+set interfaces ge-0/0/6 description ----------------006-------------------Motin_sales
+set interfaces ge-0/0/6 unit 0 family ethernet-switching port-mode access
+set interfaces ge-0/0/6 unit 0 family ethernet-switching vlan members NOL-Gulshan-Off-Lan
+set interfaces ge-0/0/7 unit 0 family ethernet-switching port-mode access
+set interfaces ge-0/0/7 unit 0 family ethernet-switching vlan members NOL-Configuration
+set interfaces ge-0/0/8 description ----------------008-------------------PC-21
+set interfaces ge-0/0/8 unit 0 family ethernet-switching port-mode access
+set interfaces ge-0/0/8 unit 0 family ethernet-switching vlan members NOL-Gulshan-Off-Lan
+set interfaces ge-0/0/9 unit 0 family ethernet-switching port-mode access
+set interfaces ge-0/0/9 unit 0 family ethernet-switching vlan members NOL-Configuration
 set interfaces ge-0/0/10 description ----------------010--------------------Sales-Rahul
 set interfaces ge-0/0/10 unit 0 family ethernet-switching port-mode access
 set interfaces ge-0/0/10 unit 0 family ethernet-switching vlan members NOL-G2-Wifi-PPP
@@ -26,11 +65,6 @@ set interfaces ge-0/0/18 unit 0 family ethernet-switching port-mode access
 set interfaces ge-0/0/18 unit 0 family ethernet-switching vlan members IPTSP
 set interfaces ge-0/0/19 unit 0 family ethernet-switching port-mode access
 set interfaces ge-0/0/19 unit 0 family ethernet-switching vlan members IPTSP
-
-
-set interfaces ge-0/0/2 description ----------------002--------------------NOL-G2-Access-Control
-set interfaces ge-0/0/2 unit 0 family ethernet-switching port-mode access
-set interfaces ge-0/0/2 unit 0 family ethernet-switching vlan members NOL-G2-Access-Control
 set interfaces ge-0/0/20 description ----------------021-------------------IP-Phone-527
 set interfaces ge-0/0/20 unit 0 family ethernet-switching port-mode access
 set interfaces ge-0/0/20 unit 0 family ethernet-switching vlan members IPTSP
@@ -61,11 +95,6 @@ set interfaces ge-0/0/28 unit 0 family ethernet-switching vlan members NOL-Gulsh
 set interfaces ge-0/0/29 description ----------------029--------------------
 set interfaces ge-0/0/29 unit 0 family ethernet-switching port-mode access
 set interfaces ge-0/0/29 unit 0 family ethernet-switching vlan members NOL-Configuration
-
-
-set interfaces ge-0/0/3 description ----------------003-------------------Motin_IP-Phone
-set interfaces ge-0/0/3 unit 0 family ethernet-switching port-mode access
-set interfaces ge-0/0/3 unit 0 family ethernet-switching vlan members IPTSP
 set interfaces ge-0/0/30 description ----------------030--------------------Ip-Phone-Motin
 set interfaces ge-0/0/30 unit 0 family ethernet-switching port-mode access
 set interfaces ge-0/0/30 unit 0 family ethernet-switching vlan members IPTSP
@@ -88,10 +117,6 @@ set interfaces ge-0/0/36 unit 0 family ethernet-switching vlan members NOL-Gulsh
 set interfaces ge-0/0/38 description ----------------038--------------------Support-pc-3
 set interfaces ge-0/0/38 unit 0 family ethernet-switching port-mode access
 set interfaces ge-0/0/38 unit 0 family ethernet-switching vlan members NOL-Gulshan-Off-Lan
-
-
-set interfaces ge-0/0/4 unit 0 family ethernet-switching port-mode access
-set interfaces ge-0/0/4 unit 0 family ethernet-switching vlan members NOL-Configuration
 set interfaces ge-0/0/42 description ----------------042--------------------Monitoring-PC-2
 set interfaces ge-0/0/42 unit 0 family ethernet-switching port-mode access
 set interfaces ge-0/0/42 unit 0 family ethernet-switching vlan members NOL-Gulshan-Off-Lan
@@ -101,26 +126,36 @@ set interfaces ge-0/0/46 unit 0 family ethernet-switching vlan members NOL-G2-Wi
 set interfaces ge-0/0/47 description ----------------047--------------------PC-Shahadat
 set interfaces ge-0/0/47 unit 0 family ethernet-switching port-mode access
 set interfaces ge-0/0/47 unit 0 family ethernet-switching vlan members NOL-G2-Wifi-PPP
-
-
-set interfaces ge-0/0/5 description ----------------005--------------------Sales-Alamin
-set interfaces ge-0/0/5 unit 0 family ethernet-switching port-mode access
-set interfaces ge-0/0/5 unit 0 family ethernet-switching vlan members NOL-G2-Wifi-PPP
-
-
-set interfaces ge-0/0/6 description ----------------006-------------------Motin_sales
-set interfaces ge-0/0/6 unit 0 family ethernet-switching port-mode access
-set interfaces ge-0/0/6 unit 0 family ethernet-switching vlan members NOL-Gulshan-Off-Lan
-
-
-set interfaces ge-0/0/7 unit 0 family ethernet-switching port-mode access
-set interfaces ge-0/0/7 unit 0 family ethernet-switching vlan members NOL-Configuratio
-
-set interfaces ge-0/0/8 description ----------------008-------------------PC-21
-set interfaces ge-0/0/8 unit 0 family ethernet-switching port-mode access
-set interfaces ge-0/0/8 unit 0 family ethernet-switching vlan members NOL-Gulshan-Off-Lan
-
-
-set interfaces ge-0/0/9 unit 0 family ethernet-switching port-mode access
-set interfaces ge-0/0/9 unit 0 family ethernet-switching vlan members NOL-Configuration
-
+set interfaces ae0 description ----------------ae0--------------------UP-Link-SW120-ae1
+set interfaces ae0 unit 0 family ethernet-switching port-mode trunk
+set interfaces ae0 unit 0 family ethernet-switching vlan members NOL-Management
+set interfaces ae0 unit 0 family ethernet-switching vlan members NOL-Configuration
+set interfaces ae0 unit 0 family ethernet-switching vlan members MD-Office
+set interfaces ae0 unit 0 family ethernet-switching vlan members NOL-Gulshan-Off-Lan
+set interfaces ae0 unit 0 family ethernet-switching vlan members NOL-G2-Access-Control
+set interfaces ae0 unit 0 family ethernet-switching vlan members NOL-G2-Monitoring-Camera
+set interfaces ae0 unit 0 family ethernet-switching vlan members NOL-G2-Monitoring-Camera-2
+set interfaces ae0 unit 0 family ethernet-switching vlan members NOL-G2-Office-Monitoring-PC
+set interfaces ae0 unit 0 family ethernet-switching vlan members IPTSP
+set interfaces ae0 unit 0 family ethernet-switching vlan members NOL-G2-Support-Camera
+set interfaces ae0 unit 0 family ethernet-switching vlan members NOL-Support-Mikrtik
+set interfaces ae0 unit 0 family ethernet-switching vlan members NOL-G2-Wifi-PPP
+set interfaces vlan unit 507 family inet address 172.17.25.122/24
+set protocols igmp-snooping vlan all
+set protocols rstp
+set protocols lldp interface all
+set protocols lldp-med interface all
+set ethernet-switching-options storm-control interface all
+set vlans IPTSP vlan-id 527
+set vlans MD-Office vlan-id 101
+set vlans NOL-Configuration vlan-id 501
+set vlans NOL-G2-Access-Control vlan-id 233
+set vlans NOL-G2-Monitoring-Camera vlan-id 246
+set vlans NOL-G2-Monitoring-Camera-2 vlan-id 272
+set vlans NOL-G2-Office-Monitoring-PC vlan-id 555
+set vlans NOL-G2-Support-Camera vlan-id 245
+set vlans NOL-G2-Wifi-PPP vlan-id 182
+set vlans NOL-Gulshan-Off-Lan vlan-id 180
+set vlans NOL-Management vlan-id 507
+set vlans NOL-Management l3-interface vlan.507
+set vlans NOL-Support-Mikrtik vlan-id 181

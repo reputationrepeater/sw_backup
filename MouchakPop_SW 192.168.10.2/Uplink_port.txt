@@ -1,8 +1,0 @@
-set interfaces ge-0/1/0 description ----------010----------Mikrotik-UP-Link
-set interfaces ge-0/1/0 unit 0 family ethernet-switching port-mode trunk
-set interfaces ge-0/1/0 unit 0 family ethernet-switching vlan members SW-Management
-set interfaces ge-0/1/0 unit 0 family ethernet-switching vlan members Knit-Asia
-set interfaces ge-0/1/0 unit 0 family ethernet-switching vlan members Muazuddin_Konabari
-set interfaces ge-0/1/0 unit 0 family ethernet-switching vlan members Hanif_Spinning
-set interfaces ge-0/1/0 unit 0 family ethernet-switching vlan members Muazuddin_Shafipur
-set interfaces ge-0/1/0 unit 0 family ethernet-switching vlan members Malek_Spinning

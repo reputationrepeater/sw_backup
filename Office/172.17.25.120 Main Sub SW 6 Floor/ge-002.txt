@@ -1,2 +1,0 @@
-set interfaces ge-0/0/2 description ----------------002--------------------SW-22-UP-Link-1
-set interfaces ge-0/0/2 ether-options 802.3ad ae1

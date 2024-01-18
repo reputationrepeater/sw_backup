@@ -1,0 +1,320 @@
+set version 15.1R5.5
+set system host-name SW-211.12
+set system root-authentication encrypted-password "$5$YgePV2Eq$X1ttCe3ASvmA7t3ux8DUoPnlTkwqErtEzTbZBDRC.6B"
+set system login user noc uid 2000
+set system login user noc class super-user
+set system login user noc authentication encrypted-password "$5$XoQsv8vP$Pe4MGU7ZhKsPp325hfuD9ci9.zgmLL40qOBVqzNdnD2"
+set system services ssh
+set system services telnet
+set chassis aggregated-devices ethernet device-count 20
+set interfaces ge-0/0/11 description -----011-----Level3-NVR
+set interfaces ge-0/0/11 unit 0 family ethernet-switching port-mode access
+set interfaces ge-0/0/11 unit 0 family ethernet-switching vlan members Level3-NVR
+set interfaces ge-0/0/14 unit 0 family ethernet-switching port-mode access
+set interfaces ge-0/0/22 description -----022-----OLT-90
+set interfaces ge-0/0/22 unit 0 family ethernet-switching port-mode trunk
+set interfaces ge-0/0/22 unit 0 family ethernet-switching vlan members IPTSP
+set interfaces ge-0/0/22 unit 0 family ethernet-switching vlan members PPPoE_Gulshan_906
+set interfaces ge-0/0/22 unit 0 family ethernet-switching vlan members DNS3-Server
+set interfaces ge-0/0/22 unit 0 family ethernet-switching vlan members NOL-G2-Access-Control-6th
+set interfaces ge-0/0/22 unit 0 family ethernet-switching vlan members Devo-Accounts-Camera
+set interfaces ge-0/0/22 unit 0 family ethernet-switching vlan members Devo-MKT-Camera
+set interfaces ge-0/0/22 unit 0 family ethernet-switching vlan members Devo-DC-Camera
+set interfaces ge-0/0/22 unit 0 family ethernet-switching vlan members L3-Billing-Camera
+set interfaces ge-0/0/22 unit 0 family ethernet-switching vlan members Devo-Support-1-Camera
+set interfaces ge-0/0/22 unit 0 family ethernet-switching vlan members Devo-Support-2-Camera
+set interfaces ge-0/0/22 unit 0 family ethernet-switching vlan members Devo-Workstation-2-Camera
+set interfaces ge-0/0/22 unit 0 family ethernet-switching vlan members Devo-Entrance-Camera
+set interfaces ge-0/0/22 unit 0 family ethernet-switching vlan members NOL-G2-Support-Camera
+set interfaces ge-0/0/22 unit 0 family ethernet-switching vlan members NOL-UT-4-Camera
+set interfaces ge-0/0/22 unit 0 family ethernet-switching vlan members NOL-G2-Marketing-Camera
+set interfaces ge-0/0/22 unit 0 family ethernet-switching vlan members DH-987-LOSAN
+set interfaces ge-0/0/22 unit 0 family ethernet-switching vlan members NOL-G2-Accounts-Camera
+set interfaces ge-0/0/22 unit 0 family ethernet-switching vlan members NOL-G2-Parking-Camera
+set interfaces ge-0/0/22 unit 0 family ethernet-switching vlan members NOL-G2-Middle-Camera
+set interfaces ge-0/0/22 unit 0 family ethernet-switching vlan members OLT_Real_IP
+set interfaces ge-0/0/22 unit 0 family ethernet-switching vlan members Devo-Parking-Camera
+set interfaces ge-0/0/22 unit 0 family ethernet-switching vlan members Policy-Research-R123
+set interfaces ge-0/0/22 unit 0 family ethernet-switching vlan members Devo-Parking-Camera-2
+set interfaces ge-0/0/22 unit 0 family ethernet-switching vlan members BTCL-IPPBx-NOL-Gulshan
+set interfaces ge-0/0/22 unit 0 family ethernet-switching vlan members NOL-G2-Monitoring-Camera-2
+set interfaces ge-0/0/22 unit 0 family ethernet-switching vlan members NOL-G2-Office-Monitoring-PC
+set interfaces ge-0/0/22 unit 0 family ethernet-switching vlan members NOL-G2-Access-Control-7th
+set interfaces ge-0/0/22 unit 0 family ethernet-switching vlan members Policy-Research-R118
+set interfaces ge-0/0/22 unit 0 family ethernet-switching vlan members L3-4th-floorAccess-Control
+set interfaces ge-0/0/22 unit 0 family ethernet-switching vlan members L3-3rd-floor-Access-Control
+set interfaces ge-0/0/22 unit 0 family ethernet-switching vlan members Patriot-Spinning-G2
+set interfaces ge-0/0/22 unit 0 family ethernet-switching vlan members SB-Group
+set interfaces ge-0/0/22 unit 0 family ethernet-switching vlan members Reliable_Builders
+set interfaces ge-0/0/22 unit 0 family ethernet-switching vlan members L3-G2-Office-Camera4
+set interfaces ge-0/0/22 unit 0 family ethernet-switching vlan members L3-G2-Office-Camera5
+set interfaces ge-0/0/22 unit 0 family ethernet-switching vlan members L3-G2-Office-Camera1
+set interfaces ge-0/0/22 unit 0 family ethernet-switching vlan members L3-G2-Office-Camera6
+set interfaces ge-0/0/22 unit 0 family ethernet-switching vlan members L3-G2-Office-Camera2
+set interfaces ge-0/0/22 unit 0 family ethernet-switching vlan members L3-G2-Office-Camera3
+set interfaces ge-0/0/22 unit 0 family ethernet-switching vlan members Synest-Solutions-Ltd
+set interfaces ge-0/0/22 unit 0 family ethernet-switching vlan members ICONIX-Camera9
+set interfaces ge-0/0/22 unit 0 family ethernet-switching vlan members ICONIX-Camera8
+set interfaces ge-0/0/22 unit 0 family ethernet-switching vlan members ICONIX-Camera7
+set interfaces ge-0/0/22 unit 0 family ethernet-switching vlan members SM_Group_HO_FTTX
+set interfaces ge-0/0/22 unit 0 family ethernet-switching vlan members Lusaka_Group_G2
+set interfaces ge-0/0/22 unit 0 family ethernet-switching vlan members BromleyBee
+set interfaces ge-0/0/22 unit 0 family ethernet-switching vlan members Universal_College_Primary
+set interfaces ge-0/0/22 unit 0 family ethernet-switching vlan members NOL_Cableman_Camera1
+set interfaces ge-0/0/22 unit 0 family ethernet-switching vlan members NOL_Cableman_Camera2
+set interfaces ge-0/0/22 unit 0 family ethernet-switching vlan members Prionti-House
+set interfaces ge-0/0/22 unit 0 family ethernet-switching vlan members Foodpanda_G2_Pri
+set interfaces ge-0/0/22 unit 0 family ethernet-switching vlan members Three_I_Logistics_G1
+set interfaces ge-0/0/22 unit 0 family ethernet-switching vlan members Viva_Creations
+set interfaces ge-0/0/22 unit 0 family ethernet-switching vlan members Mazen_Gulshan_Backup
+set interfaces ge-0/0/22 unit 0 family ethernet-switching vlan members Pizza_Inn_G1
+set interfaces ge-0/0/22 unit 0 family ethernet-switching vlan members SB_Group_Residence
+set interfaces ge-0/0/22 unit 0 family ethernet-switching vlan members NOL-G2-Access-Control-5th
+set interfaces ge-0/0/22 unit 0 family ethernet-switching vlan members NOL_G2_Support_Camera_5th
+set interfaces ge-0/0/22 unit 0 family ethernet-switching vlan members NOL_G2_Entrance_Camera_5th
+set interfaces ge-0/0/22 unit 0 family ethernet-switching vlan members Treasure_G2
+set interfaces ge-0/0/22 unit 0 family ethernet-switching vlan members Junayed_Sir_Mother_FTTX
+set interfaces ge-0/0/22 unit 0 family ethernet-switching vlan members Proficient_Information
+set interfaces ge-0/0/22 unit 0 family ethernet-switching vlan members Fardin_Director_Home
+set interfaces ge-0/0/22 unit 0 family ethernet-switching vlan members Fardin_Director_Res
+set interfaces ge-0/0/22 unit 0 family ethernet-switching vlan members Agro-Solution-G2
+set interfaces ge-0/0/22 unit 0 family ethernet-switching vlan members PPPoE_Gulshan_899
+set interfaces ge-0/0/22 unit 0 family ethernet-switching vlan members Capital_Club_G2
+set interfaces ge-0/0/22 unit 0 family ethernet-switching vlan members C2C_Res_G1
+set interfaces ge-0/0/22 unit 0 family ethernet-switching vlan members Midori_Lakeshore_FTTX
+set interfaces ge-0/0/22 unit 0 family ethernet-switching vlan members Healthcare
+set interfaces ge-0/0/22 unit 0 family ethernet-switching vlan members Fohoway_G2
+set interfaces ge-0/0/22 unit 0 family ethernet-switching vlan members Marishipa_G1
+set interfaces ge-0/1/0 description -----010-----BA-SW11
+set interfaces ge-0/1/0 ether-options 802.3ad ae4
+set interfaces ge-0/1/1 description -----011-----SW120-P010
+set interfaces ge-0/1/1 unit 0 family ethernet-switching port-mode trunk
+set interfaces ge-0/1/1 unit 0 family ethernet-switching vlan members NOL-Management
+set interfaces ge-0/1/1 unit 0 family ethernet-switching vlan members NOL-Configuration
+set interfaces ge-0/1/1 unit 0 family ethernet-switching vlan members MD-Office
+set interfaces ge-0/1/1 unit 0 family ethernet-switching vlan members NOL-G2-Access-Control-6th
+set interfaces ge-0/1/1 unit 0 family ethernet-switching vlan members NOL-G2-Marketing-Camera
+set interfaces ge-0/1/1 unit 0 family ethernet-switching vlan members NOL-G2-Support-Camera
+set interfaces ge-0/1/1 unit 0 family ethernet-switching vlan members NOL-G2-Accounts-Camera
+set interfaces ge-0/1/1 unit 0 family ethernet-switching vlan members NOL-G2-Parking-Camera
+set interfaces ge-0/1/1 unit 0 family ethernet-switching vlan members BTCL-IPPBx-NOL-Gulshan
+set interfaces ge-0/1/1 unit 0 family ethernet-switching vlan members NOL-G2-Office-Monitoring-PC
+set interfaces ge-0/1/1 unit 0 family ethernet-switching vlan members NOL-G2-Access-Control-7th
+set interfaces ge-0/1/1 unit 0 family ethernet-switching vlan members DH-987-LOSAN
+set interfaces ge-0/1/1 unit 0 family ethernet-switching vlan members SB-Group
+set interfaces ge-0/1/1 unit 0 family ethernet-switching vlan members Policy-Research-R123
+set interfaces ge-0/1/1 unit 0 family ethernet-switching vlan members IPTSP
+set interfaces ge-0/1/1 unit 0 family ethernet-switching vlan members Policy-Research-R118
+set interfaces ge-0/1/1 unit 0 family ethernet-switching vlan members Patriot-Spinning-G2
+set interfaces ge-0/1/1 unit 0 family ethernet-switching vlan members L3-3rd-floor-Access-Control
+set interfaces ge-0/1/1 unit 0 family ethernet-switching vlan members L3-G2-Office-Camera4
+set interfaces ge-0/1/1 unit 0 family ethernet-switching vlan members L3-G2-Office-Camera5
+set interfaces ge-0/1/1 unit 0 family ethernet-switching vlan members L3-G2-Office-Camera1
+set interfaces ge-0/1/1 unit 0 family ethernet-switching vlan members L3-G2-Office-Camera6
+set interfaces ge-0/1/1 unit 0 family ethernet-switching vlan members L3-G2-Office-Camera2
+set interfaces ge-0/1/1 unit 0 family ethernet-switching vlan members L3-G2-Office-Camera3
+set interfaces ge-0/1/1 unit 0 family ethernet-switching vlan members Synest-Solutions-Ltd
+set interfaces ge-0/1/1 unit 0 family ethernet-switching vlan members ICONIX-Camera7
+set interfaces ge-0/1/1 unit 0 family ethernet-switching vlan members ICONIX-Camera8
+set interfaces ge-0/1/1 unit 0 family ethernet-switching vlan members ICONIX-Camera9
+set interfaces ge-0/1/1 unit 0 family ethernet-switching vlan members SM_Group_HO_FTTX
+set interfaces ge-0/1/1 unit 0 family ethernet-switching vlan members BromleyBee
+set interfaces ge-0/1/1 unit 0 family ethernet-switching vlan members NOL_Cableman_Camera2
+set interfaces ge-0/1/1 unit 0 family ethernet-switching vlan members NOL_Cableman_Camera1
+set interfaces ge-0/1/1 unit 0 family ethernet-switching vlan members NOL-G2-Access-Control-5th
+set interfaces ge-0/1/1 unit 0 family ethernet-switching vlan members NOL_G2_Support_Camera_5th
+set interfaces ge-0/1/1 unit 0 family ethernet-switching vlan members NOL_G2_Entrance_Camera_5th
+set interfaces ge-0/1/1 unit 0 family ethernet-switching vlan members OLT_Real_IP
+set interfaces ge-0/1/1 unit 0 family ethernet-switching vlan members NOL_G2_OFF_Pri
+set interfaces ge-0/1/1 unit 0 family ethernet-switching vlan members Gulshan_FTTx_MGT
+set interfaces ge-0/1/1 unit 0 family ethernet-switching vlan members office_ppp
+set interfaces ge-0/1/1 unit 0 family ethernet-switching vlan members NOL-G2-Monitoring-Camera-2
+set interfaces ge-0/1/1 unit 0 family ethernet-switching vlan members Communication-one-Internet
+set interfaces ge-0/1/1 unit 0 family ethernet-switching vlan members ISSL-Eagle-HRM
+set interfaces ge-0/1/1 unit 0 family ethernet-switching vlan members Uttara-Call-Center
+set interfaces ge-0/1/2 description -----012-----Devotech
+set interfaces ge-0/1/2 unit 0 family ethernet-switching port-mode access
+set interfaces ge-0/1/2 unit 0 family ethernet-switching vlan members devotech
+set interfaces ge-0/1/3 description -----013-----Colo-SW11
+set interfaces ge-0/1/3 ether-options 802.3ad ae4
+set interfaces ae4 description ----------ae4----------SW-11
+set interfaces ae4 aggregated-ether-options minimum-links 1
+set interfaces ae4 aggregated-ether-options link-speed 1g
+set interfaces ae4 unit 0 family ethernet-switching port-mode trunk
+set interfaces ae4 unit 0 family ethernet-switching vlan members Gulshan_FTTx_MGT
+set interfaces ae4 unit 0 family ethernet-switching vlan members NOL-Management
+set interfaces ae4 unit 0 family ethernet-switching vlan members NOL-Configuration
+set interfaces ae4 unit 0 family ethernet-switching vlan members MD-Office
+set interfaces ae4 unit 0 family ethernet-switching vlan members IPTSP
+set interfaces ae4 unit 0 family ethernet-switching vlan members PPPoE_Gulshan_906
+set interfaces ae4 unit 0 family ethernet-switching vlan members DNS3-Server
+set interfaces ae4 unit 0 family ethernet-switching vlan members NOL-G2-Access-Control-6th
+set interfaces ae4 unit 0 family ethernet-switching vlan members Level3-NVR
+set interfaces ae4 unit 0 family ethernet-switching vlan members Devo-Accounts-Camera
+set interfaces ae4 unit 0 family ethernet-switching vlan members Devo-MKT-Camera
+set interfaces ae4 unit 0 family ethernet-switching vlan members Devo-DC-Camera
+set interfaces ae4 unit 0 family ethernet-switching vlan members L3-Billing-Camera
+set interfaces ae4 unit 0 family ethernet-switching vlan members Devo-Support-1-Camera
+set interfaces ae4 unit 0 family ethernet-switching vlan members Devo-Support-2-Camera
+set interfaces ae4 unit 0 family ethernet-switching vlan members Devo-Workstation-2-Camera
+set interfaces ae4 unit 0 family ethernet-switching vlan members Devo-Entrance-Camera
+set interfaces ae4 unit 0 family ethernet-switching vlan members NOL-G2-Support-Camera
+set interfaces ae4 unit 0 family ethernet-switching vlan members NOL-UT-4-Camera
+set interfaces ae4 unit 0 family ethernet-switching vlan members NOL-G2-Marketing-Camera
+set interfaces ae4 unit 0 family ethernet-switching vlan members DH-987-LOSAN
+set interfaces ae4 unit 0 family ethernet-switching vlan members NOL-G2-Accounts-Camera
+set interfaces ae4 unit 0 family ethernet-switching vlan members NOL-G2-Parking-Camera
+set interfaces ae4 unit 0 family ethernet-switching vlan members NOL-G2-Middle-Camera
+set interfaces ae4 unit 0 family ethernet-switching vlan members OLT_Real_IP
+set interfaces ae4 unit 0 family ethernet-switching vlan members Devo-Parking-Camera
+set interfaces ae4 unit 0 family ethernet-switching vlan members Policy-Research-R123
+set interfaces ae4 unit 0 family ethernet-switching vlan members Devo-Parking-Camera-2
+set interfaces ae4 unit 0 family ethernet-switching vlan members BTCL-IPPBx-NOL-Gulshan
+set interfaces ae4 unit 0 family ethernet-switching vlan members NOL-G2-Monitoring-Camera-2
+set interfaces ae4 unit 0 family ethernet-switching vlan members NOL-G2-Office-Monitoring-PC
+set interfaces ae4 unit 0 family ethernet-switching vlan members NOL-G2-Access-Control-7th
+set interfaces ae4 unit 0 family ethernet-switching vlan members Policy-Research-R118
+set interfaces ae4 unit 0 family ethernet-switching vlan members L3-4th-floorAccess-Control
+set interfaces ae4 unit 0 family ethernet-switching vlan members L3-3rd-floor-Access-Control
+set interfaces ae4 unit 0 family ethernet-switching vlan members NOL_G2_OFF_Pri
+set interfaces ae4 unit 0 family ethernet-switching vlan members Patriot-Spinning-G2
+set interfaces ae4 unit 0 family ethernet-switching vlan members SB-Group
+set interfaces ae4 unit 0 family ethernet-switching vlan members Reliable_Builders
+set interfaces ae4 unit 0 family ethernet-switching vlan members L3-G2-Office-Camera4
+set interfaces ae4 unit 0 family ethernet-switching vlan members L3-G2-Office-Camera5
+set interfaces ae4 unit 0 family ethernet-switching vlan members L3-G2-Office-Camera1
+set interfaces ae4 unit 0 family ethernet-switching vlan members L3-G2-Office-Camera6
+set interfaces ae4 unit 0 family ethernet-switching vlan members L3-G2-Office-Camera2
+set interfaces ae4 unit 0 family ethernet-switching vlan members L3-G2-Office-Camera3
+set interfaces ae4 unit 0 family ethernet-switching vlan members Synest-Solutions-Ltd
+set interfaces ae4 unit 0 family ethernet-switching vlan members ICONIX-Camera9
+set interfaces ae4 unit 0 family ethernet-switching vlan members ICONIX-Camera8
+set interfaces ae4 unit 0 family ethernet-switching vlan members ICONIX-Camera7
+set interfaces ae4 unit 0 family ethernet-switching vlan members SM_Group_HO_FTTX
+set interfaces ae4 unit 0 family ethernet-switching vlan members Lusaka_Group_G2
+set interfaces ae4 unit 0 family ethernet-switching vlan members BromleyBee
+set interfaces ae4 unit 0 family ethernet-switching vlan members Universal_College_Primary
+set interfaces ae4 unit 0 family ethernet-switching vlan members NOL_Cableman_Camera1
+set interfaces ae4 unit 0 family ethernet-switching vlan members NOL_Cableman_Camera2
+set interfaces ae4 unit 0 family ethernet-switching vlan members Prionti-House
+set interfaces ae4 unit 0 family ethernet-switching vlan members Foodpanda_G2_Pri
+set interfaces ae4 unit 0 family ethernet-switching vlan members Three_I_Logistics_G1
+set interfaces ae4 unit 0 family ethernet-switching vlan members Viva_Creations
+set interfaces ae4 unit 0 family ethernet-switching vlan members Mazen_Gulshan_Backup
+set interfaces ae4 unit 0 family ethernet-switching vlan members Pizza_Inn_G1
+set interfaces ae4 unit 0 family ethernet-switching vlan members SB_Group_Residence
+set interfaces ae4 unit 0 family ethernet-switching vlan members NOL-G2-Access-Control-5th
+set interfaces ae4 unit 0 family ethernet-switching vlan members NOL_G2_Support_Camera_5th
+set interfaces ae4 unit 0 family ethernet-switching vlan members NOL_G2_Entrance_Camera_5th
+set interfaces ae4 unit 0 family ethernet-switching vlan members Treasure_G2
+set interfaces ae4 unit 0 family ethernet-switching vlan members Junayed_Sir_Mother_FTTX
+set interfaces ae4 unit 0 family ethernet-switching vlan members Proficient_Information
+set interfaces ae4 unit 0 family ethernet-switching vlan members Fardin_Director_Home
+set interfaces ae4 unit 0 family ethernet-switching vlan members Fardin_Director_Res
+set interfaces ae4 unit 0 family ethernet-switching vlan members Agro-Solution-G2
+set interfaces ae4 unit 0 family ethernet-switching vlan members PPPoE_Gulshan_899
+set interfaces ae4 unit 0 family ethernet-switching vlan members Capital_Club_G2
+set interfaces ae4 unit 0 family ethernet-switching vlan members C2C_Res_G1
+set interfaces ae4 unit 0 family ethernet-switching vlan members Midori_Lakeshore_FTTX
+set interfaces ae4 unit 0 family ethernet-switching vlan members devotech
+set interfaces ae4 unit 0 family ethernet-switching vlan members office_ppp
+set interfaces ae4 unit 0 family ethernet-switching vlan members Healthcare
+set interfaces ae4 unit 0 family ethernet-switching vlan members Communication-one-Internet
+set interfaces ae4 unit 0 family ethernet-switching vlan members ISSL-Eagle-HRM
+set interfaces ae4 unit 0 family ethernet-switching vlan members Fohoway_G2
+set interfaces ae4 unit 0 family ethernet-switching vlan members Uttara-Call-Center
+set interfaces ae4 unit 0 family ethernet-switching vlan members Marishipa_G1
+set interfaces vlan unit 211 family inet address 172.211.211.12/24
+set vlans Agro-Solution-G2 vlan-id 2510
+set vlans BN-Zone-Switch
+set vlans BTCL-IPPBx-NOL-Gulshan vlan-id 805
+set vlans Bengal_Gulshan_Road24 vlan-id 2522
+set vlans BromleyBee vlan-id 2521
+set vlans C2C_Res_G1 vlan-id 2544
+set vlans Capital_Club_G2 vlan-id 2545
+set vlans Communication-one-Internet vlan-id 307
+set vlans DH-987-LOSAN vlan-id 2503
+set vlans DNS3-Server vlan-id 649
+set vlans Devo-Accounts-Camera vlan-id 237
+set vlans Devo-DC-Camera vlan-id 239
+set vlans Devo-Entrance-Camera vlan-id 244
+set vlans Devo-MKT-Camera vlan-id 238
+set vlans Devo-Parking-Camera vlan-id 267
+set vlans Devo-Parking-Camera-2 vlan-id 268
+set vlans Devo-Support-1-Camera vlan-id 241
+set vlans Devo-Support-2-Camera vlan-id 242
+set vlans Devo-Workstation-2-Camera vlan-id 243
+set vlans Fardin_Director_Home vlan-id 2542
+set vlans Fardin_Director_Res vlan-id 2512
+set vlans Fohoway_G2 vlan-id 2547
+set vlans Foodpanda_G2_Pri vlan-id 2526
+set vlans G2-9510 vlan-id 829
+set vlans Gulshan_FTTx_MGT vlan-id 211
+set vlans Gulshan_FTTx_MGT l3-interface vlan.211
+set vlans Habib_Group_G2 vlan-id 2543
+set vlans Han_She_G2 vlan-id 2534
+set vlans Healthcare vlan-id 2508
+set vlans ICONIX-Camera7 vlan-id 294
+set vlans ICONIX-Camera8 vlan-id 295
+set vlans ICONIX-Camera9 vlan-id 296
+set vlans IPTSP vlan-id 527
+set vlans ISSL-Eagle-HRM vlan-id 311
+set vlans Junayed_Sir_Mother_FTTX vlan-id 2537
+set vlans L3-3rd-floor-Access-Control vlan-id 278
+set vlans L3-4th-floorAccess-Control vlan-id 279
+set vlans L3-Billing-Camera vlan-id 240
+set vlans L3-G2-Office-Camera1 vlan-id 280
+set vlans L3-G2-Office-Camera2 vlan-id 281
+set vlans L3-G2-Office-Camera3 vlan-id 286
+set vlans L3-G2-Office-Camera4 vlan-id 287
+set vlans L3-G2-Office-Camera5 vlan-id 288
+set vlans L3-G2-Office-Camera6 vlan-id 289
+set vlans Level3-NVR vlan-id 236
+set vlans Lusaka_Group_G2 vlan-id 2520
+set vlans MD-Office vlan-id 101
+set vlans Marishipa_G1 vlan-id 2546
+set vlans Mazen_Gulshan_Backup vlan-id 2528
+set vlans Medical_Management_G2 vlan-id 2539
+set vlans Midori_Lakeshore_FTTX vlan-id 2549
+set vlans NOL-Configuration vlan-id 501
+set vlans NOL-G2-Access-Control-5th vlan-id 301
+set vlans NOL-G2-Access-Control-6th vlan-id 233
+set vlans NOL-G2-Access-Control-7th vlan-id 231
+set vlans NOL-G2-Accounts-Camera vlan-id 263
+set vlans NOL-G2-Marketing-Camera vlan-id 247
+set vlans NOL-G2-Middle-Camera vlan-id 265
+set vlans NOL-G2-Monitoring-Camera-2 vlan-id 272
+set vlans NOL-G2-Office-Monitoring-PC vlan-id 555
+set vlans NOL-G2-Parking-Camera vlan-id 264
+set vlans NOL-G2-Support-Camera vlan-id 245
+set vlans NOL-Management vlan-id 507
+set vlans NOL-UT-4-Camera vlan-id 246
+set vlans NOL_Cableman_Camera1 vlan-id 299
+set vlans NOL_Cableman_Camera2 vlan-id 300
+set vlans NOL_G2_Entrance_Camera_5th vlan-id 303
+set vlans NOL_G2_OFF_Pri vlan-id 531
+set vlans NOL_G2_Support_Camera_5th vlan-id 302
+set vlans OLT_Real_IP vlan-id 2500
+set vlans POCHE_ARCHITECTURE_G2 vlan-id 2548
+set vlans PPPoE_Gulshan_899 vlan-id 899
+set vlans PPPoE_Gulshan_906 vlan-id 906
+set vlans Patriot-Spinning-G2 vlan-id 2514
+set vlans Pizza_Inn_G1 vlan-id 2530
+set vlans Policy-Research-R118 vlan-id 2511
+set vlans Policy-Research-R123 vlan-id 2507
+set vlans Popular_Travel_G2
+set vlans Prionti-House vlan-id 2524
+set vlans Proficient_Information vlan-id 2538
+set vlans Reliable_Builders vlan-id 2515
+set vlans Runner_Footwear_G2 vlan-id 2525
+set vlans SB-Group vlan-id 2506
+set vlans SB_Group_Residence vlan-id 2531
+set vlans SM_Group_HO_FTTX vlan-id 2519
+set vlans Synest-Solutions-Ltd vlan-id 2516
+set vlans Three_I_Logistics_G1 vlan-id 2527
+set vlans Treasure_G2 vlan-id 2533
+set vlans Universal_College_Primary vlan-id 2523
+set vlans Uttara-Call-Center vlan-id 959
+set vlans Viva_Creations vlan-id 2529
+set vlans devotech vlan-id 791
+set vlans office_ppp vlan-id 182

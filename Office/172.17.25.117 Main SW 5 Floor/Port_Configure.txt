@@ -1,8 +1,40 @@
+set version 12.3R6.6
+set system host-name NOL-5thF-SW-117
+set system root-authentication encrypted-password "$1$2IQEo5Uv$gv/CNaN8S9yugav28fXuz/"
+set system login user noc uid 2001
+set system login user noc class super-user
+set system login user noc authentication encrypted-password "$1$zxgpLxHw$yRSVAUrZg5SHOK6qCP2M80"
+set system services ssh
+set system services telnet
+set chassis aggregated-devices ethernet device-count 20
 set interfaces ge-0/0/0 description ----------------000--------------------SW-121-Uplink
 set interfaces ge-0/0/0 ether-options 802.3ad ae3
-
 set interfaces ge-0/0/1 description ----------------001--------------------SW-121-Uplink
 set interfaces ge-0/0/1 ether-options 802.3ad ae3
+set interfaces ge-0/0/2 description ----------------002--------------------NOL-G2-Wifi-5th-Floor
+set interfaces ge-0/0/2 unit 0 family ethernet-switching port-mode access
+set interfaces ge-0/0/2 unit 0 family ethernet-switching vlan members NOL-G2-Wifi-5th
+set interfaces ge-0/0/3 description ----------------003--------------------Access-Control-5th-Floor
+set interfaces ge-0/0/3 unit 0 family ethernet-switching port-mode access
+set interfaces ge-0/0/3 unit 0 family ethernet-switching vlan members NOL-G2-Access-Control-5th
+set interfaces ge-0/0/4 description ----------------004--------------------NOL-G2-5th-floor-Entrance-Camera
+set interfaces ge-0/0/4 unit 0 family ethernet-switching port-mode access
+set interfaces ge-0/0/4 unit 0 family ethernet-switching vlan members NOL_G2_Entrance_Camera_5th
+set interfaces ge-0/0/5 description ----------------005--------------------NOL-G2-5th-floor-Support-Camera
+set interfaces ge-0/0/5 unit 0 family ethernet-switching port-mode access
+set interfaces ge-0/0/5 unit 0 family ethernet-switching vlan members NOL_G2_Support_Camera_5th
+set interfaces ge-0/0/6 description ----------------006--------------------PC-2-Monitoring
+set interfaces ge-0/0/6 unit 0 family ethernet-switching port-mode access
+set interfaces ge-0/0/6 unit 0 family ethernet-switching vlan members NOL-Gulshan-Off-Lan
+set interfaces ge-0/0/7 description ----------------007--------------------PC-2
+set interfaces ge-0/0/7 unit 0 family ethernet-switching port-mode access
+set interfaces ge-0/0/7 unit 0 family ethernet-switching vlan members NOL-Gulshan-Off-Lan
+set interfaces ge-0/0/8 description ----------------008--------------------PC-8
+set interfaces ge-0/0/8 unit 0 family ethernet-switching port-mode access
+set interfaces ge-0/0/8 unit 0 family ethernet-switching vlan members NOL-Gulshan-Off-Lan
+set interfaces ge-0/0/9 description ----------------009--------------------Uttara-Call-Center
+set interfaces ge-0/0/9 unit 0 family ethernet-switching port-mode access
+set interfaces ge-0/0/9 unit 0 family ethernet-switching vlan members Uttara-Call-Center
 set interfaces ge-0/0/10 description ----------------010--------------------IPPhone-2
 set interfaces ge-0/0/10 unit 0 family ethernet-switching port-mode access
 set interfaces ge-0/0/10 unit 0 family ethernet-switching vlan members IPTSP
@@ -30,41 +62,74 @@ set interfaces ge-0/0/17 unit 0 family ethernet-switching vlan members NOL_G2_Su
 set interfaces ge-0/0/18 description ----------------018--------------------Monitoring-Camera
 set interfaces ge-0/0/18 unit 0 family ethernet-switching port-mode access
 set interfaces ge-0/0/18 unit 0 family ethernet-switching vlan members NOL-Gulshan-Off-Lan
-
-set interfaces ge-0/0/2 description ----------------002--------------------NOL-G2-Wifi-5th-Floor
-set interfaces ge-0/0/2 unit 0 family ethernet-switching port-mode access
-set interfaces ge-0/0/2 unit 0 family ethernet-switching vlan members NOL-G2-Wifi-5th
-
-set interfaces ge-0/0/3 description ----------------003--------------------Access-Control-5th-Floor
-set interfaces ge-0/0/3 unit 0 family ethernet-switching port-mode access
-set interfaces ge-0/0/3 unit 0 family ethernet-switching vlan members NOL-G2-Access-Control-5th
-
-set interfaces ge-0/0/4 description ----------------004--------------------NOL-G2-5th-floor-Entrance-Camera
-set interfaces ge-0/0/4 unit 0 family ethernet-switching port-mode access
-set interfaces ge-0/0/4 unit 0 family ethernet-switching vlan members NOL_G2_Entrance_Camera_5th
+set interfaces ge-0/0/25 description ----------------025--------------------Uttara-Call-Center
+set interfaces ge-0/0/25 unit 0 family ethernet-switching port-mode access
+set interfaces ge-0/0/25 unit 0 family ethernet-switching vlan members Uttara-Call-Center
 set interfaces ge-0/0/46 ether-options 802.3ad ae4
 set interfaces ge-0/0/47 description ----------------047--------------------SW-118
 set interfaces ge-0/0/47 ether-options 802.3ad ae4
-
-set interfaces ge-0/0/5 description ----------------005--------------------NOL-G2-5th-floor-Support-Camera
-set interfaces ge-0/0/5 unit 0 family ethernet-switching port-mode access
-set interfaces ge-0/0/5 unit 0 family ethernet-switching vlan members NOL_G2_Support_Camera_5th
-
-set interfaces ge-0/0/6 description ----------------006--------------------PC-2-Monitoring
-set interfaces ge-0/0/6 unit 0 family ethernet-switching port-mode access
-set interfaces ge-0/0/6 unit 0 family ethernet-switching vlan members NOL-Gulshan-Off-Lan
-
-set interfaces ge-0/0/7 description ----------------007--------------------PC-2
-set interfaces ge-0/0/7 unit 0 family ethernet-switching port-mode access
-set interfaces ge-0/0/7 unit 0 family ethernet-switching vlan members NOL-Gulshan-Off-Lan
-
-
-set interfaces ge-0/0/8 description ----------------008--------------------PC-8
-set interfaces ge-0/0/8 unit 0 family ethernet-switching port-mode access
-set interfaces ge-0/0/8 unit 0 family ethernet-switching vlan members NOL-Gulshan-Off-Lan
-
-set interfaces ge-0/0/9 description ----------------009--------------------Wireless-Router-Monitoring
-set interfaces ge-0/0/9 unit 0 family ethernet-switching port-mode access
-set interfaces ge-0/0/9 unit 0 family ethernet-switching vlan members NOL-Gulshan-Off-Lan
-
-
+set interfaces ge-0/1/1 description ----------------011--------------------SW-120-Uplink
+set interfaces ge-0/1/1 ether-options 802.3ad ae2
+set interfaces ae2 description ----------------ae2--------------------UP-Link_from_SW120
+set interfaces ae2 aggregated-ether-options minimum-links 1
+set interfaces ae2 aggregated-ether-options link-speed 1g
+set interfaces ae2 unit 0 family ethernet-switching port-mode trunk
+set interfaces ae2 unit 0 family ethernet-switching vlan members NOL-Management
+set interfaces ae2 unit 0 family ethernet-switching vlan members NOL-Gulshan-Off-Lan
+set interfaces ae2 unit 0 family ethernet-switching vlan members NOL-G2-Office-Monitoring-PC
+set interfaces ae2 unit 0 family ethernet-switching vlan members NOL-Configuration
+set interfaces ae2 unit 0 family ethernet-switching vlan members MD-Office
+set interfaces ae2 unit 0 family ethernet-switching vlan members IPTSP
+set interfaces ae2 unit 0 family ethernet-switching vlan members NOL-G2-Wifi-5th
+set interfaces ae2 unit 0 family ethernet-switching vlan members NOL-G2-Access-Control-5th
+set interfaces ae2 unit 0 family ethernet-switching vlan members NOL_G2_Support_Camera_5th
+set interfaces ae2 unit 0 family ethernet-switching vlan members NOL_G2_Entrance_Camera_5th
+set interfaces ae2 unit 0 family ethernet-switching vlan members FTTX-vlan2
+set interfaces ae2 unit 0 family ethernet-switching vlan members nol-ppp2
+set interfaces ae2 unit 0 family ethernet-switching vlan members Communication-one-Internet
+set interfaces ae2 unit 0 family ethernet-switching vlan members ISSL-Eagle-HRM
+set interfaces ae2 unit 0 family ethernet-switching vlan members Uttara-Call-Center
+set interfaces ae3 description ----------------ae3--------------------SW-121-Uplink
+set interfaces ae3 aggregated-ether-options minimum-links 1
+set interfaces ae3 aggregated-ether-options link-speed 1g
+set interfaces ae3 unit 0 family ethernet-switching port-mode trunk
+set interfaces ae3 unit 0 family ethernet-switching vlan members NOL-Management
+set interfaces ae3 unit 0 family ethernet-switching vlan members NOL-Gulshan-Off-Lan
+set interfaces ae3 unit 0 family ethernet-switching vlan members NOL-G2-Office-Monitoring-PC
+set interfaces ae3 unit 0 family ethernet-switching vlan members NOL-Configuration
+set interfaces ae3 unit 0 family ethernet-switching vlan members MD-Office
+set interfaces ae3 unit 0 family ethernet-switching vlan members IPTSP
+set interfaces ae3 unit 0 family ethernet-switching vlan members Uttara-Call-Center
+set interfaces ae4 description ----------------ae4--------------------SW-118-Uplink
+set interfaces ae4 aggregated-ether-options minimum-links 1
+set interfaces ae4 aggregated-ether-options link-speed 1g
+set interfaces ae4 unit 0 family ethernet-switching port-mode trunk
+set interfaces ae4 unit 0 family ethernet-switching vlan members NOL-Management
+set interfaces ae4 unit 0 family ethernet-switching vlan members NOL-Gulshan-Off-Lan
+set interfaces ae4 unit 0 family ethernet-switching vlan members NOL-Configuration
+set interfaces ae4 unit 0 family ethernet-switching vlan members IPTSP
+set interfaces ae4 unit 0 family ethernet-switching vlan members FTTX-vlan2
+set interfaces ae4 unit 0 family ethernet-switching vlan members NOL-G2-Wifi-5th
+set interfaces ae4 unit 0 family ethernet-switching vlan members nol-ppp2
+set interfaces ae4 unit 0 family ethernet-switching vlan members NOL-G2-Access-Control-5th
+set interfaces ae4 unit 0 family ethernet-switching vlan members Communication-one-Internet
+set interfaces ae4 unit 0 family ethernet-switching vlan members ISSL-Eagle-HRM
+set interfaces ae4 unit 0 family ethernet-switching vlan members Uttara-Call-Center
+set interfaces vlan unit 507 family inet address 172.17.25.117/24
+set vlans Communication-one-Internet vlan-id 307
+set vlans FTTX-vlan2 vlan-id 2500
+set vlans IPTSP vlan-id 527
+set vlans ISSL-Eagle-HRM vlan-id 311
+set vlans MD-Office vlan-id 101
+set vlans NOL-Configuration vlan-id 501
+set vlans NOL-G2-Access-Control-5th vlan-id 301
+set vlans NOL-G2-Office-Monitoring-PC vlan-id 555
+set vlans NOL-G2-Wifi-5th vlan-id 183
+set vlans NOL-Gulshan-Off-Lan vlan-id 180
+set vlans NOL-Management vlan-id 507
+set vlans NOL-Management l3-interface vlan.507
+set vlans NOL_G2_Entrance_Camera_5th vlan-id 302
+set vlans NOL_G2_Support_Camera_5th vlan-id 303
+set vlans Uttara-Call-Center vlan-id 184
+set vlans nol-ppp2 vlan-id 182
+set poe interface all telemetries
