@@ -1,0 +1,264 @@
+Using 4898 out of 524288 bytes
+!
+version 12.2
+no service pad
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+!
+hostname Switch-2
+!
+boot-start-marker
+boot-end-marker
+!
+enable secret level 2 5 $1$OrPe$XZJPV1b.XRihd4D4ndqxA0
+enable secret 5 $1$zyOV$HG/VzsNd7T/Kg.hz9iAvW.
+enable password 7650
+!
+no aaa new-model
+system mtu routing 1500
+!
+!
+!
+crypto pki trustpoint TP-self-signed-2897507328
+ enrollment selfsigned
+ subject-name cn=IOS-Self-Signed-Certificate-2897507328
+ revocation-check none
+ rsakeypair TP-self-signed-2897507328
+!
+!
+crypto pki certificate chain TP-self-signed-2897507328
+ certificate self-signed 01 nvram:IOS-Self-Sig#3839.cer
+!
+!
+!
+!
+spanning-tree mode rapid-pvst
+spanning-tree extend system-id
+no spanning-tree vlan 1,569-578,582-584,586-587,591,593,596-597,601-602,605-608
+no spanning-tree vlan 611,614-622,624-627,705,745,951-952,960,1106
+!
+!
+vlan internal allocation policy ascending
+!
+vlan 507
+ name NOL_Management
+!
+vlan 561
+!
+vlan 595
+ name Asia-TV
+!
+vlan 716
+ name Flora-G2-Backup
+!
+vlan 740
+ name Fu-Wang
+!
+vlan 812
+!
+vlan 813
+ name Rupayan
+!
+vlan 814
+ name Tahoe
+!
+vlan 815
+!
+vlan 839
+ name G1-13112-Fu-Wang
+!
+vlan 841
+ name Golden-Jute-HO
+!
+vlan 908
+ name BRAC-University
+!
+vlan 916
+ name G2-AV16
+!
+vlan 952
+!
+vlan 963
+ name Olive-Tree-Tejgaon
+!
+vlan 964
+ name Junayed-Sir-Mother
+!
+vlan 1049
+!
+vlan 1121
+ name G1-0806
+!
+vlan 1129
+ name DH-448-Buildtrade
+!
+vlan 1143
+ name Olive-Tree-Gulshan
+!
+vlan 1224
+ name Youth-Leadership
+!
+vlan 1684
+ name Green_Delta
+!
+!
+!
+interface FastEthernet0/1
+ description DH-110 Brain Station Wireless
+ switchport access vlan 952
+ duplex full
+!
+interface FastEthernet0/2
+ description DH-1241-Bangladesh-Youth-Leadership-
+ duplex full
+!
+interface FastEthernet0/3
+ description G1-AV10 DS.Concept
+ switchport access vlan 815
+ duplex full
+!
+interface FastEthernet0/4
+ description DH-1109-DRFM-B-BRAC University
+ switchport access vlan 908
+ duplex full
+!
+interface FastEthernet0/5
+ description ALOK-IT
+ switchport access vlan 812
+ duplex full
+!
+interface FastEthernet0/6
+ description DH-1059-Bangladesh-Youth-Leadership-Center
+ switchport access vlan 1224
+ duplex full
+!
+interface FastEthernet0/7
+ description DH-249_Asian Radio
+ switchport access vlan 1049
+ duplex full
+!
+interface FastEthernet0/8
+ description G1-0806-Md.Hasanuzzaman-Titu
+ switchport access vlan 1121
+ duplex full
+!
+interface FastEthernet0/9
+ description DH-318-Fu-Wang-Tejgaon
+ switchport access vlan 740
+ duplex full
+!
+interface FastEthernet0/10
+ description Delta Securities
+ switchport access vlan 1684
+ duplex full
+!
+interface FastEthernet0/11
+ description DH-326-Tahoe
+ switchport access vlan 814
+ duplex full
+!
+interface FastEthernet0/12
+ description DH-972-Golden-Jute-HO-Gulshan-1
+ switchport access vlan 841
+ duplex full
+!
+interface FastEthernet0/13
+ description Junayed-Sir-Mother
+ switchport access vlan 964
+ duplex full
+!
+interface FastEthernet0/14
+ description Free
+ switchport access vlan 901
+ duplex full
+!
+interface FastEthernet0/15
+ description Free
+ duplex full
+!
+interface FastEthernet0/16
+ description Free
+ duplex full
+!
+interface FastEthernet0/17
+ description Buildtrade-ODF2-B1
+ switchport access vlan 1129
+ duplex full
+!
+interface FastEthernet0/18
+ description DH-391-Olive-Tree-Food-23-Gulsan-Avenue
+ switchport access vlan 1143
+ duplex full
+!
+interface FastEthernet0/19
+ description summit_outlet
+ switchport trunk allowed vlan 1056,1586,1593,1681,1682,1981,1989,1990
+ switchport mode trunk
+ shutdown
+ duplex full
+!
+interface FastEthernet0/20
+ description DH-1185-Fu-Wang-Tejgaon
+ switchport access vlan 963
+ shutdown
+ duplex full
+!
+interface FastEthernet0/21
+ description G2-AV16-Flora-Limited
+ switchport access vlan 916
+ duplex full
+!
+interface FastEthernet0/22
+ description DH-346-Rupayan
+ switchport access vlan 813
+ duplex full
+!
+interface FastEthernet0/23
+ description G1-13112-Fu-wang
+ switchport access vlan 839
+ duplex full
+!
+interface FastEthernet0/24
+ description DH-430-Flora-Backup
+ switchport access vlan 716
+ duplex full
+!
+interface GigabitEthernet0/1
+ description NTMC-ILIS-Triangle
+ port-type nni
+ no cdp enable
+!
+interface GigabitEthernet0/2
+ description SW-9-P18
+ port-type nni
+ switchport trunk allowed vlan 202,328,420,507,545,561,595,620-623,716,727,740
+ switchport trunk allowed vlan add 748,768,769,792,812-815,832,839,841,901,908
+ switchport trunk allowed vlan add 916,928,952,963,964,980,1036-1038,1047,1049
+ switchport trunk allowed vlan add 1056,1113,1121,1129,1143,1224,1586,1593,1681
+ switchport trunk allowed vlan add 1682,1684,1981,1989,1990
+ switchport mode trunk
+ no cdp enable
+!
+interface Vlan1
+ no ip address
+ no ip route-cache
+ shutdown
+!
+interface Vlan507
+ ip address 172.17.25.2 255.255.255.0
+ no ip route-cache
+!
+no ip http server
+ip http secure-server
+no cdp run
+snmp-server community next_online RO
+!
+line con 0
+line vty 0 4
+ password 7650
+ login
+line vty 5 15
+ login
+!
+end

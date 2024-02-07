@@ -1,0 +1,194 @@
+Using 3405 out of 65536 bytes
+!
+version 12.2
+no service pad
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+!
+hostname Core10
+!
+boot-start-marker
+boot-end-marker
+!
+enable secret 5 $1$/Wse$/FjtJMoGlLn5xmUWC9muc0
+enable password 7650
+!
+!
+!
+no aaa new-model
+system mtu routing 1500
+vtp domain nodomainvtp
+vtp mode transparent
+authentication mac-move permit
+ip subnet-zero
+!
+!
+!
+!
+!
+!
+!
+spanning-tree mode pvst
+spanning-tree etherchannel guard misconfig
+spanning-tree extend system-id
+no spanning-tree vlan 506-509,520,529-530,628-639,888
+!
+vlan internal allocation policy ascending
+!
+vlan 501,503,507
+!
+vlan 527
+ name ICX
+!
+vlan 528
+!
+vlan 1105
+ name KASPERSKY-Colo
+!
+!
+!
+interface FastEthernet0/1
+ description none
+ switchport trunk allowed vlan 501,503,507,527
+ switchport mode trunk
+ shutdown
+ no cdp enable
+!
+interface FastEthernet0/2
+ description none
+ switchport mode access
+ duplex full
+!
+interface FastEthernet0/3
+ description IPTSP-Server-Dell
+ switchport access vlan 527
+ switchport mode access
+!
+interface FastEthernet0/4
+ description ----------------MetroSW-P10
+ switchport access vlan 528
+ switchport mode access
+!
+interface FastEthernet0/5
+ description IPTSP-LAN-IP-172.51_MTik_09
+ switchport access vlan 507
+ switchport mode access
+!
+interface FastEthernet0/6
+ description IPTSP-Mtik_P10
+ switchport trunk allowed vlan 501,503,507,527
+ switchport mode trunk
+!
+interface FastEthernet0/7
+ description IPTSP_37
+ switchport access vlan 527
+ switchport mode access
+!
+interface FastEthernet0/8
+ description none
+ switchport mode access
+!
+interface FastEthernet0/9
+ description none
+ switchport mode access
+ speed 10
+!
+interface FastEthernet0/10
+ description none
+ switchport mode access
+!
+interface FastEthernet0/11
+ description none
+ switchport mode access
+ speed 10
+ no cdp enable
+!
+interface FastEthernet0/12
+ description none
+ switchport mode access
+!
+interface FastEthernet0/13
+ description none
+ switchport mode access
+!
+interface FastEthernet0/14
+ description none
+ switchport mode access
+!
+interface FastEthernet0/15
+ description none
+ switchport mode access
+!
+interface FastEthernet0/16
+ description none
+ switchport mode access
+!
+interface FastEthernet0/17
+ description none
+ switchport mode access
+!
+interface FastEthernet0/18
+ description none
+ switchport mode access
+!
+interface FastEthernet0/19
+ description none
+ switchport mode access
+!
+interface FastEthernet0/20
+ description none
+ switchport mode access
+ duplex full
+ no cdp enable
+!
+interface FastEthernet0/21
+ description none
+ switchport mode access
+!
+interface FastEthernet0/22
+ description Media-Gateway
+ switchport access vlan 527
+ switchport mode access
+!
+interface FastEthernet0/23
+ description none
+ switchport mode access
+ no cdp enable
+!
+interface FastEthernet0/24
+ description none
+ switchport mode access
+!
+interface GigabitEthernet0/1
+ switchport trunk allowed vlan 501,503,507,527,528,1105
+ switchport mode trunk
+ no cdp enable
+!
+interface GigabitEthernet0/2
+ description KASPERSKY-Colo
+ switchport access vlan 1105
+ switchport mode access
+ no cdp enable
+!
+interface Vlan1
+ ip address 194.193.121.7 255.255.255.0
+ no ip route-cache
+!
+interface Vlan507
+ ip address 172.17.25.10 255.255.255.0
+ no ip route-cache
+!
+ip http server
+ip sla enable reaction-alerts
+snmp-server community next_online RO
+!
+line con 0
+line vty 0 4
+ password 7650
+ login
+line vty 5 15
+ password 7650
+ login
+!
+end
